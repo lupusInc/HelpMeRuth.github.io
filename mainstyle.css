@@ -1,0 +1,250 @@
+body {
+  background-color: #242424;
+  font-family: arial;
+  font-size: 1.1vw;
+  width: 90%;
+  height: 90%;
+}
+
+table,
+th,
+td {
+  font-size: 1.4vw;
+  padding: 5% 0%;
+  text-align: left;
+}
+
+table {
+  border-spacing: 10%;
+  width: 100%;
+  height: 100%;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0%;
+  padding: 0%;
+  height: 90%;
+  overflow: hidden;
+  background-color: #2377e6;
+  box-shadow: 0px 1% 1% 0px rgba(0, 0, 0, 0.5%);
+}
+
+li {
+  height: 100%;
+  width: 10.3%;
+  float: left;
+}
+
+li a,
+.dropbtn {
+  font-size: 1.4vw;
+  display: inline-block;
+  color: whitesmoke;
+  text-align: center;
+  padding: 11.4% 10%;
+  text-decoration: none;
+}
+
+#home {
+  width: 6%;
+}
+
+#homeX {
+  padding: 19.6% 19%;
+}
+
+#WifX {
+  padding: 19.6% 10%;
+}
+
+#ProX {
+  padding: 19.6% 5%;
+}
+
+li:hover,
+.dropdown:hover .dropbtn {
+  background-color: #2e628b;
+}
+
+li.dropdown {
+  font-size: 1.5vw;
+  display: block;
+}
+
+li.home {
+  width: 6%;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  top: 90%;
+  min-width: 10.3%;
+  box-shadow: 0% 1% 2% 0% rgba(0, 0, 0, 0.2);
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 10% 15%;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+img.ps4img {
+  position: absolute;
+  left: 73%;
+  top: 13%;
+  width: 20%;
+  height: 15%;
+}
+
+img.xboximg {
+  position: absolute;
+  left: 5%;
+  top: 13%;
+  width: 20%;
+  height: 15%;
+}
+
+img.wiiimg {
+  position: absolute;
+  left: 42%;
+  top: 16%;
+  width: 16%;
+  height: 8%;
+}
+
+div.ps4Block {
+  position: absolute;
+  top: 15%;
+  left: 68.5%;
+  width: 25%;
+  height: 77%;
+  background-color: whitesmoke;
+  border: 0.7% solid whitesmoke;
+  padding: 1.5% 1.5%;
+  display: inline-block;
+}
+
+div.xboxBlock {
+  position: absolute;
+  top: 15%;
+  left: 2%;
+  width: 25%;
+  height: 77%;
+  background-color: whitesmoke;
+  border: 0.7% solid whitesmoke;
+  padding: 1.5% 1.5%;
+  float: left;
+  display: inline-block;
+}
+
+div.wiiBlock {
+  position: absolute;
+  top: 15%;
+  left: 35%;
+  width: 25%;
+  height: 77%;
+  background-color: whitesmoke;
+  border: 0.7% solid whitesmoke;
+  padding: 1.5% 1.5%;
+  display: inline-block;
+}
+
+div.block {
+  position: absolute;
+  top: 15%;
+  left: 2%;
+  width: 91.55%;
+  height: 77%;
+  background-color: #242424;
+  border: 0.5% solid #242424;
+  padding: 2% 2%;
+  float: left;
+  display: inline-block;
+}
+
+div.leesMeer {
+  text-align: center;
+  font-size: 1.5vw;
+  position: absolute;
+  top: 85%;
+  left: 15%;
+  width: 10%;
+  height: 4%;
+  color: whitesmoke;
+  background-color: #2377e6;
+  border: 0.5% solid #2377e6;
+  padding: 2% 2%;
+  display: inline-block;
+}
+
+#xbox {
+  left: 16%;
+}
+
+#wii {
+  left: 48%;
+}
+
+#ps4 {
+  left: 81.5%;
+}
+
+div.leesMeer:hover {
+  background-color: #2e628b;
+  border: 0.5% solid #2e628b;
+}
+
+img.WiiSite {
+  position: absolute;
+  left: 3%;
+  top: 5%;
+  width: 20%;
+  height: 16%;
+}
+
+div.Hblock {
+  position: absolute;
+  top: 25%;
+  background: white;
+  color: black;
+  text-align: center;
+  padding: 1% 0.75%;
+  width: 35%;
+  height: 65%;
+  box-shadow: 0% 1% 2% 0% rgba(0, 0, 0, 0.5);
+}
+
+#Twii {
+  top: 5%;
+  width: 56%;
+  left: 40%;
+  height: 85%;
+}
+
+#Tlogo {
+  top: 5%;
+  width: 35.1%;
+  left: 2%;
+  height: 12%;
+}
+
+#WiF {
+  top: 5%;
+  width: 45%;
+  left: 1%;
+  height: 85%;
+}
