@@ -4,12 +4,6 @@ body {
   color: black;
 }
 
-::-webkit-scrollbar {
-  width: 0px;
-  background: transparent;
-  /* make scrollbar transparent */
-}
-
 .navbar-custom {
   background-color: rgba(100, 100, 100, 0.7);
   width: 100%;
@@ -34,7 +28,6 @@ body {
   top: 150px;
   color: white;
   left: 20px;
-  overflow-y: auto;
 }
 
 .tab1 {
