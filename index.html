@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Temp</title>
+
+  <!-- CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  <link href="vendor/custom/css/custom.css" rel="stylesheet">
+
+
+</head>
+
+
+<body>
+  <!-- Welcome overlay, only shows when page is loaded -->
+  <div class="overlay">
+    <div class="overlay-content">
+      <a><img class="logo" src="vendor/images/logo.png" /></a>
+      <button class="btn btn-primary" onclick="continueSite();">Lees verder</button>
+    </div>
+  </div>
+
+  <!-- Universal background. scales for all screens -->
+  <img class="background" src="vendor/images/background.jpg" />
+
+  <!-- Main navigationbar -->
+  <nav class="navbar fixed-top navbar-dark navbar-custom">
+    <a class="navbar-brand" href="#">Lupus Inc.</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsingNavbar">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="navbar-collapse collapse" id="collapsingNavbar">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item" data-toggle="collapse" data-target="#collapsingNavbar">
+          <a class="nav-link" href="javascript:pageScroll(0);">Home</a>
+        </li>
+        <li class="nav-item" data-toggle="collapse" data-target="#collapsingNavbar">
+          <a class="nav-link" href="javascript:pageScroll(1);">Tab1</a>
+        </li>
+        <li class="nav-item" data-toggle="collapse" data-target="#collapsingNavbar">
+          <a class="nav-link" href="javascript:pageScroll(2); ">Tab2</a>
+        </li>
+        <li class="nav-item" data-toggle="collapse" data-target="#collapsingNavbar">
+          <a class="nav-link" href="javascript:pageScroll(3);">Tab3</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Page Content -->
+  <div class="container-fluid">
+    <div class="row ">
+      <div class="col-lg-12 tab tab0 text-left">
+        <div class="tab0-content col-lg-6 col-md-9 col-sm-6 col-xs-8">
+          <h1>Wat is de invloed van wolven op de natuur?</h1>
+          <p>Ons profielwerkstuk gaat over de wolf. Maar niet alleen wat de wolf is, maar ook wat hij doet, hoe hij het doet en wat de gevolgen zijn op de natuur om ons heen. De wolf is namelijk niet zo simpel als de meesten denken. Het is een erg complex
+            dier en er spelen veel achterliggende factoren bij het zijn van een wolf. Daarbij zorgt hij voor grote gevolgen in ecosystemen waar de wolf aanwezig is, maar wat be&iuml;nvloed de wolf nou allemaal precies door simpelweg z&rsquo;n dagelijks
+            leven te lijden? Deze hoofdvraag splitsen we op in de geografische en ecologische veranderingen. Om dit te kunnen beantwoorden gaan we eerst na hoe de wolf nou in elkaar zit en hoe hij elke dag leeft als apex predator in zijn roedel zonder
+            dat iemand hem na kan doen.</p>
+
+          <p>We gebruiken hier het Yellowstone National Park als ons test arena, waar op deze dag de wolf nog steeds veel wordt onderzocht, hier kunnen we goed zien wat voor effect de wolf nou precies heeft op het park, de planten, de mens en de vele andere
+            soorten die daar leven in het geval dat hij opnieuw geherintroduceerd wordt. </p>
+          <button class="btn btn-primary" onclick="pageScroll(NaN, true);">Scroll down</button>
+        </div>
+      </div>
+      <div class="col-lg-12 tab tab1 text-left">
+        <div class="tab1-content">
+          <h1>Fancy h1 text</h1>
+          <button class="btn btn-primary" onclick="pageScroll(NaN, true);">Scroll down</button>
+          <button class="btn btn-primary" onclick="pageScroll(NaN, false);">Scroll up</button>
+        </div>
+      </div>
+      <div class="col-lg-12 tab tab2 text-left">
+        <div style="position:absolute;top:50%;color:white;left:10%;">
+          <h1>Nee</h1>
+          <!-- <button class="btn btn-primary" onclick="pageScroll(NaN, true);">Scroll down</button> -->
+          <button class="btn btn-primary" onclick="pageScroll(NaN, false);">Scroll up</button>
+        </div>
+      </div>
+
+      <!-- Bootstrap core JavaScript -->
+      <script src="vendor/jquery/jquery.min.js "></script>
+      <script src="vendor/bootstrap/js/bootstrap.bundle.min.js "></script>
+      <script src="vendor/custom/js/custom.js "></script>
+      <script src="https://use.fontawesome.com/8d6338574f.js"></script>
+
+    </div>
+  </div>
+  <button type="button" class="btn btn-primary btn-circle btn-lg" onclick="pageScroll(0);"><i class="fa fa-arrow-up" aria-hidden="true"></i></button>
+</body>
+
+</html>
