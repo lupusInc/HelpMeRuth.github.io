@@ -1,0 +1,142 @@
+body {
+  background-color: rgba(33, 33, 33, 1);
+  font-family: 'Open Sans', serif;
+  color: black;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+  /* make scrollbar transparent */
+}
+
+.navbar-custom {
+  background-color: rgba(100, 100, 100, 0.7);
+  width: 100%;
+  transition: 0.4s;
+  top: -60px;
+}
+
+.tab {
+  max-height: 100%;
+  opacity: 0;
+  transition: opacity 250ms;
+}
+
+.tab0 {
+  background-color: rgba(33, 33, 33, 1);
+}
+
+.tab0-content {
+  position: relative;
+  max-width: 50%;
+  max-height: 100%;
+  top: 150px;
+  color: white;
+  left: 20px;
+  overflow-y: auto;
+}
+
+.tab1 {
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.tab1-content {
+  position: absolute;
+  top: 50%;
+  color: black;
+  left: 10%;
+}
+
+.tab2 {
+  background-color: rgba(33, 33, 33, 1);
+}
+
+.tab2-content {
+  position: absolute;
+  top: 50%;
+  color: white;
+  left: 10%;
+}
+
+.background {
+  position: fixed;
+  max-width: 100%;
+  height: auto;
+  width: auto;
+  transition: 1s;
+  filter: blur(6px);
+  opacity: 1;
+}
+
+/*Welcome overlay*/
+
+.logo {
+  height: auto;
+  width: 80%;
+  max-width: 500px;
+  transition: 0.3s;
+}
+
+.overlay {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.overlay-content {
+  position: absolute;
+  top: 50px;
+  opacity: 0;
+  width: 100%;
+  text-align: center;
+  transition: 0.7s;
+}
+
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.overlay button {
+  text-decoration: none;
+  font-size: 25px;
+}
+
+.overlay a:hover, .overlay a:focus {
+  color: #f1f1f1;
+}
+
+.btn-circle {
+  position: fixed;
+  bottom: 20px;
+  right: -20px;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  padding: 6px 0;
+  font-size: 12px;
+  line-height: 1.428571429;
+  border-radius: 15px;
+  transition: 0.4s;
+  display: none;
+}
+
+.btn-circle.btn-lg {
+  width: 50px;
+  height: 50px;
+  padding: 10px 16px;
+  font-size: 18px;
+  line-height: 1.33;
+  border-radius: 25px;
+}
