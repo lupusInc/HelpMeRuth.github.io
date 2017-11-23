@@ -2,6 +2,31 @@
 var currentTab = 1;
 var Fade = 0.3;
 var Background = $(".background");
+//
+// check if we're on mobile
+function mobileMode() {
+  if ($(window).width() > 450 && $(window).height() > 600) {
+    return false
+  } else {
+    return true
+  }
+}
+
+function OnLoad() {
+  console.log($(window).width() + " " + $(window).height());
+  scaleBackground();
+  setTimeout(function() { // wait for the site to be loaded (makes it smoother)
+    //Put all simple start animations here
+    $(".overlay-content").css("opacity", "1");
+    $(".overlay-content").css("top", "0");
+  }, 500);
+  if (!mobileMode()) {
+    // desktop mode
+    scrollEvent()
+  } else {
+    // mobile mode
+  }
+}
 //Functions
 //
 //One page fade effect to switch through different html elements.
@@ -21,24 +46,6 @@ function LoadNewContent(newTab) {
     $(".tab" + newTab).css("opacity", "1");
   }, Fade * 2000);
 }
-//
-function OnLoad() {
-  scaleBackground();
-  setTimeout(function() { // wait for the site to be loaded (makes it smoother)
-    //Put all simple start animations here
-    $(".overlay-content").css("opacity", "1");
-    $(".overlay-content").css("top", "0");
-  }, 500);
-  if (!mobileMode()) {
-    // desktop mode
-    scrollEvent()
-  } else {
-    // mobile mode
-
-
-
-  }
-}
 
 function continueSite() {
   if (!mobileMode()) {
@@ -53,68 +60,8 @@ function continueSite() {
     $(".btn-circle").css("display", "initial");
     sizeTabs();
   } else {
-    // mobile mobile mode
-
-
-
+    // mobile mode
   }
-}
-//
-//We need to check if our background fits the screen.
-//If not change the way how we calculate the width or height of the picturel.
-// only needed for greeting overlay. both mobile en desktop
-function scaleBackground() {
-  //Main magic
-  if ($(window).height() > Background.height()) {
-    Background.css("max-width", "none");
-    Background.css("max-height", "100%");
-  }
-  if ($(window).width() > Background.width()) {
-    Background.css("max-width", "100%");
-    Background.css("max-height", "none");
-  }
-}
-
-function sizeTabs() {
-  $(".tab").css("height", $(window).height());
-}
-// Events
-//
-//Trigger scaleBackground() when screen is resized.
-$(window).resize(function() {
-  scaleBackground();
-  if (!mobileMode()) {
-    sizeTabs();
-  }
-});
-//
-//Trigger OnLoad() when page is fully loaded.
-$(document).ready(function() {
-  OnLoad();
-})
-//
-//When page is scrolled
-$(window).scroll(function() {
-  scrollEvent();
-});
-
-function scrollEvent() {
-  if (!mobileMode()) {
-    //desktop mode
-    if ($(window).scrollTop() < 50) {
-      $(".navbar-custom").css("background-color", "rgba(33, 33, 33, 0.7)");
-      $(".btn-circle").css("opacity", "0");
-      $(".btn-circle").css("right", "-20px");
-    } else {
-      $(".navbar-custom").css("background-color", "rgba(66, 66, 66, 0.7)");
-      $(".btn-circle").css("opacity", "1");
-      $(".btn-circle").css("right", "20px");
-    }
-  } else {
-    //mobile mode
-
-  }
-
 }
 
 function pageScroll(x, down) {
@@ -140,11 +87,58 @@ function pageScroll(x, down) {
     scrollTop: scrollLength
   }, 1000);
 }
-// check if we're on mobile
-function mobileMode() {
-  if ($(window).width() > 450) {
-    return false
-  } else {
-    return true
+//
+//We need to check if our background fits the screen.
+//If not change the way how we calculate the width or height of the picturel.
+// only needed for greeting overlay. both mobile en desktop
+function scaleBackground() {
+  //Main magic
+  if ($(window).height() > Background.height()) {
+    Background.css("max-width", "none");
+    Background.css("max-height", "100%");
+  }
+  if ($(window).width() > Background.width()) {
+    Background.css("max-width", "100%");
+    Background.css("max-height", "none");
   }
 }
+
+function sizeTabs() {
+  $(".tab").css("height", $(window).height());
+}
+
+function scrollEvent() {
+  if (!mobileMode()) {
+    //desktop mode
+    if ($(window).scrollTop() < 50) {
+      $(".navbar-custom").css("background-color", "rgba(33, 33, 33, 0.7)");
+      $(".btn-circle").css("opacity", "0");
+      $(".btn-circle").css("right", "-20px");
+    } else {
+      $(".navbar-custom").css("background-color", "rgba(66, 66, 66, 0.7)");
+      $(".btn-circle").css("opacity", "1");
+      $(".btn-circle").css("right", "20px");
+    }
+  } else {
+    //mobile mode
+  }
+}
+// Events
+//
+//Trigger scaleBackground() when screen is resized.
+$(window).resize(function() {
+  scaleBackground();
+  if (!mobileMode()) {
+    sizeTabs();
+  }
+});
+//
+//Trigger OnLoad() when page is fully loaded.
+$(document).ready(function() {
+  OnLoad();
+})
+//
+//When page is scrolled
+$(window).scroll(function() {
+  scrollEvent();
+});
