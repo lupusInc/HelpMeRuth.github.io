@@ -43,21 +43,21 @@ function OnLoad() {
 function continueSite() {
   if (!mobileMode()) {
     // desktop mode
-  $(".tab").css("opacity", "1");
-  $(".overlay").css("opacity", "0");
-  $(".overlay").css("height", "0%");
-  $(".navbar-custom").css("top", "0px");
-  $(".background").css("filter", "blur(0px)");
-  $(".background").css("display", "none");
-  pageScroll(0);
-  $(".btn-circle").css("display", "initial");
-  sizeTabs();
-} else {
-  // mobile mobile mode
+    $(".tab").css("opacity", "1");
+    $(".overlay").css("opacity", "0");
+    $(".overlay").css("height", "0%");
+    $(".navbar-custom").css("top", "0px");
+    $(".background").css("filter", "blur(0px)");
+    $(".background").css("display", "none");
+    pageScroll(0);
+    $(".btn-circle").css("display", "initial");
+    sizeTabs();
+  } else {
+    // mobile mobile mode
 
 
 
-}
+  }
 }
 //
 //We need to check if our background fits the screen.
@@ -99,21 +99,21 @@ $(window).scroll(function() {
 });
 
 function scrollEvent() {
-  if(!mobileMode()) {
+  if (!mobileMode()) {
     //desktop mode
-  if ($(window).scrollTop() < 50) {
-    $(".navbar-custom").css("background-color", "rgba(33, 33, 33, 0.7)");
-    $(".btn-circle").css("opacity", "0");
-    $(".btn-circle").css("right", "-20px");
+    if ($(window).scrollTop() < 50) {
+      $(".navbar-custom").css("background-color", "rgba(33, 33, 33, 0.7)");
+      $(".btn-circle").css("opacity", "0");
+      $(".btn-circle").css("right", "-20px");
+    } else {
+      $(".navbar-custom").css("background-color", "rgba(66, 66, 66, 0.7)");
+      $(".btn-circle").css("opacity", "1");
+      $(".btn-circle").css("right", "20px");
+    }
   } else {
-    $(".navbar-custom").css("background-color", "rgba(66, 66, 66, 0.7)");
-    $(".btn-circle").css("opacity", "1");
-    $(".btn-circle").css("right", "20px");
-  }
-} else {
-  //mobile mode
+    //mobile mode
 
-}
+  }
 
 }
 
@@ -142,7 +142,7 @@ function pageScroll(x, down) {
 }
 // check if we're on mobile
 function mobileMode() {
-  if ($(window).width() > 450 || $(window).height() > 700) {
+  if ($(window).width() > 450) {
     return false
   } else {
     return true
