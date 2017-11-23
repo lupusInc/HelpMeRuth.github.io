@@ -29,24 +29,40 @@ function OnLoad() {
     $(".overlay-content").css("opacity", "1");
     $(".overlay-content").css("top", "0");
   }, 500);
-  scrollEvent()
+  if (!mobileMode()) {
+    // desktop mode
+    scrollEvent()
+  } else {
+    // mobile mode
+
+
+
+  }
 }
 
 function continueSite() {
+  if (!mobileMode()) {
+    // desktop mode
   $(".tab").css("opacity", "1");
   $(".overlay").css("opacity", "0");
   $(".overlay").css("height", "0%");
   $(".navbar-custom").css("top", "0px");
   $(".background").css("filter", "blur(0px)");
   $(".background").css("display", "none");
-  $("html, body").animate({
-    scrollTop: 0
-  }, 1000);
+  pageScroll(0);
   $(".btn-circle").css("display", "initial");
+  sizeTabs();
+} else {
+  // mobile mobile mode
+
+
+
+}
 }
 //
 //We need to check if our background fits the screen.
 //If not change the way how we calculate the width or height of the picturel.
+// only needed for greeting overlay. both mobile en desktop
 function scaleBackground() {
   //Main magic
   if ($(window).height() > Background.height()) {
@@ -57,7 +73,9 @@ function scaleBackground() {
     Background.css("max-width", "100%");
     Background.css("max-height", "none");
   }
+}
 
+function sizeTabs() {
   $(".tab").css("height", $(window).height());
 }
 // Events
@@ -65,6 +83,9 @@ function scaleBackground() {
 //Trigger scaleBackground() when screen is resized.
 $(window).resize(function() {
   scaleBackground();
+  if (!mobileMode()) {
+    sizeTabs();
+  }
 });
 //
 //Trigger OnLoad() when page is fully loaded.
@@ -78,6 +99,8 @@ $(window).scroll(function() {
 });
 
 function scrollEvent() {
+  if(!mobileMode()) {
+    //desktop mode
   if ($(window).scrollTop() < 50) {
     $(".navbar-custom").css("background-color", "rgba(33, 33, 33, 0.7)");
     $(".btn-circle").css("opacity", "0");
@@ -87,6 +110,10 @@ function scrollEvent() {
     $(".btn-circle").css("opacity", "1");
     $(".btn-circle").css("right", "20px");
   }
+} else {
+  //mobile mode
+
+}
 
 }
 
@@ -112,4 +139,12 @@ function pageScroll(x, down) {
   $("html, body").animate({
     scrollTop: scrollLength
   }, 1000);
+}
+// check if we're on mobile
+function mobileMode() {
+  if ($(window).width() > 450 || $(window).height() > 700) {
+    return false
+  } else {
+    return true
+  }
 }
