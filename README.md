@@ -1,1 +1,1 @@
-HelpMeRuth.github.io/index.html
+HelpMeRuth.github.io
