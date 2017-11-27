@@ -4,12 +4,14 @@ function OnLoad() {
   $(".contentblock").css("height", $(document).height());
   countPages();
   resetPages();
+  overlay();
 }
 
 function Scroll() {
   console.log("Scrolled"); //event log
   // Height can change on mobile whilst scrolling e.g chrome
   scalePage();
+  overlay()
 }
 
 function Resize() {
@@ -80,6 +82,7 @@ function movePage(newPage, down) {
     currentPage = newPage;
     // Fix any placement issues
     straightPage();
+    overlay()
   }, 1000);
 }
 // Set the right configuration of pages
@@ -105,8 +108,21 @@ function resetPages() {
     $(".page" + i).css("top", j + "px");
   }
 }
-
+// Scale the content
 function scalePage() {
   $(".contentblock").css("height", $(window).height()); // Reset the height
   $(".contentblock").css("height", $(document).height()); // Set the actual height
+}
+//
+function overlay() {
+  if ($(window).scrollTop() < 50 && currentPage < 1) {
+    console.log("yay");
+    $(".navbar-custom").css("background-color", "rgba(100, 100, 100, 0)");
+    $(".btn-circle").css("opacity", "0");
+    $(".btn-circle").css("right", "-60px");
+  } else {
+    $(".navbar-custom").css("background-color", "rgba(100, 100, 100, 0.7)");
+    $(".btn-circle").css("opacity", "1");
+    $(".btn-circle").css("right", "20px");
+  }
 }
