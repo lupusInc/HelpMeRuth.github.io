@@ -2,7 +2,7 @@
 function OnLoad() {
   console.log("Loaded"); //event log
   $(".contentblock").css("height", $(document).height());
-  countPages()
+  countPages();
   resetPages();
 }
 
@@ -15,6 +15,7 @@ function Scroll() {
 function Resize() {
   console.log("Resized"); //event log
   scalePage();
+  straightPage();
 }
 // Events
 //
@@ -47,18 +48,44 @@ function countPages() {
   }
 }
 
-function slide(newPage, down) {
+function movePage(newPage, down) {
+  // Enable animation
+  $(".page" + currentPage).css("transition", "1s");
+  $(".page" + newPage).css("transition", "1s");
+  // Place the currentPage above or under the visible screen, depending on direction
   if (down) {
     $(".page" + currentPage).css("top", -$(document).height() + "px");
   } else {
     $(".page" + currentPage).css("top", $(document).height() + "px");
   }
+  // "Freeze" the page so it wont cause any issues while hidden
   $(".page" + currentPage).css("position", "fixed");
+  // Bring in the new page
   $(".page" + newPage).css("top", "0px");
+  // Wait for the animation
   setTimeout(function() {
     $(".page" + newPage).css("position", "initial");
+    // Disable animation
+    $(".page" + currentPage).css("transition", "0s");
+    $(".page" + newPage).css("transition", "0s");
+    // Upadte currentPage
+    currentPage = newPage;
+    // Fix any placement issues
+    straightPage();
   }, 1000);
-  currentPage = newPage;
+
+}
+
+function straightPage() {
+  for (var i = 0; i <= pages; i++) {
+    if (i !== currentPage) {
+      if (i < currentPage) {
+        $(".page" + i).css("top", -$(document).height() + "px");
+      } else if (i > currentPage) {
+        $(".page" + i).css("top", $(document).height() + "px");
+      }
+    }
+  }
 }
 
 function resetPages() {
