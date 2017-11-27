@@ -22,12 +22,12 @@ body {
 }
 
 .tab0-content {
-  position: relative;
-  max-width: 50%;
-  max-height: 100%;
-  top: 150px;
+  /*position: relative;*/
+  /*max-width: 50%; */
+  /*max-height: 100%;*/
+  /*top: 150px;*/
   color: white;
-  left: 20px;
+  /*left: 20px;*/
 }
 
 .tab1 {
@@ -52,6 +52,13 @@ body {
   left: 10%;
 }
 
+.DesktopLogo {
+  width: 300px;
+  height: auto;
+}
+
+/*Welcome overlay*/
+
 .background {
   position: fixed;
   max-width: 100%;
@@ -61,8 +68,6 @@ body {
   filter: blur(6px);
   opacity: 1;
 }
-
-/*Welcome overlay*/
 
 .logo {
   height: auto;
