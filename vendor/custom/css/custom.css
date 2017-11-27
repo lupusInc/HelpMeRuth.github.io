@@ -1,7 +1,7 @@
 body {
   font-family: 'Open Sans', serif;
   color: black;
-  transition: 1s;
+  overflow-y: scroll;
 }
 
 .navbar-custom {
@@ -14,14 +14,33 @@ body {
   width: 10000px;
 }
 
-.contentblock {
-  color: white;
-}
+.contentblock {}
 
 .content {
   top: 100px;
 }
 
 .page0 {
+  top: 0px;
   background-color: rgba(33, 33, 33, 1);
+  transition: 1s;
+  color: white;
+  position: initial;
+}
+
+.page1 {
+  top: 0px;
+  position: fixed;
+  /*display: none;*/
+  background-color: rgba(255, 255, 255, 1);
+  transition: 1s;
+  color: black;
+}
+
+.page2 {
+  top: 0px;
+  background-color: rgba(33, 33, 33, 1);
+  transition: 1s;
+  color: white;
+  position: fixed;
 }
