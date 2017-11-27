@@ -1,19 +1,17 @@
 //
 function OnLoad() {
-  console.log("Loaded");
-  $(".contentblock").css("min-height", $(document).height());
+  console.log("Loaded"); //event log
+  $(".contentblock").css("height", $(document).height());
 }
 
 function Scroll() {
-  console.log("Scrolled");
-  $(".contentblock").css("height", $(document).height());
-  $(".contentblock").css("min-height", $(window).height());
-
-
+  console.log("Scrolled"); //event log
 }
 
 function Resize() {
-  console.log("Resized");
+  console.log("Resized"); //event log
+  $(".contentblock").css("height", $(window).height()); // Reset the height
+  $(".contentblock").css("height", $(document).height()); // Set the actual height
 }
 // Events
 //
@@ -30,9 +28,4 @@ $(window).resize(function() {
   Resize();
 });
 
-function slide() {
-  $("contentblock").css("min-height", $(window).height());
-  $("contentblock").css("height", $(window).height());
-  // $(".page0").css("position","fixed");
-  // $(".page0").css("bottom",$(window).height());
-}
+function slide() {}

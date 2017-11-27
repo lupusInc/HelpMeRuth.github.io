@@ -7,28 +7,21 @@ body {
 .navbar-custom {
   background-color: rgba(100, 100, 100, 0.7);
   width: 100%;
-  transition: 0.4s;
 }
 
 .container {
-  transition: 1s;
   max-width: 100%;
-  !important width: 10000px;
-  !important
+  width: 10000px;
 }
 
 .contentblock {
-  transition: 1s;
   color: white;
 }
 
 .content {
   top: 100px;
-  transition: 1s;
-  /*background-color: red;*/
 }
 
 .page0 {
-  transition: 1s;
   background-color: rgba(33, 33, 33, 1);
 }
