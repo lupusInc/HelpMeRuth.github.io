@@ -49,6 +49,14 @@ function countPages() {
 }
 
 function movePage(newPage, down) {
+  // Check for defined newPage
+  if (isNaN(newPage)) {
+    if (down) {
+      newPage = currentPage + 1
+    } else if (currentPage !== 0) {
+      newPage = currentPage - 1
+    }
+  }
   // Enable animation
   $(".page" + currentPage).css("transition", "1s");
   $(".page" + newPage).css("transition", "1s");
@@ -73,9 +81,8 @@ function movePage(newPage, down) {
     // Fix any placement issues
     straightPage();
   }, 1000);
-
 }
-
+// Set the right configuration of pages
 function straightPage() {
   for (var i = 0; i <= pages; i++) {
     if (i !== currentPage) {
@@ -87,7 +94,7 @@ function straightPage() {
     }
   }
 }
-
+// Initial styling
 function resetPages() {
   for (var i = 0; i <= pages; i++) {
     if (i == currentPage) {
