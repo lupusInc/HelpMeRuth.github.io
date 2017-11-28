@@ -1,21 +1,17 @@
 // Event functions
 function OnLoad() {
-  console.log("Loaded"); //event log
-  $(".contentblock").css("height", $(document).height());
+  straightPage();
   countPages();
-  resetPages();
   overlay();
   scalePage();
+  straightPage();
 }
 
 function Scroll() {
-  console.log("Scrolled"); //event log
   // Height can change on mobile whilst scrolling e.g chrome
 }
 
 function Resize() {
-  console.log("Resized"); //event log
-  // test();
   scalePage();
 }
 // Events
@@ -34,11 +30,10 @@ $(window).resize(function() {
 });
 //
 //Functions
-var currentPage = 0;
-var pages = 0;
-
+var currentPage = 0; // Start page
+var pages = 0; // Amount of pages we have
+// Count the amount of pages we have
 function countPages() {
-  pages = 0;
   for (var found = false; !found;) {
     if ($(".page" + pages).length == 1) {
       pages++;
@@ -48,7 +43,7 @@ function countPages() {
     }
   }
 }
-
+// Scroll up or down, to any page number or right under or above the current page
 function movePage(newPage, down) {
   // Check for defined direction if not given calculate automaticly
   if (isNaN(down) && !isNaN(newPage)) {
@@ -62,12 +57,13 @@ function movePage(newPage, down) {
   // Check for defined newPage
   if (isNaN(newPage)) {
     if (down) {
-      newPage = currentPage + 1
+      newPage = currentPage + 1;
     } else if (currentPage !== 0) {
-      newPage = currentPage - 1
+      newPage = currentPage - 1;
     }
     straightPage();
   }
+  scalePage();
   // Enable animation
   $(".page" + currentPage).css("transition", "1s");
   $(".page" + newPage).css("transition", "1s");
@@ -87,17 +83,17 @@ function movePage(newPage, down) {
     // Disable animation
     $(".page" + currentPage).css("transition", "0s");
     $(".page" + newPage).css("transition", "0s");
-    // Upadte currentPage
+    // Update currentPage
     currentPage = newPage;
-    // Fix any placement issues
     overlay();
     scalePage();
-    // scalePage();
   }, 1000);
 }
 // Set the right configuration of pages
 function straightPage() {
   for (var i = 0; i <= pages; i++) {
+    $(".height" + i).css("height", $(window).height()); // Reset the height
+    $(".height" + i).css("height", $(document).height()); // Set the actual height
     if (i !== currentPage) {
       if (i < currentPage) {
         $(".page" + i).css("top", -$(".height" + i).height());
@@ -107,24 +103,13 @@ function straightPage() {
     }
   }
 }
-// Initial styling
-function resetPages() {
-  for (var i = 0; i <= pages; i++) {
-    if (i == currentPage) {
-      j = 0;
-    } else {
-      j = $(document).height();
-    }
-    $(".page" + i).css("top", j + "px");
-  }
-}
-// Scale the content
+// Scale the content, for performance sake we seperate the same code from straightPage()
 function scalePage() {
   console.log("scale");
   $(".height" + currentPage).css("height", $(window).height()); // Reset the height
   $(".height" + currentPage).css("height", $(document).height()); // Set the actual height
 }
-//
+// Animate the scroll buttons(hide and show on first and last page)
 function overlay() {
   if (currentPage == 0) {
     $(".btn-up").css("opacity", "0");
