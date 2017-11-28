@@ -1,6 +1,5 @@
 // Event functions
 function OnLoad() {
-  straightPage();
   countPages();
   overlay();
   scalePage();
@@ -13,6 +12,7 @@ function Scroll() {
 //
 function Resize() {
   scalePage();
+  straightPage();
 }
 // Events
 //
@@ -55,7 +55,6 @@ function movePage(newPage, down) {
       } else {
         down = true;
       }
-      straightPage();
     }
     // Check for defined newPage
     if (isNaN(newPage)) {
@@ -64,9 +63,7 @@ function movePage(newPage, down) {
       } else if (currentPage !== 0) {
         newPage = currentPage - 1;
       }
-      straightPage();
     }
-    scalePage();
     // Enable animation
     $(".page" + currentPage).css("transition", "1s");
     $(".page" + newPage).css("transition", "1s");
@@ -80,6 +77,7 @@ function movePage(newPage, down) {
     $(".page" + currentPage).css("position", "fixed");
     // Bring in the new page
     $(".page" + newPage).css("top", "0px");
+    // straightPage()
     // Wait for the animation
     setTimeout(function() {
       $(".page" + newPage).css("position", "initial");
@@ -88,8 +86,10 @@ function movePage(newPage, down) {
       $(".page" + newPage).css("transition", "0s");
       // Update currentPage
       currentPage = newPage;
-      overlay();
+      // Scaling bullshit
       scalePage();
+      straightPage();
+      overlay();
       lock = false;
     }, 1000);
   }
@@ -97,22 +97,20 @@ function movePage(newPage, down) {
 // Set the right configuration of pages
 function straightPage() {
   for (var i = 0; i <= pages; i++) {
-    $(".height" + i).css("height", $(window).height()); // Reset the height
-    $(".height" + i).css("height", $(document).height()); // Set the actual height
-    if (i !== currentPage) {
-      if (i < currentPage) {
-        $(".page" + i).css("top", -$(".height" + i).height());
-      } else if (i > currentPage) {
-        $(".page" + i).css("top", $(document).height());
-      }
+    if (i < currentPage && i !== currentPage) {
+      $(".page" + i).css("top", -$(".page" + i).height());
+    } else if (i > currentPage) {
+      $(".page" + i).css("top", $(document).height());
     }
   }
 }
-// Scale the content, for performance sake we seperate the same code from straightPage()
+// Scale the content
 function scalePage() {
-  console.log("scale");
-  $(".height" + currentPage).css("height", $(window).height()); // Reset the height
-  $(".height" + currentPage).css("height", $(document).height()); // Set the actual height
+  for (var i = 0; i <= pages; i++) {
+    $(".page" + i).css("min-height", $(window).height()); // Reset the height
+    $(".page" + i).css("height", $(window).height()); // Reset the height
+    $(".page" + i).css("height", $(".height" + i).height()); // Set the actual height
+  }
 }
 // Animate the scroll buttons(hide and show on first and last page)
 function overlay() {
