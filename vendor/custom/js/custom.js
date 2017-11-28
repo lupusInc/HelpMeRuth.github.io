@@ -6,11 +6,11 @@ function OnLoad() {
   scalePage();
   straightPage();
 }
-
+//
 function Scroll() {
   // Height can change on mobile whilst scrolling e.g chrome
 }
-
+//
 function Resize() {
   scalePage();
 }
@@ -127,10 +127,9 @@ function overlay() {
     $(".btn-down").css("right", "20px");
     $(".btn-up").css("bottom", "80px");
   }
-  if (currentPage % 2 == 0) {
+  if (currentPage % 2 == 0) { // Change nav color slightly based on the background page
     $(".navbar-custom").css("background-color", "rgba(33, 33, 33, 0.7)")
   } else {
     $(".navbar-custom").css("background-color", "rgba(13, 13, 13, 0.7)")
-
   }
 }
