@@ -11,7 +11,7 @@ function Scroll() {
   console.log("Scrolled"); //event log
   // Height can change on mobile whilst scrolling e.g chrome
   scalePage();
-  overlay()
+  overlay();
 }
 
 function Resize() {
@@ -51,6 +51,14 @@ function countPages() {
 }
 
 function movePage(newPage, down) {
+  // Check for defined direction if not given calculate automaticly
+  if (isNaN(down) && !isNaN(newPage)) {
+    if ($(".page" + currentPage).css("top") > $(".page" + newPage).css("top")) {
+      down = false;
+    } else {
+      down = true;
+    }
+  }
   // Check for defined newPage
   if (isNaN(newPage)) {
     if (down) {
@@ -68,6 +76,7 @@ function movePage(newPage, down) {
   } else {
     $(".page" + currentPage).css("top", $(document).height() + "px");
   }
+
   // "Freeze" the page so it wont cause any issues while hidden
   $(".page" + currentPage).css("position", "fixed");
   // Bring in the new page
@@ -115,14 +124,26 @@ function scalePage() {
 }
 //
 function overlay() {
-  if ($(window).scrollTop() < 50 && currentPage < 1) {
-    console.log("yay");
-    $(".navbar-custom").css("background-color", "rgba(100, 100, 100, 0)");
-    $(".btn-circle").css("opacity", "0");
-    $(".btn-circle").css("right", "-60px");
+  if (currentPage == 0) {
+    $(".btn-up").css("opacity", "0");
+    $(".btn-up").css("right", "-60px");
   } else {
-    $(".navbar-custom").css("background-color", "rgba(100, 100, 100, 0.7)");
-    $(".btn-circle").css("opacity", "1");
-    $(".btn-circle").css("right", "20px");
+    $(".btn-up").css("opacity", "1");
+    $(".btn-up").css("right", "20px");
+  }
+  if (currentPage == pages) {
+    $(".btn-down").css("opacity", "0");
+    $(".btn-down").css("right", "-60px");
+    $(".btn-up").css("bottom", "20px");
+  } else {
+    $(".btn-down").css("opacity", "1");
+    $(".btn-down").css("right", "20px");
+    $(".btn-up").css("bottom", "80px");
+  }
+  if (currentPage % 2 == 0) {
+    $(".navbar-custom").css("background-color", "rgba(33, 33, 33, 0.7)")
+  } else {
+    $(".navbar-custom").css("background-color", "rgba(13, 13, 13, 0.7)")
+
   }
 }
