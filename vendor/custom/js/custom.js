@@ -32,6 +32,7 @@ $(window).resize(function() {
 //Functions
 var currentPage = 0; // Start page
 var pages = 0; // Amount of pages we have
+var lock = false; // simple lock system to prevent bugs
 // Count the amount of pages we have
 function countPages() {
   for (var found = false; !found;) {
@@ -45,49 +46,53 @@ function countPages() {
 }
 // Scroll up or down, to any page number or right under or above the current page
 function movePage(newPage, down) {
-  // Check for defined direction if not given calculate automaticly
-  if (isNaN(down) && !isNaN(newPage)) {
-    if ($(".page" + currentPage).css("top") > $(".page" + newPage).css("top")) {
-      down = false;
-    } else {
-      down = true;
+  if (!lock) {
+    lock = true;
+    // Check for defined direction if not given calculate automaticly
+    if (isNaN(down) && !isNaN(newPage)) {
+      if ($(".page" + currentPage).css("top") > $(".page" + newPage).css("top")) {
+        down = false;
+      } else {
+        down = true;
+      }
+      straightPage();
     }
-    straightPage();
-  }
-  // Check for defined newPage
-  if (isNaN(newPage)) {
-    if (down) {
-      newPage = currentPage + 1;
-    } else if (currentPage !== 0) {
-      newPage = currentPage - 1;
+    // Check for defined newPage
+    if (isNaN(newPage)) {
+      if (down) {
+        newPage = currentPage + 1;
+      } else if (currentPage !== 0) {
+        newPage = currentPage - 1;
+      }
+      straightPage();
     }
-    straightPage();
-  }
-  scalePage();
-  // Enable animation
-  $(".page" + currentPage).css("transition", "1s");
-  $(".page" + newPage).css("transition", "1s");
-  // Place the currentPage above or under the visible screen, depending on direction
-  if (down) {
-    $(".page" + currentPage).css("top", -$(".height" + currentPage).height() + "px");
-  } else {
-    $(".page" + currentPage).css("top", $(document).height() + "px");
-  }
-  // "Freeze" the page so it wont cause any issues while hidden
-  $(".page" + currentPage).css("position", "fixed");
-  // Bring in the new page
-  $(".page" + newPage).css("top", "0px");
-  // Wait for the animation
-  setTimeout(function() {
-    $(".page" + newPage).css("position", "initial");
-    // Disable animation
-    $(".page" + currentPage).css("transition", "0s");
-    $(".page" + newPage).css("transition", "0s");
-    // Update currentPage
-    currentPage = newPage;
-    overlay();
     scalePage();
-  }, 1000);
+    // Enable animation
+    $(".page" + currentPage).css("transition", "1s");
+    $(".page" + newPage).css("transition", "1s");
+    // Place the currentPage above or under the visible screen, depending on direction
+    if (down) {
+      $(".page" + currentPage).css("top", -$(".height" + currentPage).height() + "px");
+    } else {
+      $(".page" + currentPage).css("top", $(document).height() + "px");
+    }
+    // "Freeze" the page so it wont cause any issues while hidden
+    $(".page" + currentPage).css("position", "fixed");
+    // Bring in the new page
+    $(".page" + newPage).css("top", "0px");
+    // Wait for the animation
+    setTimeout(function() {
+      $(".page" + newPage).css("position", "initial");
+      // Disable animation
+      $(".page" + currentPage).css("transition", "0s");
+      $(".page" + newPage).css("transition", "0s");
+      // Update currentPage
+      currentPage = newPage;
+      overlay();
+      scalePage();
+      lock = false;
+    }, 1000);
+  }
 }
 // Set the right configuration of pages
 function straightPage() {
