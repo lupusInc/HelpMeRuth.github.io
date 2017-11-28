@@ -5,19 +5,18 @@ function OnLoad() {
   countPages();
   resetPages();
   overlay();
+  scalePage();
 }
 
 function Scroll() {
   console.log("Scrolled"); //event log
   // Height can change on mobile whilst scrolling e.g chrome
-  scalePage();
-  overlay();
 }
 
 function Resize() {
   console.log("Resized"); //event log
+  // test();
   scalePage();
-  straightPage();
 }
 // Events
 //
@@ -58,6 +57,7 @@ function movePage(newPage, down) {
     } else {
       down = true;
     }
+    straightPage();
   }
   // Check for defined newPage
   if (isNaN(newPage)) {
@@ -66,17 +66,17 @@ function movePage(newPage, down) {
     } else if (currentPage !== 0) {
       newPage = currentPage - 1
     }
+    straightPage();
   }
   // Enable animation
   $(".page" + currentPage).css("transition", "1s");
   $(".page" + newPage).css("transition", "1s");
   // Place the currentPage above or under the visible screen, depending on direction
   if (down) {
-    $(".page" + currentPage).css("top", -$(document).height() + "px");
+    $(".page" + currentPage).css("top", -$(".height" + currentPage).height() + "px");
   } else {
     $(".page" + currentPage).css("top", $(document).height() + "px");
   }
-
   // "Freeze" the page so it wont cause any issues while hidden
   $(".page" + currentPage).css("position", "fixed");
   // Bring in the new page
@@ -90,8 +90,9 @@ function movePage(newPage, down) {
     // Upadte currentPage
     currentPage = newPage;
     // Fix any placement issues
-    straightPage();
-    overlay()
+    overlay();
+    scalePage();
+    // scalePage();
   }, 1000);
 }
 // Set the right configuration of pages
@@ -99,9 +100,9 @@ function straightPage() {
   for (var i = 0; i <= pages; i++) {
     if (i !== currentPage) {
       if (i < currentPage) {
-        $(".page" + i).css("top", -$(document).height() + "px");
+        $(".page" + i).css("top", -$(".height" + i).height());
       } else if (i > currentPage) {
-        $(".page" + i).css("top", $(document).height() + "px");
+        $(".page" + i).css("top", $(document).height());
       }
     }
   }
@@ -119,8 +120,9 @@ function resetPages() {
 }
 // Scale the content
 function scalePage() {
-  $(".contentblock").css("height", $(window).height()); // Reset the height
-  $(".contentblock").css("height", $(document).height()); // Set the actual height
+  console.log("scale");
+  $(".height" + currentPage).css("height", $(window).height()); // Reset the height
+  $(".height" + currentPage).css("height", $(document).height()); // Set the actual height
 }
 //
 function overlay() {
