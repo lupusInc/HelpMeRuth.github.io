@@ -72,7 +72,7 @@ function movePage(newPage, down) {
     $(".page" + newPage).css("transition", "1s");
     // Place the currentPage above or under the visible screen, depending on direction
     if (down) {
-      $(".page" + currentPage).css("top", -$(".height" + currentPage).height() + "px");
+      $(".page" + currentPage).css("top", -$(".page" + currentPage).height() + "px");
     } else {
       $(".page" + currentPage).css("top", $(".page" + newPage).height() + "px");
     }
