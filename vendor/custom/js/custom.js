@@ -71,7 +71,7 @@ function movePage(newPage, down) {
     if (down) {
       $(".page" + currentPage).css("top", -$(".height" + currentPage).height() + "px");
     } else {
-      $(".page" + currentPage).css("top", $(".height" + newPage).height() + "px");
+      $(".page" + currentPage).css("top", $(".page" + newPage).height() + "px");
     }
     // "Freeze" the page so it wont cause any issues while hidden
     $(".page" + currentPage).css("position", "fixed");
