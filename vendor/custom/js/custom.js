@@ -65,8 +65,8 @@ function movePage(newPage, down) {
       }
     }
     // Enable animation
-    $(".page" + currentPage).css("transition", $(".page" + currentPage).height() * 0.375 + "ms");
-    $(".page" + newPage).css("transition", $(".page" + newPage).height() * 0.375 + "ms");
+    $(".page" + currentPage).css("transition", "1s");
+    $(".page" + newPage).css("transition", "1s");
     // Place the currentPage above or under the visible screen, depending on direction
     if (down) {
       $(".page" + currentPage).css("top", -$(".height" + currentPage).height() + "px");
