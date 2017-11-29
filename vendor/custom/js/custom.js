@@ -110,7 +110,7 @@ function straightPage() {
 // Scale the content
 function scalePage() {
   for (var i = 0; i <= pages; i++) {
-    $(".page" + i).css("min-height", $(window).height()); // Reset the height
+    $(".page" + i).css("min-height", $(window).height()); // Reset the min-height
     $(".page" + i).css("height", $(window).height()); // Reset the height
     $(".page" + i).css("height", $(".height" + i).height()); // Set the actual height
   }
