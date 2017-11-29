@@ -9,6 +9,7 @@ function OnLoad() {
 function Scroll() {
   // Height can change on mobile whilst scrolling e.g chrome
 }
+
 //
 function Resize() {
   scalePage();
@@ -63,6 +64,8 @@ function movePage(newPage, down) {
       } else if (currentPage !== 0) {
         newPage = currentPage - 1;
       }
+    } else if (newPage > pages) {
+      newPage = pages;
     }
     // Enable animation
     $(".page" + currentPage).css("transition", "1s");
