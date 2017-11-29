@@ -10,6 +10,8 @@ body {
   width: 100%;
   transition: 0.4s;
   color: #007bff;
+  box-shadow: 0px 3px 10px rgba(44, 44, 44, 0.9);
+  background-color: rgba(55, 55, 55, 0.95);
 }
 
 .container {
@@ -49,6 +51,55 @@ body {
   position: fixed;
 }
 
+.page3 {
+  top: 0px;
+  background-color: rgba(255, 255, 255, 1);
+  color: black;
+  position: fixed;
+}
+
+.page4 {
+  top: 0px;
+  background-color: rgba(66, 66, 66, 1);
+  color: white;
+  position: fixed;
+}
+
+.page5 {
+  top: 0px;
+  background-color: rgba(255, 255, 255, 1);
+  color: black;
+  position: fixed;
+}
+
+.page6 {
+  top: 0px;
+  background-color: rgba(66, 66, 66, 1);
+  color: white;
+  position: fixed;
+}
+
+.page7 {
+  top: 0px;
+  background-color: rgba(255, 255, 255, 1);
+  color: black;
+  position: fixed;
+}
+
+.page8 {
+  top: 0px;
+  background-color: rgba(66, 66, 66, 1);
+  color: white;
+  position: fixed;
+}
+
+.page9 {
+  top: 0px;
+  background-color: rgba(255, 255, 255, 1);
+  color: black;
+  position: fixed;
+}
+
 .btn-circle {
   position: fixed;
   width: 30px;
@@ -60,6 +111,7 @@ body {
   border-radius: 15px;
   transition: 0.4s;
   display: initial;
+  box-shadow: 0px 3px 10px rgba(44, 44, 44, 0.9);
 }
 
 .btn-circle.btn-lg {
