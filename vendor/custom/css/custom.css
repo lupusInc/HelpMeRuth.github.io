@@ -2,21 +2,44 @@ body {
   font-family: 'Open Sans', serif;
   color: black;
   overflow-y: scroll;
+  background-color: rgba(55, 55, 55, 1);
 }
 
 .navbar-custom {
-  /*background-color: rgba(13, 13, 13, 0.7);*/
   background-color: rgba(13, 13, 13, 0.7);
   width: 100%;
-  transition: 0.4s;
   color: #007bff;
-  box-shadow: 0px 3px 10px rgba(44, 44, 44, 0.9);
+  box-shadow: 0px 3px 10px rgba(44, 44, 44, 0.8);
   background-color: rgba(55, 55, 55, 0.95);
 }
 
 .container {
-  max-width: 100%;
-  width: 10000px;
+  box-shadow: 0px 0px 60px rgba(10, 10, 10, 0.4);
+  background-color: rgba(35, 35, 35, 1);
+}
+
+@media (min-width: 600px) {
+  .container {
+    max-width: 600px;
+  }
+}
+
+@media (min-width: 800px) {
+  .container {
+    max-width: 750px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .container {
+    max-width: 950px;
+  }
+}
+
+@media (min-width: 1350px) {
+  .container {
+    max-width: 1300px;
+  }
 }
 
 .contentblock {}
@@ -32,72 +55,20 @@ body {
 
 .page0 {
   top: 0px;
-  background-color: rgba(66, 66, 66, 1);
   color: white;
-  position: initial;
+  margin: 0 auto;
 }
 
 .page1 {
   top: 0px;
   position: fixed;
-  background-color: rgba(255, 255, 255, 1);
-  color: black;
+  color: white;
 }
 
 .page2 {
   top: 0px;
-  background-color: rgba(66, 66, 66, 1);
+  position: fixed;
   color: white;
-  position: fixed;
-}
-
-.page3 {
-  top: 0px;
-  background-color: rgba(255, 255, 255, 1);
-  color: black;
-  position: fixed;
-}
-
-.page4 {
-  top: 0px;
-  background-color: rgba(66, 66, 66, 1);
-  color: white;
-  position: fixed;
-}
-
-.page5 {
-  top: 0px;
-  background-color: rgba(255, 255, 255, 1);
-  color: black;
-  position: fixed;
-}
-
-.page6 {
-  top: 0px;
-  background-color: rgba(66, 66, 66, 1);
-  color: white;
-  position: fixed;
-}
-
-.page7 {
-  top: 0px;
-  background-color: rgba(255, 255, 255, 1);
-  color: black;
-  position: fixed;
-}
-
-.page8 {
-  top: 0px;
-  background-color: rgba(66, 66, 66, 1);
-  color: white;
-  position: fixed;
-}
-
-.page9 {
-  top: 0px;
-  background-color: rgba(255, 255, 255, 1);
-  color: black;
-  position: fixed;
 }
 
 .btn-circle {
@@ -124,11 +95,16 @@ body {
 }
 
 .btn-up {
-  bottom: 80px;
+  bottom: 140px;
   right: 20px;
 }
 
 .btn-down {
+  bottom: 80px;
+  right: 20px;
+}
+
+.btn-counter {
   bottom: 20px;
   right: 20px;
 }

@@ -67,6 +67,9 @@ function movePage(newPage, down) {
     } else if (newPage > pages) {
       newPage = pages;
     }
+    //
+    $(".page" + currentPage).css("left", $(".page" + currentPage).offset().left);
+    $(".page" + currentPage).css("left", $(".page" + currentPage).offset().left);
     // Enable animation
     $(".page" + currentPage).css("transition", "1s");
     $(".page" + newPage).css("transition", "1s");
@@ -78,15 +81,17 @@ function movePage(newPage, down) {
     }
     // "Freeze" the page so it wont cause any issues while hidden
     $(".page" + currentPage).css("position", "fixed");
+
     // Bring in the new page
     $(".page" + newPage).css("top", "0px");
     // straightPage()
     // Wait for the animation
     setTimeout(function() {
-      $(".page" + newPage).css("position", "initial");
       // Disable animation
       $(".page" + currentPage).css("transition", "0s");
       $(".page" + newPage).css("transition", "0s");
+      $(".page" + newPage).css("position", "initial");
+      $(".page" + newPage).css("left", "0px");
       // Update currentPage
       currentPage = newPage;
       // Scaling bullshit
@@ -104,6 +109,10 @@ function straightPage() {
       $(".page" + i).css("top", -$(".page" + i).height());
     } else if (i > currentPage) {
       $(".page" + i).css("top", $(document).height());
+    }
+    if (i !== currentPage) {
+      $(".page" + i).css("left", $(".page" + currentPage).offset().left);
+      $(".page" + i).css("left", $(".page" + currentPage).offset().left);
     }
   }
 }
@@ -127,10 +136,11 @@ function overlay() {
   if (currentPage == pages) {
     $(".btn-down").css("opacity", "0");
     $(".btn-down").css("right", "-60px");
-    $(".btn-up").css("bottom", "20px");
+    $(".btn-up").css("bottom", "80px");
   } else {
     $(".btn-down").css("opacity", "1");
     $(".btn-down").css("right", "20px");
-    $(".btn-up").css("bottom", "80px");
+    $(".btn-up").css("bottom", "140px");
   }
+  $("p:last").text(currentPage + 1);
 }
