@@ -113,6 +113,12 @@ body {
   color: white;
 }
 
+.page10 {
+  top: 0px;
+  position: fixed;
+  color: white;
+}
+
 .btn-circle {
   position: fixed;
   width: 30px;
