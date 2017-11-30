@@ -189,16 +189,15 @@ function continuePage() {
 }
 
 function reload() {
+  $(".overlay").css("display", "initial");
+  $(".background").css("display", "initial");
+  console.log($(".overlay").css("transition"));
   $(".overlay").css("opacity", "1");
   $(".background").css("opacity", "1");
   $(".navbar-custom").css("opacity", "0");
   $(".container").css("opacity", "0");
   $(".btn-circle").css("opacity", "0");
-  setTimeout(function() {
-    $(".overlay").css("display", "initial");
-    $(".background").css("display", "initial");
-    loaded = false;
-    scaleBackground();
-    movePage(0, NaN);
-  }, 500);
+  loaded = false;
+  scaleBackground();
+  movePage(0, NaN);
 }
