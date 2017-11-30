@@ -7,11 +7,6 @@ function OnLoad() {
   scaleBackground()
 }
 //
-function Scroll() {
-  // Height can change on mobile whilst scrolling e.g chrome
-}
-
-//
 function Resize() {
   scalePage();
   straightPage();
@@ -23,11 +18,6 @@ function Resize() {
 $(document).ready(function() {
   OnLoad();
 })
-//
-//When page is scrolled
-$(window).scroll(function() {
-  Scroll();
-});
 $(window).resize(function() {
   Resize();
 });
@@ -69,7 +59,7 @@ function movePage(newPage, down) {
     } else if (newPage > pages) {
       newPage = pages;
     }
-    //
+    // Nullify the difference between position: fixed and initial
     $(".page" + currentPage).css("left", $(".page" + currentPage).offset().left);
     $(".page" + currentPage).css("left", $(".page" + currentPage).offset().left);
     // Enable animation
@@ -86,7 +76,6 @@ function movePage(newPage, down) {
 
     // Bring in the new page
     $(".page" + newPage).css("top", "0px");
-    // straightPage()
     // Wait for the animation
     setTimeout(function() {
       // Disable animation
@@ -96,7 +85,7 @@ function movePage(newPage, down) {
       $(".page" + newPage).css("left", "0px");
       // Update currentPage
       currentPage = newPage;
-      // Scaling bullshit
+      // Scaling
       scalePage();
       straightPage();
       overlay();
