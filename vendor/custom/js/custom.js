@@ -180,7 +180,12 @@ function continuePage() {
   $(".navbar-custom").css("opacity", "1");
   $(".container").css("opacity", "1");
   $(".btn-circle").css("opacity", "1");
-  loaded = true;
+  setTimeout(function() {
+    $(".overlay").css("display", "none");
+    $(".background").css("display", "none");
+    loaded = true;
+    overlay();
+  }, 500);
 }
 
 function reload() {
@@ -193,7 +198,7 @@ function reload() {
     $(".overlay").css("display", "initial");
     $(".background").css("display", "initial");
     loaded = false;
-    overlay();
     scaleBackground();
+    movePage(0, NaN);
   }, 500);
 }
