@@ -180,11 +180,20 @@ function continuePage() {
   $(".navbar-custom").css("opacity", "1");
   $(".container").css("opacity", "1");
   $(".btn-circle").css("opacity", "1");
-  setTimeout(function() {
-    $(".overlay").css("display", "none");
-    $(".background").css("display", "none");
-    overlay();
-  }, 500);
   loaded = true;
+}
 
+function reload() {
+  $(".overlay").css("opacity", "1");
+  $(".background").css("opacity", "1");
+  $(".navbar-custom").css("opacity", "0");
+  $(".container").css("opacity", "0");
+  $(".btn-circle").css("opacity", "0");
+  setTimeout(function() {
+    $(".overlay").css("display", "initial");
+    $(".background").css("display", "initial");
+    loaded = false;
+    overlay();
+    scaleBackground();
+  }, 500);
 }
