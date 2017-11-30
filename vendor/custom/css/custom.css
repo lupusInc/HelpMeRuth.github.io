@@ -8,26 +8,15 @@ body {
 .navbar-custom {
   background-color: rgba(13, 13, 13, 0.7);
   width: 100%;
-  color: #007bff;
   box-shadow: 0px 3px 10px rgba(44, 44, 44, 0.8);
   background-color: rgba(55, 55, 55, 0.95);
 }
 
 .container {
-  box-shadow: 0px 30px 60px rgba(10, 10, 10, 0.4);
+  -webkit-box-shadow: 25px 0px 25px -25px rgba(0, 0, 0, 0.45), -25px 0px 25px -25px rgba(0, 0, 0, 0.45);
+  -moz-box-shadow: 25px 0px 25px -25px rgba(0, 0, 0, 0.45), -25px 0px 25px -25px rgba(0, 0, 0, 0.45);
+  box-shadow: 25px 0px 25px -25px rgba(0, 0, 0, 0.45), -25px 0px 25px -25px rgba(0, 0, 0, 0.45);
   background-color: rgba(35, 35, 35, 1);
-}
-
-@media (min-width: 600px) {
-  .container {
-    max-width: 600px;
-  }
-}
-
-@media (min-width: 800px) {
-  .container {
-    max-width: 750px;
-  }
 }
 
 @media (min-width: 1000px) {
@@ -43,6 +32,10 @@ body {
 }
 
 .contentblock {}
+
+.italic {
+  font-style: italic;
+}
 
 .content {
   top: 100px;
@@ -114,6 +107,54 @@ body {
 }
 
 .page10 {
+  top: 0px;
+  position: fixed;
+  color: white;
+}
+
+.page11 {
+  top: 0px;
+  position: fixed;
+  color: white;
+}
+
+.page12 {
+  top: 0px;
+  position: fixed;
+  color: white;
+}
+
+.page13 {
+  top: 0px;
+  position: fixed;
+  color: white;
+}
+
+.page14 {
+  top: 0px;
+  position: fixed;
+  color: white;
+}
+
+.page15 {
+  top: 0px;
+  position: fixed;
+  color: white;
+}
+
+.page16 {
+  top: 0px;
+  position: fixed;
+  color: white;
+}
+
+.page17 {
+  top: 0px;
+  position: fixed;
+  color: white;
+}
+
+.page18 {
   top: 0px;
   position: fixed;
   color: white;
