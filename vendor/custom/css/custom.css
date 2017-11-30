@@ -10,6 +10,7 @@ body {
   width: 100%;
   box-shadow: 0px 3px 10px rgba(44, 44, 44, 0.8);
   background-color: rgba(55, 55, 55, 0.95);
+  opacity: 0;
 }
 
 .container {
@@ -17,6 +18,7 @@ body {
   -moz-box-shadow: 25px 0px 25px -25px rgba(0, 0, 0, 0.45), -25px 0px 25px -25px rgba(0, 0, 0, 0.45);
   box-shadow: 25px 0px 25px -25px rgba(0, 0, 0, 0.45), -25px 0px 25px -25px rgba(0, 0, 0, 0.45);
   background-color: rgba(35, 35, 35, 1);
+  opacity: 0;
 }
 
 @media (min-width: 1000px) {
@@ -161,6 +163,7 @@ body {
 }
 
 .btn-circle {
+  opacity: 0;
   position: fixed;
   width: 30px;
   height: 30px;
@@ -196,4 +199,62 @@ body {
 .btn-counter {
   bottom: 20px;
   right: 20px;
+}
+
+/*Welcome overlay*/
+
+.background {
+  position: fixed;
+  max-width: 100%;
+  height: auto;
+  width: auto;
+  transition: 0.1s;
+  filter: blur(6px);
+  opacity: 1;
+}
+
+.logo {
+  height: auto;
+  width: 80%;
+  max-width: 500px;
+  transition: 0.5s;
+}
+
+.overlay {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.overlay-content {
+  position: absolute;
+  top: 50px;
+  opacity: 0;
+  width: 100%;
+  text-align: center;
+  transition: 0.5s;
+}
+
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  display: block;
+  transition: 0.5s;
+}
+
+.overlay button {
+  text-decoration: none;
+  font-size: 25px;
+}
+
+.overlay a:hover, .overlay a:focus {
+  color: #f1f1f1;
 }

@@ -4,6 +4,7 @@ function OnLoad() {
   overlay();
   scalePage();
   straightPage();
+  scaleBackground()
 }
 //
 function Scroll() {
@@ -14,6 +15,7 @@ function Scroll() {
 function Resize() {
   scalePage();
   straightPage();
+  scaleBackground();
 }
 // Events
 //
@@ -124,23 +126,65 @@ function scalePage() {
     $(".page" + i).css("height", $(".height" + i).height()); // Set the actual height
   }
 }
+var loaded = false;
 // Animate the scroll buttons(hide and show on first and last page)
 function overlay() {
-  if (currentPage == 0) {
-    $(".btn-up").css("opacity", "0");
-    $(".btn-up").css("right", "-60px");
+  if (loaded) {
+    if (currentPage == 0) {
+      $(".btn-up").css("opacity", "0");
+      $(".btn-up").css("right", "-60px");
+    } else {
+      $(".btn-up").css("opacity", "1");
+      $(".btn-up").css("right", "20px");
+    }
+    if (currentPage == pages) {
+      $(".btn-down").css("opacity", "0");
+      $(".btn-down").css("right", "-60px");
+      $(".btn-up").css("bottom", "80px");
+    } else {
+      $(".btn-down").css("opacity", "1");
+      $(".btn-down").css("right", "20px");
+      $(".btn-up").css("bottom", "140px");
+    }
+    $("p:last").text(currentPage + 1);
   } else {
-    $(".btn-up").css("opacity", "1");
-    $(".btn-up").css("right", "20px");
+    setTimeout(function() {
+      //Put all simple start animations here
+      $(".overlay-content").css("opacity", "1");
+      $(".overlay-content").css("top", "0");
+    }, 600);
   }
-  if (currentPage == pages) {
-    $(".btn-down").css("opacity", "0");
-    $(".btn-down").css("right", "-60px");
-    $(".btn-up").css("bottom", "80px");
-  } else {
-    $(".btn-down").css("opacity", "1");
-    $(".btn-down").css("right", "20px");
-    $(".btn-up").css("bottom", "140px");
+}
+//
+//We need to check if our background fits the screen.
+//If not change the way how we calculate the width or height of the picturel.
+// only needed for greeting overlay. both mobile en desktop
+function scaleBackground() {
+  var Background = $(".background");
+  if (!loaded) {
+    //Main magic
+    if ($(window).height() > Background.height()) {
+      Background.css("max-width", "none");
+      Background.css("max-height", "100%");
+    }
+    if ($(window).width() > Background.width()) {
+      Background.css("max-width", "100%");
+      Background.css("max-height", "none");
+    }
   }
-  $("p:last").text(currentPage + 1);
+}
+
+function continuePage() {
+  $(".overlay").css("opacity", "0");
+  $(".background").css("opacity", "0");
+  $(".navbar-custom").css("opacity", "1");
+  $(".container").css("opacity", "1");
+  $(".btn-circle").css("opacity", "1");
+  setTimeout(function() {
+    $(".overlay").css("display", "none");
+    $(".background").css("display", "none");
+    overlay();
+  }, 500);
+  loaded = true;
+
 }
