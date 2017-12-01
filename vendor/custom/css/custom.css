@@ -228,7 +228,7 @@ body {
   z-index: 1;
   left: 0;
   top: 0;
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: rgba(0, 0, 0, 0.6);
   overflow-x: hidden;
   transition: 0.5s;
 }
