@@ -137,13 +137,13 @@ function overlay() {
     }
     $("p:last").text(currentPage + 1);
   } else {
-    setTimeout(function() {
-      //Put all simple start animations here
+    $('.overlay-content').imagesLoaded(function() {
       $(".overlay-content").css("opacity", "1");
       $(".overlay-content").css("top", "0");
-    }, 600);
+    });
   }
 }
+
 //
 //We need to check if our background fits the screen.
 //If not change the way how we calculate the width or height of the picturel.
