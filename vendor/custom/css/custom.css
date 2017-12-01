@@ -37,6 +37,7 @@ body {
 
 .italic {
   font-style: italic;
+  font-size: 10px;
 }
 
 .content {
