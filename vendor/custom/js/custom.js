@@ -3,12 +3,12 @@ function OnLoad() {
   lazyLoad();
   countPages();
   overlay();
-  straightPage(true);
+  straightPage();
   scaleBackground()
 }
 //
 function Resize() {
-  straightPage(true);
+  straightPage();
   if (!loaded) {
     scaleBackground();
   }
@@ -41,6 +41,7 @@ function countPages() {
 }
 // Scroll up or down, to any page number or right under or above the current page
 function movePage(newPage, down) {
+
   if (!lock) {
     lock = true;
     // Check for defined direction if not given calculate automaticly
@@ -61,8 +62,7 @@ function movePage(newPage, down) {
     } else if (newPage > pages) {
       newPage = pages;
     }
-    // Nullify the difference between position: fixed and initial
-    $(".page" + currentPage).css("left", $(".page" + currentPage).offset().left);
+    // Nullify the difference between position: fixed and static
     $(".page" + currentPage).css("left", $(".page" + currentPage).offset().left);
 
     // Compensate for the scrolled position
@@ -89,12 +89,12 @@ function movePage(newPage, down) {
         // Disable animation
         $(".page" + currentPage).css("transition", "0s");
         $(".page" + newPage).css("transition", "0s");
-        $(".page" + newPage).css("position", "initial");
+        $(".page" + newPage).css("position", "static");
         $(".page" + newPage).css("left", "0px");
         // Update currentPage
         currentPage = newPage;
         // Scaling
-        straightPage(false);
+        straightPage();
         overlay();
         lock = false;
       }, 1000);
@@ -166,6 +166,7 @@ function scaleBackground() {
 }
 
 function continuePage() {
+  $(window).scrollTop(0);
   $(".overlay").css("opacity", "0");
   $(".background").css("opacity", "0");
   $(".navbar-custom").css("opacity", "1");
@@ -180,8 +181,8 @@ function continuePage() {
 }
 
 function reload() {
-  $(".overlay").css("display", "initial");
-  $(".background").css("display", "initial");
+  $(".overlay").css("display", "static");
+  $(".background").css("display", "static");
   console.log($(".overlay").css("transition"));
   $(".overlay").css("opacity", "1");
   $(".background").css("opacity", "1");
