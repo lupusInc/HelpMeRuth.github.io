@@ -181,8 +181,8 @@ function continuePage() {
 }
 
 function reload() {
-  $(".overlay").css("display", "initial");
-  $(".background").css("display", "initial");
+  $(".overlay").css("display", "inline");
+  $(".background").css("display", "inline");
   $(".overlay").css("opacity", "1");
   $(".background").css("opacity", "1");
   $(".navbar-custom").css("opacity", "0");
