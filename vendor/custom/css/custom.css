@@ -39,7 +39,75 @@ body {
   }
 }
 
-.contentblock {}
+.carousel {
+  height: auto;
+  width: 100%;
+  max-width: 750px;
+  background-color: rgba(65, 65, 65, 1);
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0px 3px 10px rgba(44, 44, 44, 0.9);
+  -moz-box-shadow: inset 0px 3px 10px rgba(44, 44, 44, 0.9);
+  box-shadow: inset 0px 3px 10px rgba(44, 44, 44, 0.9);
+}
+
+.carousel-image0 {
+  height: auto;
+  width: 100%;
+  background-size: cover;
+  border-radius: 10px;
+}
+
+.carousel-image {
+  background-size: cover;
+  border-radius: 10px;
+  color: white;
+  padding-top: 100%;
+}
+
+.carousel-image1 {
+  background-image: url(../../images/page1wolf.png);
+}
+
+.carousel-image2 {
+  background-image: url(../../images/page2graph.jpg);
+}
+
+.carousel-image3 {
+  background-image: url(../../images/page5wolf2.png);
+}
+
+.carousel-image4 {
+  background-image: url(../../images/page4wolf.png);
+}
+
+.carousel-image5 {
+  background-image: url(../../images/page5wolf.png);
+}
+
+.carousel-image6 {
+  background-image: url(../../images/page7wolf.png);
+}
+
+.carousel-image7 {
+  background-image: url(../../images/page8wolf.png);
+}
+
+.carousel-image8 {
+  background-image: url(../../images/page10scape.png);
+}
+
+.carousel-image9 {
+  background-image: url(../../images/page11wolf.png);
+}
+
+.carousel-image10 {
+  background-image: url(../../images/page12wolf.png);
+}
+
+.carousel-caption {
+  color: white;
+  background-color: rgba(22, 22, 22, 0.8);
+}
 
 .italic {
   font-style: italic;
@@ -59,6 +127,7 @@ body {
   top: 0px;
   color: white;
   text-align: center;
+  transition: 1s;
 }
 
 .page1 {
@@ -167,6 +236,41 @@ body {
   top: 0px;
   position: fixed;
   color: white;
+}
+
+.contact-button {
+  right: 80px;
+  top: 8px;
+  position: absolute;
+}
+
+.contact-box {
+  display: none;
+  transition: 0.5s;
+  opacity: 0;
+  box-shadow: 0px 0px 15px rgba(22, 22, 22, 1);
+  border-radius: 10px;
+  text-align: center;
+  position: fixed;
+  max-height: 800px;
+  min-height: 700px;
+  height: 70%;
+  width: 100%;
+  left: 0%;
+  top: 80px;
+  color: white;
+  background-color: rgba(22, 22, 22, 1);
+}
+
+.contact-img {
+  max-width: 300px;
+  height: auto;
+  width: 100%;
+}
+
+.contact-content {
+  position: relative;
+  top: 30px;
 }
 
 .btn-circle {

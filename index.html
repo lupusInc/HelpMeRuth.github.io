@@ -9,7 +9,7 @@
   <meta name="author" content="">
 
   <title>Lupus Inc.</title>
-  <link rel="icon" href="vendor/images/favicon.ico">
+  <link rel="icon" href="vendor/images/favicon.ico" type="image/x-icon">
   <!-- CSS -->
   <link href="vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
@@ -26,10 +26,11 @@
   </div>
   <!-- Universal background. scales for all screens -->
   <img class="background" src="vendor/images/background.jpg" />
-
   <!-- Main navigationbar -->
   <nav class="navbar fixed-top navbar-dark navbar-custom" id="navbar">
     <a class="navbar-brand" href="javascript:reload();">Lupus Inc.</a>
+
+    <button class="btn btn btn-primary contact-button" onclick="javascript:contacts(true);"><i class="fa fa-address-book fa-lg" style="text-align:right;color:white;"></i> Contact</button>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsingNavbar">
         <span class="navbar-toggler-icon"></span>
     </button>
@@ -60,10 +61,10 @@
           <a class="nav-link" href="javascript:movePage(7, NaN);">Territorium en dieet</a>
         </li>
         <li class="nav-item" data-toggle="collapse" data-target="#collapsingNavbar">
-          <a class="nav-link" href="javascript:movePage(8, NaN);">Invloed op de natuur 1</a>
+          <a class="nav-link" href="javascript:movePage(8, NaN);">Wat is de invloed op organismen? 1</a>
         </li>
         <li class="nav-item" data-toggle="collapse" data-target="#collapsingNavbar">
-          <a class="nav-link" href="javascript:movePage(9, NaN);">Invloed op de natuur 2</a>
+          <a class="nav-link" href="javascript:movePage(9, NaN);">Wat is de invloed op organismen? 2</a>
         </li>
         <li class="nav-item" data-toggle="collapse" data-target="#collapsingNavbar">
           <a class="nav-link" href="javascript:movePage(10, NaN);">Wat is de invloed op de geografie?</a>
@@ -82,1049 +83,1211 @@
   </nav>
 
   <!-- Page Content -->
-
+  <div>
+  </div>
   <div class="container page0">
     <div class="row">
       <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 contentblock height0">
         <div class="row">
-          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 content" style="top:0px;">
-            <img class="logo lazyload" data-src="vendor/images/logo.png" />
-            <p>
-              Ons profielwerkstuk gaat over de wolf. Maar niet alleen wat de wolf is, maar ook wat hij doet, hoe hij het doet en wat de gevolgen zijn op de natuur om ons heen. De wolf is namelijk niet zo simpel als de meeste mensen denken. Het is een erg complex dier
-              en er spelen veel achterliggende factoren bij het zijn van een wolf. Daarbij zorgt hij voor grote gevolgen in ecosystemen waar de wolf aanwezig is. Maar wat beïnvloed de wolf nou allemaal precies door simpelweg z’n dagelijks leven te lijden?
-              Deze hoofdvraag splitsen we op in de geografische en ecologische veranderingen. Om dit te kunnen beantwoorden gaan we eerst na hoe de wolf nou in elkaar zit en hoe hij de dag doorbrengt als toppredator in zijn roedel zonder dat iemand hem
-              na kan doen.
-            </p>
-            <p>
-              We gebruiken hier het Yellowstone National Park als ons test arena, waar op deze dag de wolf nog steeds veel wordt onderzocht. Hier kunnen we goed zien wat voor effect de wolf nou precies heeft op het park, de planten, de mens en de vele andere soorten
-              die daar leven in het geval dat hij opnieuw geherintroduceerd wordt.
-            </p>
+          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 content">
+            <div class="row">
+              <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                  <div class="carousel-inner" role="listbox">
+                    <div class="carousel-item active">
+                      <img class="d-block carousel-image0 img-fluid" src="vendor/images/logo.png"></img>
+                    </div>
+                    <div class="carousel-item">
+                      <div class="d-block carousel-image carousel-image1" onclick="javascript:movePage(1, NaN);"></div>
+                      <div class="carousel-caption d-none d-md-block">
+                        <h1>Een kijkje bij de wolf.</h3>
+                      </div>
+                    </div>
+                <div class="carousel-item">
+                  <div class="d-block carousel-image carousel-image2" onclick="javascript:movePage(2, NaN);"></div>
+                  <div class="carousel-caption d-none d-md-block">
+                    <h1>Geschiedenis en herkomst.</h3>
+                  </div>
+                </div>
+            <div class="carousel-item">
+              <div class="d-block carousel-image carousel-image3" onclick="javascript:movePage(3, NaN);"></div>
+              <div class="carousel-caption d-none d-md-block">
+                <h1>Bouw van de wolf.</h3>
+              </div>
+            </div>
+        <div class="carousel-item">
+          <div class="d-block carousel-image carousel-image4"onclick="javascript:movePage(4, NaN);"></div>
+          <div class="carousel-caption d-none d-md-block">
+            <h1>Hoe oriënteert de wolf zich?</h3>
           </div>
-          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 spacer"></div>
         </div>
+    <div class="carousel-item">
+      <div class="d-block carousel-image carousel-image5" onclick="javascript:movePage(5, NaN);"></div>
+      <div class="carousel-caption d-none d-md-block">
+        <h1>Gedrag en communicatie</h3>
       </div>
     </div>
-  </div>
-
-  <div class="container page1">
-    <div class="row">
-      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 contentblock height1">
-        <div class="row">
-          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 content">
-            <h1>Een kijkje bij de wolf</h1>
-          </div>
-          <div class="col-lg-12 col-md12 col-sm-12 col-xs-12 content">
-            <p>
-              Wat is een wolf nou eigenlijk? Dat lijkt misschien een simpele vraag met een nog simpeler antwoord. Toch, als je er even over nadenkt, kom je tot de conclusie dat het een stuk lastigere kwestie is dan je eerder had ingeschat. De wolf ook wel Canis lupus
-              genoemd, komt van de familie hondachtigen (Canidae), die weer behoort tot de orde van de roofdieren (Carnivora). Maar waar hoort de wolf nog meer bij, hoe is de wolf &lsquo;de wolf&rsquo; geworden zoals we die kennen en wat maakt deze hondachtige
-              zo speciaal? Dat gaan wij nu beantwoorden in de volgende kopjes.
-            </p>
-            <img class="lazyload" data-src="vendor/images/page1wolf.png" style="height:auto;width:100%;margin-bottom:50px;margin-top:25px;" />
-            <h4>
-                  De taxonomie van de wolf
-                </h4>
-            <p>Voordat we in een aantal leuke weetjes van de wolf duiken, vertel ik eerst wat over de taxonomie van de wolf, oftewel waar de wolf in de biologie wordt ingedeeld.</p>
-            <ul>
-              <li>
-                <p>
-                  Domein: Eukaryoten.
-                </p>
-            </ul>
-            <p>De wolf behoort tot de eukaryoten, wat betekent dat het dier cellen heeft met daarin organellen en een celkern die de chromosomen bij elkaar houdt. Eukaryoten kunnen zowel ééncellig als meercellig zijn. De wolf is uiteraard een meercellig
-              organisme. Naast een celkern heeft de wolf in zijn cellen ook andere organellen, waaronder: mitochondriën, ribosomen en een golgi-systeem.</p>
-            <ul>
-              <li>
-                <p>
-                  Rijk: Dieren (de wetenschappelijke naam is Animalia).
-                </p>
-            </ul>
-            <p>De wolf behoort tot het dierenrijk, oftewel Animalia. Dit betekent dat de cellen van het dier geen celwand, geen bladgroenkorrels, maar wel een celkern bevatten.</p>
-            <ul>
-              <li>
-                <p>
-                  Stam: Chordadieren (de wetenschappelijke naam is Chordata).
-                </p>
-            </ul>
-            <p>
-              De wolf behoort tot de Chordadieren. Dat zijn dieren die aanleg van een Chorda hebben. Dit is een elastische, flexibele streng die langs de complete rug van het dier loopt. Dit is nog geen ruggengraat, maar wanneer het dier ook een gewervelde is, wat
-              de wolf is, ontwikkeld het dier in latere ontwikkelingsstadia ruggenwervels.
-            </p>
-            <ul>
-              <li>
-                <p>
-                  Klasse: Zoogdieren (de wetenschappelijke naam is Mammalia).
-                </p>
-            </ul>
-            <p>De wolf behoort tot de zoogdieren. Dit zijn warmbloedige dieren die hun nakomelingen levend baren en zoals de naam al verklapt, zoogt de moeder haar nakomelingen met een soort melk.</p>
-            <ul>
-              <li>
-                <p>
-                  Orde: Roofdieren (de wetenschappelijke naam is Carnivora).
-                </p>
-            </ul>
-            <p>De wolf behoort tot de roofdieren. Dit betekent dat het dier exclusief vlees eet. De wolf eet dus onder normale omstandigheden alleen vlees.</p>
-            <ul>
-              <li>
-                <p>
-                  Familie: Hondachtigen (de wetenschappelijke naam is Canidae).
-                </p>
-            </ul>
-            <p>
-              De wolf behoort tot de hondachtigen. Dat betekent dat het dier vier poten heeft met aan de voorkant 5 nagels per poot en aan de achterkant 4 nagels per poot. De nagels zijn niet intrekbaar zoals bij de katachtigen.
-            </p>
-            <ul>
-              <li>
-                <p>
-                  Geslacht: Canis
-                </p>
-            </ul>
-            <p>
-              De wolf zijn geslacht is Canis. Dat betekent dat hij onder een groep valt van verschillende hondachtigen, waaronder: de jakhalzen, de coyote, de hond en de wolf.
-            </p>
-            <ul>
-              <li>
-                <p>
-                  Soort: Lupus
-                </p>
-            </ul>
-            <p>
-              Zijn soort is lupus, ofwel de wolf.
-            </p>
-          </div>
-          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 spacer"></div>
-        </div>
+    <div class="carousel-item">
+      <div class="d-block carousel-image carousel-image6" onclick="javascript:movePage(7, NaN);"></div>
+      <div class="carousel-caption d-none d-md-block">
+        <h1>Territorium en dieet</h3>
       </div>
     </div>
-  </div>
-
-  <div class="container page2">
-    <div class="row">
-      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 contentblock height2">
-        <div class="row">
-          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 content">
-            <h1>Geschiedenis en herkomst</h1>
-          </div>
-          <div class="col-lg-12 col-md12 col-sm-12 col-xs-12 content">
-            <h4>
-              Voorouders
-            </h4>
-            <p>
-              De Canis lupus, of de grijze wolf, is niet de eerste in zijn evolutie tak, maar zeker ook niet de laatste. Deze soort van de Canis familie leeft officieel sinds 1758, waar hij voor het eerst is gedocumenteerd door Carl Linnaeus in zijn boek Systema Naturae.
-              De grootvader van de Canis familie is de Canis lepophagus, deze soort leefde exclusief in een deel van Noord-Amerika zo’n 5 miljoen jaar geleden. De Canis lepophagus was erg klein toen der tijd, met een gewicht van ongeveer 18 kilo. Vergelijk
-              dit met de meer moderne hondachtige soorten die tot wel zo’n 80 kg kunnen wegen. Na de lepophagus kwam de Canis etruscus tot stand. Over deze soort is weinig bekend, omdat fragmenten van hun botten erg zeldzaam zijn. Ook bevatten de botten
-              vaak weinig genetisch materiaal.
-            </p>
-            <p>
-              Wat we wel weten is dat hij de voorouder is van de Canis mosbachensis. Deze soort had meerdere populaties in Noord-Amerika, Europa en Azië. Later stierf de Noord-Amerikaanse populatie uit.
-            </p>
-            </br>
-            <h4>
-            Evolutie
-          </h4>
-            <p>
-              Er is een duidelijke trend te zien, elke nieuwe wolvensoort uit de Canis familie is groter en sterker gaan groeien dan hun voorouders met een uitzondering op de hond - laten we zeggen dat dit het zwarte schaap is van de familie. Dit waren blijkbaar voordelige
-              eigenschappen in het verleden, waardoor de wolf uiteindelijk nu zo tot stand is gekomen.
-            </p>
-            </br>
-            <h4>
-            De wolf van nu
-          </h4>
-            <p>
-              De modernste vorm van de Canis familie naast de geliefde hondensoort wordt lupus genoemd. De mosbachensis, die zich de voorouder mag noemen van de lupus, ging vanuit Azië verder naar Noord-Amerika om daar de dominantste wolvensoort te worden. Helaas heeft
-              dit feest niet lang geduurd. In 1926 werden in de VS al de wolvenpopulaties gereduceerd tot kleine aantallen. In de VS stierf de laatste grijze wolf nog voor 1930 in Yellowstone. Pas in het jaar 1995 werd de wolf weer geherintroduceerd in
-              het Yellowstone National Park. Hedendaags heeft de lupus vooral in Canada, Rusland, Azië, delen in Oost-Europa en Duitsland grote populaties.
-            </p>
-          </div>
-          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 spacer"></div>
-        </div>
+    <div class="carousel-item">
+      <div class="d-block carousel-image carousel-image7" onclick="javascript:movePage(8, NaN);"></div>
+      <div class="carousel-caption d-none d-md-block">
+        <h1>Wat is de invloed op organismen?</h3>
       </div>
     </div>
-  </div>
-
-  <div class="container page3">
-    <div class="row">
-      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 contentblock height3">
-        <div class="row">
-          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 content">
-            <h1>Bouw van de wolf</h1>
-          </div>
-          <div class="col-lg-12 col-md12 col-sm-12 col-xs-12 content">
-            <p>
-              Heb je wel eens willen weten hoe hard een wolf kan bijten, hoe snel en hoe lang zo’n beest kan rennen, of hij zacht is, maar vooral hoe groot de wolf is? Dit gaan wij behandelen in het volgende onderwerp.
-            </p>
-            </br>
-            <h4>
-              De Grootte en het gewicht
-            </h4>
-            <p>
-              De grijze wolf weegt gemiddeld tussen de 40 en de 50 kilogram, maar het is niet vreemd als een wolf 60 kilogram wordt. De vrouwtjes zijn gemiddeld 20% kleiner dan de mannetjes. De mannetjes kunnen van staart tot neus ongeveer anderhalve meter tot en met
-              twee meter lang worden. De vrouwtjes worden van neus tot staart gemiddeld 1,40 meter tot en met 1,80 meter lang.
-            </p>
-            </br>
-            <h4>
-              De kaak en de beet
-            </h4>
-            <p>
-              De kaak van een wolf is wat ingewikkelder dan die van een mens, omdat de wolf 42 tanden in zijn bek heeft. Dit zijn 12 snijtanden, 4 hoektanden, 16 voorkiezen, 10 scheurkiezen en gewone kiezen. Het unieke aan een wolf is dat hij zijn prooi niet kauwt,
-              maar hem eerder aan stukken scheurt, zodat hij zijn prooi op gemakkelijk naar binnen kan werken. De druk die hij uitoefent tijdens het bijten, bedraagt maar liefst 15 MPa. Dit houdt in dat hij een elands poot kan doorbijten tot aan het beenmerg
-              toe.
-            </p>
-            </br>
-            <h4>
-              De vacht
-            </h4>
-            <p>
-              De vacht van de meeste wolven moet tegen lage temperaturen kunnen, daarom heeft de wolf een dichte wintervacht, inclusief een korte ondervacht en grof dekhaar. Het haar op de wolf is het langst rond de nek, vooral rond de schouder is bijzonder lang. Dit
-              vormt als ware een soort kam in de hals van de wolf. De kop is bedekt met lange haren die een bosje vormen. De oren zijn bedekt met redelijk korte haren.
-            </p>
-            <p>
-              Tijdens het voorjaar, wanneer de wolf deze deze dikke vacht niet nodig heeft, laat hij grotendeels zijn ondervacht en dekhaar vallen. De kleuren van de vacht bij wolven verschillen enorm, van bijna wit tot zwart, van grijs tot bruin en zelfs verschillende
-              tinten blond.
-            </p>
-            </br>
-            <h4>
-              De conditie en loopsnelheid
-            </h4>
-            <p>
-              Wolven draven in een stevig tempo van ongeveer 8 kilometer per uur. Hun topsnelheid ligt rond de 60 kilometer per uur. Dit komt van pas wanneer zij achtervolgingen met prooi hebben. Helaas kunnen zij dit niet voor lange afstanden volhouden. De lange afstands
-              conditie van de wolf daarentegen, is verbazingwekkend. Ze zijn instaat om 80 kilometer per dag af te leggen en kunnen uren lopen zonder moe te worden. Het is bekend dat wolven meerdere honderden kilometers weg van hun territorium hebben
-              gereisd op zoek naar een eigen roedel. Waarbij sommigen wel een afstand van zo’n 160 kilometer hebben afgelegd zonder enige rust.
-            </p>
-          </div>
-          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 spacer"></div>
-        </div>
+    <div class="carousel-item">
+      <div class="d-block carousel-image carousel-image8" onclick="javascript:movePage(10, NaN);"></div>
+      <div class="carousel-caption d-none d-md-block">
+        <h1>Wat is de invloed op de geografie?</h3>
       </div>
     </div>
-  </div>
-
-  <div class="container page4">
-    <div class="row">
-      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 contentblock height4">
-        <div class="row">
-          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 content">
-            <h1>Hoe oriënteert de wolf zich?</h1>
-          </div>
-          <div class="col-lg-12 col-md12 col-sm-12 col-xs-12 content">
-            <p>
-              In dit kopje behandelen we hoe geslepen de zintuigen van een wolf zijn, en in hoeverre de wolf superieur is tegenover de mens en vooral in welke opzichten. Om specifieker te zijn, hoe is het zicht, het reukvermogen en om niet te vergeten het gehoor van
-              de wolf.
-            </p>
-            <img class="lazyload" data-src="vendor/images/page4wolf.png" style="height:auto;width:100%;margin-bottom:50px;margin-top:25px;" />
-            <h4>
-              Het zicht
-            </h4>
-            <p>
-              We beginnen met de ogen van de wolf en hoe goed die ontwikkeld zijn. Om te beginnen, zijn ze dat eigenlijk wel? In het ene opzicht wel. Daarmee bedoel ik dat zij veel beter in het donker kunnen zien dan wij mensen. Dat niet alleen, zij hebben een gezichtsveld
-              van 270°, terwijl de mens slechts een gezichtsveld heeft van ongeveer 180°. Dit helpt de wolf goed zijn omgeving in de gaten te houden. Daar bovenop komt dat wolven veel meer staafjes in hun ogen hebben dan wij mensen dat hebben. Staafjes
-              hebben als enige functie om licht op te vangen. Dit zorgt ervoor dat wolven heel goed beweging kunnen waarnemen. Toch heeft de wolf ook wat minpunten als we het hebben over zijn zicht. Wolven kunnen een stuk slechter diepte vanaf afstand
-              inschatten zoals wij dat kunnen. Daarnaast hebben de wolfjes een stuk minder kegeltjes in hun ogen. Deze kegeltjes kunnen kleuren detecteren. Dit zorgt ervoor dat wolven minder kleuren zien dan wij mensen. Deze twee dingen kunnen ervoor
-              zorgen dat wolven een stilstaand persoon over het hoofd zien, omdat ze het niet kunnen herkennen als een mogelijk levend wezen.
-            </p>
-            </br>
-            <h4>
-                Het reukvermogen
-              </h4>
-            <p>
-              Een wolf heeft een reukvermogen tot wel 10.000 keer dat van de mens. Onder goede omstandigheden kan de wolf van zo’n 2 kilometer of meer geuren oppikken met z’n neus. De wolf gebruikt zijn neus ook om er mee te communiceren.
-            </p>
-            </br>
-            <h4>
-                Het gehoor
-              </h4>
-            <p>
-              De oren van de wolf doen het weer een stuk beter dan bij mensen. Zij kunnen tonen tot 40.000 Hz horen! In vergelijking kan de mens op zijn best tot 20.000 Hz horen.
-            </p>
-            <p>
-              Dit verklaart ook waarom wij wolvenfluitjes niet kunnen horen, maar wolven wel. Deze fluitjes geven dus een toon af van boven de 20.000 Hz.
-            </p>
-          </div>
-          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 spacer"></div>
-        </div>
+    <div class="carousel-item">
+      <div class="d-block carousel-image carousel-image9" onclick="javascript:movePage(11, NaN);"></div>
+      <div class="carousel-caption d-none d-md-block">
+        <h1>Waarom de wolf?</h3>
       </div>
     </div>
-  </div>
-
-  <div class="container page5">
-    <div class="row">
-      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 contentblock height5">
-        <div class="row">
-          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 content">
-            <h1>Gedrag en communicatie</h1>
-          </div>
-          <div class="col-lg-12 col-md12 col-sm-12 col-xs-12 content">
-            <h4>
-              Roedels
-            </h4>
-            <p>
-              Wolven zijn zeer sociale dieren die meestal in roedels leven met daarin een alfa-mannetje en een alfa-vrouwtje. De alfa’s regelen alles in de roedel, zoals: wanneer er gejaagd wordt, wanneer het tijd is om te reizen naar een ander stuk land en wie er
-              als eerste eten krijgt. Ze lossen zelfs conflicten op tussen de wolven in de roedel. Het alfa-mannetje wordt gekozen of bepaald qua hoe sterk hij is, hoe intimiderend hij is of hoe gerespecteerd hij wordt. Het alfa-vrouwtje krijgt haar status
-              als alfa wanneer zij de hoofdpartner van het alfa-mannetje is. Met “hoofd” wordt er bedoeld dat het wel eens kan voorkomen dat het alfa-mannetje paart met meerdere vrouwtjes in de roedel. Alle andere wolven zijn ondergeschikten, oftewel
-              beta’s, en behoren tot de lagere rang in de roedel en moeten bevelen opvolgen van de alfa’s.
-            </p>
-            <img class="lazyload" data-src="vendor/images/page5wolf.png" style="height:auto;width:100%;margin-bottom:50px;margin-top:25px;" />
-            <p>
-              De grootte van een roedel is erg verschillend en wordt sterk beïnvloed door de verandering in geboortecijfers, verspreiding en sterftecijfers. De beschikbaarheid en grootte van prooidieren spelen ook belangrijke factoren.
-            </p>
-            <p>
-              Een roedel wolven hebben normaal gesproken één nest met jongen per jaar tijdens de lente. Hoewel, als er een overvloed van prooi in hun leefgebied aanwezig is, kan het weleens voorkomen dat er meer dan één vrouwtje in een roedel jongen krijgt. Waarbij
-              de grootte van het nest ongeveer 4 á 6 jongen is, maar dit kan soms ook meer of minder zijn. Een aantal – of zelfs alle – jongen kunnen sterven als er niet een stabiele voorraad is van voedsel voor de snelgroeiende pups. Daarnaast kunnen
-              ziektes en andere predatoren ook een rol spelen in het sterven van de jongen.
-            </p>
-            <p>
-              Tijdens de eerste 3 weken, worden de jongen elke 4 tot 6 uur gekoesterd en warm gehouden. In het algemeen is het de moeder die bij de jongen blijft in het nest. Omdat zij haar tijd voornamelijk besteedt aan haar jongeren, brengen andere roedelleden haar
-              voedsel. Verder worden de jongen vanaf hun geboorte volgepropt met eten. Voorlopig is hun enige taak om te spelen en te eten zodat ze genoeg tijd hebben om te groeien en nieuwe dingen te ontdekken.
-            </p>
-            <p>
-              Na ongeveer een half jaar tot een jaar zullen de pups oud genoeg zijn om te leren jagen. In hun eerste jacht zullen ze meegaan met hun ouders of met de alfa’s van de roedel en toekijken hoe hun ouderen te werk gaan.
-            </p>
-            <p>
-              Vaak zullen alleen het alfa-paar paren en nakomelingen krijgen, maar hier zijn natuurlijk wel uitzonderingen voor.
-            </p>
-            <p>
-              Het alfa-mannetje kan vervolgens niet gaan paren met z’n eigen dochters. Al zou hij het proberen of graag willen, zullen zijn dochters meestal hem wegjagen om inteelt en eventuele gezondheidsproblemen bij hun nakomelingen te voorkomen. Om hun roedel verder
-              te vergroten is er dus een mannetje nodig van een andere roedel, wat dus één van de uitzonderingen is voor het feit dat meestal alleen de alfa’s onderling paren.
-            </p>
-            <p>
-              Wanneer de pups zo’n 2 á 3 jaar bereiken, is het mogelijk dat ze hun roedel verlaten en op zoek gaan naar nieuw territorium, een andere roedel of een partner om mee te paren. Dit is dan ook meteen de leeftijd wanneer ze beginnen met paren, wat ze hun
-              hele leven lang door kunnen blijven doen.
-            </p>
-            <p>
-              Uiteengaande wolven kunnen gemiddeld wel 64 tot 113 kilometer ver rondzwerven, waarbij sommige wel een afstand van plus 160 kilometer afleggen, afhankelijk van gender, beschikbare leefgebieden en aanwezigheid van andere roedels.
-            </p>
-            <img class="lazyload" data-src="vendor/images/page5wolf3.png" style="height:auto;width:100%;margin-bottom:50px;margin-top:25px;" />
-            <p>
-              Opzoek gaan naar een partner is zeer moeilijk, want je beste kansen liggen bij een andere roedel, wat erg gevaarlijk is, zelfs levensbedreigend, wanneer je andermans territorium binnentreedt. Als een mannetje een vrouwtje zoekt, moet hij dit toch overwegen.
-            </p>
-            <p>
-              Zodra een wolf andermans territorium betreedt, is het de taak van het alfa-mannetje om de vreemdeling weg te jagen of zelfs af te maken. Vaak hebben de indringers maar twee keuzes: vecht met je leven op het spel óf probeer zo snel mogelijk weg te rennen.
-              Als de indringer weet te blijven, zal hij, om de vrouwtjes in de buurt te laten weten van zijn
-            </p>
-          </div>
-          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 spacer"></div>
-        </div>
+    <div class="carousel-item">
+      <div class="d-block carousel-image carousel-image10" onclick="javascript:movePage(12, NaN);"></div>
+      <div class="carousel-caption d-none d-md-block">
+        <h1>Hoe kan de wolf naast de mens leven?</h3>
       </div>
     </div>
-  </div>
-
-  <div class="container page6">
-    <div class="row">
-      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 contentblock height6">
-        <div class="row">
-          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 content">
-            <h1>Gedrag en communicatie</h1>
-          </div>
-          <div class="col-lg-12 col-md12 col-sm-12 col-xs-12 content">
-            <h4>
-              Communicatie
-            </h4>
-            <p>
-              Bij communicatie denken mensen vaak aan praten of een ander vocaal geluid, maar zoals sommigen weten, is dat slechts een klein deel van wat communicatie inhoudt.
-            </p>
-            <p>
-              De communicatie tussen roedelleden zorgt ervoor dat wolven voor elkaar kunnen zorgen, hun territorium kunnen beschermen en samen een groot prooidier kunnen neerhalen dat een individu niet voor elkaar zou kunnen krijgen.
-            </p>
-            <p>
-              Een groot deel van de communicatie tussen de wolven in een roedel is lichaamstaal. Bepaald gespecialiseerd gedrag en postuur zijn geëvolueerd om agressie tussen roedelleden te verminderen. De lichaamstaal van wolven zorgt ervoor dat de roedel makkelijker
-              in overeenkomst kunnen leven.
-            </p>
-            <img class="lazyload" data-src="vendor/images/page5wolf2.png" style="height:auto;width:100%;margin-bottom:50px;margin-top:25px;" />
-            <p>
-              Vocale communicatie onder wolven bestaat uit huilen, piepen, grommen en blaffen.
-            </p>
-            <p>
-              Alhoewel niet alle functies van huilen bekend zijn, zijn onderzoekers er vrijwel zeker van dat wolven deze manier van communicatie gebruiken om hun roedel bij elkaar te brengen, om territorium te claimen, om indringers te waarschuwen of om andere wolven
-              te identificeren.
-            </p>
-            <p>
-              De gezichtsuitdrukkingen van wolven worden vaak gebruikt om hun emoties te tonen en zelfs om hun personaliteit weer te geven. Bijvoorbeeld, wolven die hun tanden laten zien en hun oren voorwaarts wijzen, vertonen dominant gedrag. Het gedrag van de lagere
-              rang wolven vertonen daarbij een gesloten mond, spleetogen en zullen hun oren naar achteren wijzen en dicht bij hun hoofd houden, terwijl ze hun hoofd naar beneden richten.
-            </p>
-            <img class="lazyload" data-src="vendor/images/page5wolf5.png" style="height:auto;width:100%;margin-bottom:50px;margin-top:25px;" />
-            <p>
-              De positie van hun staart wordt ook gebruikt om te communiceren met emoties.
-            </p>
-            <p>
-              Wolven die dreigende tekens uitdrukken, houden hun staart recht omhoog, terwijl de onderdanige wolven – meestal in de lagere rang ook wel beta’s genoemd – hun staart tussen hun benen houden.
-            </p>
-            <p>
-              Zelfs geur is een belangrijke factor bij communicatie tussen wolven.
-            </p>
-            <p>
-              Urine is de meest voorkomende vorm van geur markering voor wolven, maar ze kunnen ook geuren produceren vanuit de klieren tussen hun tenen.
-            </p>
-            <p>
-              Omdat wolvenroedels zeer territoriaal zijn, gebruiken ze bepaalde geuren om de grenzen van hun territorium duidelijk aan te stippen, zodat andere roedels weten dat dit gebied van hen is. Ook wordt geur gebruikt om eigenaarschap van eten aan te geven en
-              als een soort directie of route voor de rest van de roedel om te volgen. Geur is dus een manier voor een roedel om te laten weten dat zij lang nadat ze zijn vertrokken op deze plaats zijn geweest.
-            </p>
-          </div>
-          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 spacer"></div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="container page7">
-    <div class="row">
-      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 contentblock height7">
-        <div class="row">
-          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 content">
-            <h1>Territorium en dieet</h1>
-          </div>
-          <div class="col-lg-12 col-md12 col-sm-12 col-xs-12 content">
-            <p>
-              De wolf kan in principe overal leven, als er maar genoeg voedsel is op die plek. Zoals je al weet, zijn wolven groepsdieren en moet het alfa-mannetje ervoor zorgen dat de roedel genoeg voedsel heeft. Een roedel heeft meestal 10 tot 20 wolven, dus voedsel
-              is erg belangrijk. Om ervoor te zorgen dat de roedel gegarandeerd eten heeft, moeten ze een territorium hebben. Het territorium mag niet overlappen met het territorium van andere wolven en moet genoeg bronnen van voedsel hebben. Wolven maken
-              hun territorium door de grenzen van hun territorium te markeren met hun urinegeur. Deze taak is weggelegd voor het alfa-mannetje en -vrouwtje die ook elke keer die geur moet verversen. De urine geur geeft andere wolven aan van wie dit territorium
-              is en dat andere roedels er uit moeten blijven.
-            </p>
-            <p>
-              Een territorium kan wel meer dan dan 6.000 km^2 bevatten. Wolven moeten dus weten waar ze hun prooi kunnen vinden. Dit doen ze door het gedrag van hun prooi te bestuderen. De wolven weten meestal op welke plekken hun prooi het meest zich bevinden en welke
-              route hun prooi volgen. Dit geeft de wolf bepaalde routes wat ze elke keer volgen om bij een bepaald gebied te komen. Wolven moet de verschillende routes onthouden om tactisch op hun prooien te jagen. Als er veel honger heerst over een roedel,
-              is het beter om op grotere en sterkere dieren te jagen, zoals reeën en herten.
-            </p>
-            <p>
-              En als er minder honger heerst zijn zwijnen en bokken weer een beter doelwit.
-            </p>
-            <p>
-              <img class="lazyload" data-src="vendor/images/page7wolf.png" style="height:auto;width:100%;margin-top:25px;" />
-            </p>
-            <p class="italic">
-              Afbeelding 7: een roedel wolven met een karkas van een grote herbivoor
-            </p>
-            <h4>
-              Jagen
-            </h4>
-            <p>
-              Wanneer je als individueel niet genoeg benodigde kracht, snelheid of tactiek hebt om zelf je voedsel te bemachtigen, dan is het verstandig om in een groep samen te gaan werken. Na honderden jaren heeft de wolf dit aardig onder de knie, in samenwerking
-              met de hiërarchie, perfecte neus en de uitmuntende uithoudingsvermogen, kun je de roedel wel een militair leger noemen. Elke wolf heeft zijn eigen taak en houdt zich daar ook streng aan. De jacht wordt bijna altijd geleid door het alfa-mannetje
-              en die maakt dus ook de beslissingen.
-            </p>
-            <p>
-              De aanval begint met het opsporen van de prooi, hier schijnen de kwaliteiten van de neus het sterkst. Soms duurt het wel dagen totdat ze misschien een groep met herten of elanden vinden. In het geval dat ze een groep vinden, testen ze de prooi en filteren
-              ze de jongen, zieken of ouderen eruit. Wolven merken heel snel met hun zintuigen wie van de dieren het zwakste binnen de groep is. Omdat dit moeilijk te zien is als de kudde stilstaat, laat de wolf zich al snel zien zodat de kudde het op
-              het lopen zet. De wolf kan dan aan verschillende kenmerken zien wie zwakker is dan de rest. Misschien zitten er jongen of zeer oude dieren in de kudde, of misschien ziet een hert er gewond uit of loopt die raar.
-            </p>
-            <p>
-              Dit zijn allemaal kenmerken waarop de wolf let. Zodra de wolf de zwakste op het oog heeft, zet de groep wolven het op het rennen. Tijdens de sprint kan de wolf wel 40 km/h halen, De roedel gaat in formatie, de oudsten voorop om de vitale klap uit te delen
-              en om beslissingen te maken. De rest verspreidt zich rondom het doel zodat het niet kan ontsnappen. De wolven mikken graag op de benen om die te beschadigen, zodat de verspreide wolven met z’n allen direct hun prooi kunnen doden. Ook moeten
-              ze uitkijken voor verschillende gevaarlijke situaties, bijvoorbeeld een trap van een ree of een hert die fataal kan zijn voor een wolf. In het geval dat ze hun kans missen, hebben de wolven de mogelijkheid om meerdere kilometers de prooi
-              met 10 km/h te kunnen achtervolgen, maar het is vaak het niet waard om dit te doen.
-            </p>
-          </div>
-          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 spacer"></div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="container page8">
-    <div class="row">
-      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 contentblock height8">
-        <div class="row">
-          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 content">
-            <h1>Invloed op de natuur</h1>
-          </div>
-          <div class="col-lg-12 col-md12 col-sm-12 col-xs-12 content">
-            <h4>
-              Wat is de invloed op andere organismen?
-            </h4>
-            <p>
-              Predatoren besturen ecosystemen. Dat klinkt wellicht vreemd, maar het is écht zo. We weten allemaal dat wolven op een boel dieren jagen, maar wat we niet allemaal realiseren, is dat ze ook leven geven aan een groot aantal andere dieren.
-            </p>
-            <p>
-              Een jongeman genaamd Aldo Leopald kwam erachter dat wanneer de wolven afstierven, de hertenpopulatie sterk begon te stijgen. Deze herten aten alle planten op in de omgeving, waardoor er niks of nauwelijks meer overbleef.
-            </p>
-            <p>
-              In vroeg 1900, was Yellowstone National Park vol met grassen en bomen en bloeiden het hele ecosysteem. Maar in het jaar 1992, waren er nauwelijks planten over. Biologen zochten naar de oorzaak van dit fenomeen en er waren verschillende theorieën, waaronder
-              klimaatveranderingen of bosbranden. Maar beiden leken niet het geval te zijn. Volgens Bill Ripple, van Oregon State University, was buiten het park de condities van verschillende soorten bomen in goede staat, terwijl er in het Yellowstone
-              park er nauwelijks bomen waren. Samen met Eric Larson, van University of Wisconsin, kwam Ripple erachter dat er bijna geen middeljarige bomen in het park stonden. De meeste bomen waren 70 jaar oud. Door de ringen in de boomstronken te tellen,
-              kwamen ze erachter dat de bomen stopten met regenereren in de jaren 30 van de 20ste eeuw. De biologen vroegen zich af wat er nou rond 1930 is gebeurd. Wat ze wel wisten, is dat vóór 1930 de laatste wolf werd neergeschoten door jagers.
-            </p>
-            <p>
-              <img class="lazyload" data-src="vendor/images/page8wolf.png" style="height:auto;width:100%;margin-top:25px;" />
-            </p>
-            <p class="italic">
-              Afbeelding 8: lone wolf
-            </p>
-            <p>
-              Volgens jaren later onderzoek, bleken de uitspraken ook daadwerkelijk te kloppen. In 1995 werden de wolven in het Yellowstone National Park geherintroduceerd, waar men veel van heeft geleerd over de effecten en de invloed van predatoren op de natuur.
-              Vroeger werd er namelijk gedacht dat een ecosysteem werd gemaakt met plantenleven als fundering, waarna alle andere organismen rond deze fundering ontstonden. Zodra er gezond plantenleven ontstaat, ontstaat er een balans tussen alle insecten,
-              kleine diertjes, vogels, grote herbivoren en uiteindelijk de toppredatoren. Bijna alle conservatie en herintroductie projecten werden op dit principe gebouwd. Biologen zouden in een beschadigd gebied eerst al het plantenleven opbouwen en
-              weer tot bloei laten komen, voordat ze andere dingen gingen doen. Maar sommige ecosystemen bleken hierdoor niet hersteld te kunnen worden zonder het herintroduceren van een bedreigde toppredator.
-            </p>
-            <p>
-              Sinds het herintroduceren van de wolven in Yellowstone, werd het nationale park hét wetenschappelijke laboratorium op basis van de observatie van wilde dieren en het herstellen van ecosystemen. Allerlei wetenschappers van over de hele wereld zijn naar
-              het nationale park gekomen om het effect die de wolven uitoefenen met hun eigen ogen te bekijken.
-            </p>
-            <p>
-              <img class="lazyload" data-src="vendor/images/page8wolf2.png" style="height:auto;width:100%;margin-top:25px;" />
-            </p>
-            <p class="italic">
-              Afbeelding 9: roedel wolven op pad
-            </p>
-            <p>
-              Na de herintroductie van de wolven in Yellowstone, zijn de elanden, herten en bizons sterker geworden, de bomen en andere planten gezonder en de grassen hoger.
-            </p>
-            <p>
-              Wolven jagen voornamelijk op grote herbivoren, waardoor de populatie van deze dieren sterk afneemt. Maar de wolven jagen niet op willekeurig prooi. Ze prooien meestal op de zwakkelingen, zoals jongere of minder gezonde. Oudere elanden zijn, bijvoorbeeld,
-              groter en agressiever, waardoor het moeilijker is voor de wolven om op deze individuen te jagen. De wolven rennen achter de herten en elanden aan, waardoor zij worden geforceerd om harder, sneller en verder te rennen (zie afbeelding 10).
-              Tijdens dat de elanden en herten rennen, zullen hun hoeven de bodem aanstampen, zodat er meer planten kunnen groeien. Vervolgens, als je niet snel genoeg bent of lang genoeg kan rennen, word je gepakt door de wolven. Hierdoor zullen alle
-              zwakke dieren in een populatie uitgeroeid worden, waardoor de sterke en gezonde overblijven en hun nakomelingen ook de best geschikte genen voor hun leefgebied zullen overerven. In het kort, de selectiedruk is weer toegenomen, waardoor survival
-              of the fittest weer in volle kracht geherintroduceerd is in Yellowstone.
-            </p>
-            <p>
-              <img class="lazyload" data-src="vendor/images/page8wolf3.png" style="height:auto;width:100%;margin-top:25px;" />
-            </p>
-            <p class="italic">
-              Afbeelding 10: wolven die hun prooi opjagen
-            </p>
-            <p>
-              Niet alleen heeft de wolf invloed op de gezondheid van herbivoren, maar ze tasten ook het gedrag van deze soorten aan. Herbivoren zoals herten en elanden worden geforceerd om niet een al te lange tijd te blijven in hetzelfde gebied vanwege het risico
-              dat ze worden opgejaagd door wolvenroedels. Door deze migratie zullen de planten in het gebied minder aangetast zijn en kunnen ze sneller regenereren. Ook is het dat herbivoren het territorium van een wolvenroedel niet durven te betreden,
-              waardoor er zogenaamde “bufferzones” ontstaan. Dit zijn gebieden tussen territoria van verschillende wolvenroedels in, waar de herbivoren vaak in goede omstandigheden leven. Wolven die hun roedel hebben verlaten vinden vaak hier goed onderdak,
-              veiligheid en eten, met minder risico om aangevallen te worden door wolvenroedels in de nabije gebieden. Alhoewel, dit betekent niet dat het waterdichte, veilige gebieden zijn. Het is mogelijk dat er om het gebied wordt gevochten door de
-              roedels in de omgeving en dat de eenzame wolf alsnog aangevallen kan worden.
-            </p>
-            <p>
-              <img class="lazyload" data-src="vendor/images/page8wolf4.png" style="height:auto;width:100%;margin-top:25px;" />
-            </p>
-            <p class="italic">
-              Afbeelding 11: relatief dor landschap met bizon en lone wolf, bossen in de achtergrond
-            </p>
-            <p>
-              Door het migreren van de herbivoren en deze bufferzones, zal de plantengroei in andere gebieden, met name het territoria van wolvenroedels, sterk toenemen. Maar niet alleen dat, want door de afname van de populatie van bepaalde soorten herbivoren, kregen
-              de planten meer tijd om te groeien en zich voort te planten. Dit zorgde voor meer vegetatie en uiteindelijk een grotere biodiversiteit in het plantenrijk. Dit proces komt het meest voor in territoria van wolvenroedels en valleien waar je
-              een makkelijk prooi bent door de absentie van enige ontsnappingsroutes. Herbivoren durven zich niet te vestigen in deze gebieden, maar het proces gebeurt ook natuurlijk in andere gebieden vanwege de migratie van, bijvoorbeeld, elanden. Deze
-              gebieden zullen grotendeels onaangetast blijven, waardoor er een grote bloei van plantengroei plaatsvindt waaruit grote bossen en grassen ontstaan.
-            </p>
-            <p>
-              Uit het ontstaan van meer planten, zullen steeds meer dieren - vooral dieren die niet als prooi worden gezien door de wolf, zich vestigen in deze gebieden, omdat er meer voedsel en onderdak aanwezig is. Zodra er allerlei verschillende bossen ontstonden,
-              migreerden de vogels zich binnen deze gebieden. De hoeveelheid zangvogels nam sterk toe. De hoeveelheid bevers begon ook toe te nemen, omdat bevers ervan houden om bomen op te eten. En net zoals wolven, zijn de bevers ecosysteem ingenieurs
-              en maken ze holtes en dammen waar andere soorten weer in kunnen vestigen, zoals otters, muskusratten, eenden, vissen, reptielen en amfibieën.
-            </p>
-            <p>
-              Zoals in de rest van de Verenigde Staten, waren de coyote, of prairiewolven, populaties in Yellowstone bijna uit de handen gelopen. Maar sinds dat de wolven terugkwamen, begonnen ze de coyotes te doden en hebben ze de populatie van coyotes afgenomen met
-              wel 80 procent in gebieden waar wolven leven. De coyotes die er nog zijn, zijn een stuk schrikachtiger en voorzichtig geworden. Met de afname van coyotes begonnen de hoeveelheden van knaagdieren, zoals konijnen en muizen, toe te nemen. Wat
-              daar weer ervoor zorgde dat er meer haviken, wezels, vossen en dassen zich gingen vestigen, omdat zij weer meer eten voorziening hadden. Raven en arenden migreerden naar de gebieden waar wolven aanwezig waren, om te smikkelen van de restjes
-              die de wolven achterlieten. Ook verschillende soorten insecten eten van de karkassen die wolven achterlaten. Zelfs beren kwamen erbij om van de restjes te genieten of door de prooi van wolven te stelen, waardoor hun populatie ook sterk toenam,
-              maar ook omdat er nu meer bessen en dergelijke aan de regenererende planten groeien. De beren zorgden daarna voor een domino-effect en versterkten de impact van de wolven door een aantal andere populaties van, bijvoorbeeld, herten af te
-              nemen.
-            </p>
-            <p>
-              <img class="lazyload" data-src="vendor/images/page8wolf5.png" style="height:auto;width:100%;margin-top:25px;" />
-            </p>
-            <p class="italic">
-              Afbeelding 12: wolf met een groep kraaien die een lijk omsingelen
-            </p>
-            <p>
-              In essentie, hebben wij, de mens, geleerd dat door de top van de trofische niveaus te herstellen, door bijvoorbeeld wolven te herintroduceren, het hele ecosysteem daar profijt bij heeft. Een wilde wolvenpopulatie zorgt eigenlijk voor een sterker, gezonder
-              en een meer gebalanceerd ecosysteem. Niet alleen de planten en dieren hebben hier profijt van, maar wij ook.
-            </p>
-          </div>
-          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 spacer"></div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="container page9">
-    <div class="row">
-      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 contentblock height9">
-        <div class="row">
-          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 content">
-            <h1>Invloed op de natuur</h1>
-          </div>
-          <div class="col-lg-12 col-md12 col-sm-12 col-xs-12 content">
-            <p>
-              Om het allemaal nog duidelijk weer te geven kun je naar het voedselweb hieronder kijken. Dit voedselweb laat de situatie zien van Yellowstone na de wolven herintroductie.
-            </p>
-            <p>
-              <img class="lazyload" data-src="vendor/images/page9graph.png" style="height:auto;max-width:600px;;width:100%;margin-top:25px;" />
-            </p>
-            <p class="italic">
-              Afbeelding 13: voedselweb voorbeeld in Yellowstone [bron]
-            </p>
-            <p>
-              Vóór de herintroductie van de wolf waren de meeste planten, die je onderaan de voedselketen ziet, opgegeten door elanden en herten. Verder waren er nog andere herbivoren zoals dikhoornschapen, bizons en gaffelbokken die ook de planten opaten. Naast deze
-              herbivoren waren er ook coyotes die op kleine dieren zoals muizen en konijnen jagen. Maar omdat er geen natuurlijke vijand voor de coyotes waren, ontstond er van hen een overvloed van nakomelingen.
-            </p>
-            <p>
-              Tijdens de afwezigheid van de wolf, is dus overduidelijk te zien dat er te weinig toppredatoren waren die de overvloed aan herbivoren en andere predatoren, als de coyotes, in bedwang hielden.
-            </p>
-            <p>
-              Grizzlyberen en coyotes zijn wel predatoren, maar coyotes jagen vooral op kleine dieren, want ze zijn te klein om op grote dieren (zoals bizons, elanden ect.) te jagen. Natuurlijk klopt het wel dat ze elanden en bizons aten maar ze jaagde niet op ze.
-              En voor de wolven herintroductie waren er nauwelijks grizzlyberen, omdat het dieet van de grizzlybeer vooral bestaat uit wortels, bessen en noten. Dit was toendertijd erg problematisch in samenstelling met weinig vegetatie. Natuurlijk jaagden
-              de grizzlyberen wel op elanden en gaffelbokken, maar dat was vaak niet mogelijk en dit was niet wat ze het liefst aten. Slechts 11% van het dieet van grizzlyberen bestaat uit zoogdieren en 67% bestaat uit plantensoorten. Je kan ook zien
-              in deze grafiek dat er pas na de wolven herintroductie (in 1995) er meer beren in Yellowstone begonnen te komen.
-            </p>
-            <p>
-              <img class="lazyload" data-src="vendor/images/page9graph2.png" style="height:auto;max-width:600px;;width:100%;margin-top:25px;" />
-            </p>
-            <p class="italic">
-              Afbeelding 14: grafiek, populatiedichtheid van de grizzlybeer [bron]
-            </p>
-            <p>
-              Dit zijn de gegevens vóór de wolven herintroductie.
-            </p>
-            <p>
-              Nu gaan we stap voor stap kijken wat er gebeurde na de herintroductie.
-            </p>
-            <p>
-              Het was dus al duidelijk toen de wolven geherintroduceerd werden dat het aantal elanden en herten daalden en dat er daardoor meer planten weer konden groeien. Ook konden de planten en bomen beter groeien. Een voorbeeld hiervan is cottonwood, waarvan het
-              aantal in 1995 rond de 1 à 2 was, had in 2010 rond de 150 à 160 in aantallen.
-            </p>
-            <p>
-              <img class="lazyload" data-src="vendor/images/page9graph3.png" style="height:auto;max-width:600px;;width:100%;margin-top:25px;" />
-            </p>
-            <p class="italic">
-              Afbeelding 15: grafiek, aantal cottonwoodplantjes [bron]
-            </p>
-            <p>
-              Of een ander voorbeeld is de hoogte van espen bomen die in 1997 40 cm was en in 2010 345 cm was. Dat is een toename van meer dan 650%.
-            </p>
-            <p>
-              <img class="lazyload" data-src="vendor/images/page9graph4.png" style="height:auto;max-width:600px;;width:100%;margin-top:25px;" />
-            </p>
-            <p class="italic">
-              Afbeelding 16: grafiek, hoogte van espenbomen [bron]
-            </p>
-            <p>
-              Dit heeft natuurlijk ook veel invloed op de dieren, die daar leefden en die erbij komen. Om dit goed te overzien moeten we weer het voedselweb van Yellowstone erbij pakken.
-            </p>
-            <p>
-              <img class="lazyload" data-src="vendor/images/page9graph.png" style="height:auto;max-width:600px;;width:100%;margin-top:25px;" />
-            </p>
-            <p class="italic">
-              Afbeelding 17: voedselweb voorbeeld in Yellowstone [bron]
-            </p>
-            <p>
-              <br/> We weten hoe de situatie was voor de wolven herintroductie. Dat laat ons beter begrijpen wat er nou precies na gebeurd is. Door de vermindering van de populatie elanden konden planten en bomen eindelijk weer goed en in grotere aantallen
-              groeien, wat voor andere organismen voordelig is, omdat er meer voedsel aanwezig is. Het is voordelig voor dieren zoals de hertmuis. Dit geldt ook voor vele soorten insecten waar de haften er één van is. Ook viel de wolf coyotes aan en doodde
-              veel van hun nakomelingen. De coyotes hadden nu een natuurlijke vijand, waardoor de populatie coyotes is gedaald. In het tabel hieronder zie je de gevolgen.
-            </p>
-            <p>
-              <img class="lazyload" data-src="vendor/images/page9graph5.png" style="height:auto;max-width:600px;;width:100%;margin-top:25px;" />
-            </p>
-            <p class="italic">
-              Afbeelding 18: grafiek, aantal wolven en coyotes in Yellowstone [bron]
-            </p>
-            <p>
-              Sinds 1995 zie je dat het gemiddelde aantal coyotes afneemt t/m 2002 en dan weer toeneemt, maar niet zo hoog als daarvoor. Je kan wel zien dat er in 2007 een hoge piek was, waar het aantal coyotes bijna de 60 raakte (net zoals 13 jaar geleden), maar het
-              jaar daarop is het weer gedaald naar 41. Een grote oorzaak van het afnemen van coyotes, is dat er onder nu meer concurrentie ontstond tussen de coyotes zelf, omdat het voedsel voor de coyotes nu niet meer in overvloed is, moeten de coyotes
-              meer en meer concurreren met elkaar om aan voedsel te komen. Dit zorgt uiteindelijk voor een beter aangepaste populatie coyotes.
-            </p>
-            <p>
-              Dit had als gevolg dat de rode vos ook vaker te zien was omdat er minder coyotes waren die bepaalde gebieden als territorium geclaimd hadden. Maar er kwamen ook veel meer kleine dieren zoals konijnen en hertmuizen, wat weer als gevolg had dat er meer
-              roodstaartbuizerds, kale adelaars en vele andere vogels en kleine zoogdieren tevoorschijn kwamen.
-            </p>
-            <p>
-              En doordat alles meer bloeide en vruchtbaarder werd, kwamen er meer bomen en bossen. Rivieren gingen rechter stromen door de sterkere grond en dit zorgde ervoor dat er ook steeds meer bevers kwamen. Omdat er genoeg voedsel was en genoeg materiaal om dammen
-              en burchten te maken, groeiden de beverpopulatie van 1 kolonie tot 12 kolonies.
-            </p>
-            <p>
-              Je kan de groei in het diagram beneden zien.
-            </p>
-            <p>
-              <img class="lazyload" data-src="vendor/images/page9graph6.png" style="height:auto;max-width:600px;;width:100%;margin-top:25px;" />
-            </p>
-            <p class="italic">
-              Afbeelding 19: grafiek, aantal kolonies van de bever in Yellowstone [bron]
-            </p>
-            <br/>
-            <p>
-              Dit geeft duidelijker aan wat de gevolgen zijn van wolven, en dan niet zo zeer op individueel niveau maar op hele populaties. Het geeft ook aan hoe krachtig het effect is van de wolf op ecosystemen en dat ze een belangrijke rol spelen in de natuur op
-              plaatsen zoals Yellowstone.
-            </p>
-            <p>
-              Wolven hebben dus een enorm effect op een ecosysteem, niet alleen omdat zij goed hun “werk” kunnen uitvoeren en ze zo goed zijn in het jagen op grote herbivoren, maar ook omdat Yellowstone een ideaal gebied is voor de wolven. Het is een ideaal gebied,
-              omdat de herbivoren de herbivoren in dit gebied niet gewend zijn aan de aanwezigheid van een toppredator. Dan zou je waarschijnlijk denken dat wolven in een mum van tijd een enorme populatiegroei zouden ondergaan en die groei blijven vasthouden.
-              Het eerste gedeelte klopt wel, maar als je kijkt naar de eerdere grafieken zie je dat er op gegeven moment een S-vormige grafiek ontstaat bij het aantal wolven in Yellowstone. Dit wordt veroorzaakt door een negatieve terugkoppeling. Dit
-              houdt in dat het proces geremd wordt tot er weer een bepaalde waarde wordt bereikt. Pas als die waarde wordt bereikt stopt het proces met geremd worden. In het geval van de wolf verloopt het proces zo: door het grote aantal grote herbivoren
-              in Yellowstone kon de de wolvenpopulatie exponentieel groeien, maar op gegeven moment verdween die grote groep herbivoren, waardoor er dus minder voedsel was voor de wolven. Dit zorgt uiteindelijk voor het kleiner worden van de totale wolvenpopulatie.
-              Als gevolg van het kleiner worden van de totale wolvenpopulatie konden de grote herbivoren weer in aantallen groeien. Door het groeien van de populatie herbivoren ontstond er meer voedsel voor de wolven, waardoor de wolvenpopulatie alweer
-              kon groeien. Nu ontstaat er een cyclus van het groeien en dalen van beide populaties tegenovergesteld van elkaar. Door dit proces is er nu een evenwicht ontstaan tussen de aantallen wolven en de grote herbivoren.
-            </p>
-          </div>
-          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 spacer"></div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="container page10">
-    <div class="row">
-      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 contentblock height10">
-        <div class="row">
-          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 content">
-            <h1>Wat is de invloed op de geografie?</h1>
-          </div>
-          <div class="col-lg-12 col-md12 col-sm-12 col-xs-12 content">
-            <p>
-              Om te beginnen, geografie is alles wat op het aardoppervlak gebeurt. Zonder dat de wolf het zelf door heeft, past hij niet alleen biologische factoren aan maar ook het land waarop hij loopt, eet, drinkt en jaagt verandert drastisch.
-            </p>
-            <p>
-              Het natuurgebied wat wij gebruiken om de vragen te beantwoorden die wij hebben gesteld in ons profielwerkstuk is Yellowstone. Yellowstone is een natuurgebied in de VS, Wyoming. De beheerders van Yellowstone bedachten een plan om het landschap van Yellowstone
-              drastisch te veranderen. Het plan ging als volgd: ”We zetten wolven uit en laten de natuur zijn werk doen.”
-            </p>
-            <p>
-              Voordat wolven geherintroduceerd werden in Yellowstone, zag het natuurgebied er erg eentonig uit met weinig biodiversiteit, wat gepaard ging met een redelijk kaal landschap. Nadat er wolven uitgezet werden in Yellowstone veranderde het landschap drastisch.
-              Vandaag de dag is het kale landschap verandert in een prachtig natuurgebied, met grote bossen, veel biodiversiteit en natuurlijk ook wolven. Het heeft de wolven een kleine 20 jaar gekost om zo’n prestatie neer te zetten. Dit lijkt misschien
-              lang voor een menselijk perspectief, maar in werkelijkheid is dit het tegenovergestelde waar. Het is ongebruikelijk dat een ecosysteem zo drastisch positief verandert in zo’n korte tijd.
-            </p>
-            <p>
-              Wolven werden geherintroduceerd in het jaar 1995. Na het uitzetten van deze predatoren, kwam het landschap steeds meer tot bloei. Het begon allemaal toen de herten en elanden populatie voor het eerst in jaren daalden. In de grafiek hieronder zie je de
-              gevolgen van de wolf op de populatie wapitiherten (elk in het Engels).
-            </p>
-            <p>
-              <img class="lazyload" data-src="vendor/images/page10graph.png" style="height:auto;width:70%;margin-top:25px;" />
-            </p>
-            <p class="italic">
-              Afbeelding 20: grafiek, aantal wapitiherten [bron]
-            </p>
-            <p>
-              Je kan zien dat de populatie wapitiherten in 2015 met 71% gedaald is, als je het vergelijkt met 1995. Dit werd veroorzaakt door de nogal onervaren herten, die noch nooit ergens bang voor hoefden te zijn, omdat er voor zeker 70 jaar geen grote predatoren
-              in Yellowstone te vinden waren die een gevaar konden zijn voor de grote herbivoren. De ervaren alfa wolven konden van de onwetendheid van de herten gebruik maken, wat zorgde voor het dalen van de populatie herbivoren. Al snel paste de herten
-              en andere grote herbivoren hun gedrag aan en vertrokken ze uit het territorium van de wolven, zodat ze zoveel mogelijk contact met wolven konden vermijden.
-            </p>
-            <br/>
-            <p>
-              <img class="lazyload" data-src="vendor/images/page10scape.png" style="height:auto;width:100%;margin-top:25px;" />
-            </p>
-            <p class="italic">
-              Afbeelding 21: bloeiend landschap met vaste rivieren en veel biodiversiteit
-            </p>
-            <p>
-              De verandering in dit gedrag en aantallen van elanden en herten was erg positief voor de vegetatie in Yellowstone, de leeggevreten valleien en kale bossen konden eindelijk weer opbloeien. Planten verzorgen niet alleen het voedsel in Yellowstone, ze spelen
-              ook een erg belangrijke rol in de geografische veranderingen in het park.
-            </p>
-
-            <p>
-              Door de toename van planten, werd de grond een stuk sterker. Vooral de bomen spelen hierbij een grote rol. De wortels die door de grond verspreid worden, zorgen ervoor dat de rivierbanken worden versterkt, waardoor de rivieren rechter gingen stromen.
-            </p>
-            <p>
-              Een zwakke bodem is namelijk vaak erg makkelijk voor rivieren om te beginnen met meanderen. Meanderen komt vaak voor wanneer er aan een van de kanten het water sneller stroomt dan de tegenovergestelde kant. Door dit snellere water wordt er meer zand en
-              klei meegenomen en ontstaat er langzamerhand een grote lus in de baan van de rivier.
-            </p>
-            <p>
-              De wortels van de bomen zorgt voor het afnemen van meanderen, waaruit stevige, permanente stukken grond ontstaan.
-            </p>
-            <p>
-              Naast een meer stevige bodem werd de bodem ook steeds meer vruchtbaar. Om te beginnen, wat maakt een bodem meer vruchtbaar? Een bodem wordt vruchtbaar genoemd wanneer de grond rijk is aan voedingsstoffen voor planten. Denk dan voornamelijk aan verschillende
-              mineralen die planten nodig hebben voor eiwitsynthese en organische stoffen die de plant kan gebruiken als brand/voedingsstoffen. Naast deze stoffen zorgen verschillende micro-organismen voor een beter leefbare grond. Deze dingen samen in
-              de grond kan je ook humus noemen. Het probleem was eerst dat door de eerst humusarme bovenlaag regenwater niet goed bleef liggen en al snel naar de diepere grondlagen stroomde. Het regenwater neemt dan ook de weinige mineralen en organische
-              stoffen die wel op het oppervlak lagen mee naar die diepere lagen waar het vervolgens niet benut kan worden. Dit proces wordt uitspoeling genoemd. Wanneer de mineralen en de organische stoffen verdwijnen, kunnen de micro-organismen zichzelf
-              ook niet voortzetten.
-            </p>
-            <p>
-              Doordat verschillende planten steeds minder gegeten werden door grote herbivoren ontstond er vanzelf een zooi meer humus. Kleine planten die afsterven die vormen een humus van verschillende organische stoffen waar vervolgens meer en grotere planten gebruik
-              van kunnen maken. De hoeveelheid mineralen nam ook toe door het toenemen van planten. Planten scheiden als afvalstoffen verschillende soorten zuren uit. Deze zuren zorgen ervoor dat uit de grond waar de planten op gevestigd zijn mineralen
-              vrijkomen. Naast dit chemische proces komen voornamelijk mineralen vrij door verschillende bacteriën en schimmels die organische stoffen omzetten in voedingszouten, dus mineralen. Deze bacteriën en schimmels nou je de reducenten. Nu dat
-              de mineralen en organische stoffen weer zich in de bodem bevinden, kunnen de micro-organismen zich ook weer vestigen.
-            </p>
-            <p>
-              Nu dat de humuslaag alsmaar groter wordt, blijft er steeds meer water liggen, er vindt dus nu geen uitspoeling meer plaats. Dit gebeurde voorheen vooral bij zandbodems vanwege de grote lucht ruimtes tussen de zandkorrels. Daarbovenop komt dat planten
-              nu ook in een meer vochtige bodem kunnen groeien. Dit is altijd voordelig, sinds elke plant water nodig heeft om goed te kunnen groeien. Juist op andere stukken grond waar de grond van zichzelf veel fijner is, waar normaal wel veel water
-              blijft staan, werd door behulp van meer humus steeds meer doordringbaar voor verschillende planten. Hier moet je denken aan een kleiachtige bodem. Een kleiachtige bodem heeft heel kleine lucht ruimtes tussen de kleikorrels, waardoor het
-              klei van nature veel water vasthoudt, maar helaas niet zo goed doordringbaar is voor planten.
-            </p>
-            <p>
-              Andere gevolgen van een humusarme grond is dat er een proces genaamt erosie plaatsvindt. Erosie zorgt voor het langzaam slijten van een ondergrond door een aantal abiotische factoren, zoals regen en wind. Erosie kan dus voorkomen worden wanneer de ondergrond
-              begroeid is met planten, zodat de grond niet makkelijk meer loslaat. Planten kunnen zich alleen goed vestigen wanneer de grond een beetje vruchtbaar is, dus humusrijk. Dit gebeurde in yellowstone, waardoor je meer stevige stukken land kreeg
-              wat vervolgens bij kon dragen aan het toenemen van permanenten rivier en maar ook bossen.
-            </p>
-            <p>
-              Door de toename van bossen ontstonden er ook meerdere diersoorten die er weer voor zorgden dat de plantendiversiteit toe kon nemen. Dit zorgt ook uiteindelijk voor een veel vruchtbaardere grond. Naast het verminderen van het meanderen zijn er ook veel
-              meren en sloten ontstaan. Als reactie is de beverpopulatie gestegen. De bevers maken dammen, waardoor er meer leefomgevingen ontstaan voor andere dieren zoals vissen, eenden en reptielen. Deze dieren konden alleen hier leven, doordat er
-              steeds meer nieuwe microklimaten ontstonden. Er is sprake van een microklimaat wanneer op kleine schaal het ecosysteem anders is dan je bij het klimaat zou verwachten. Denk bij de microklimaten aan de gloednieuwe bossen, rivieren, sloten
-              en meren. Klein in aantallen maar groot in daden is de wolf één van de beste dieren om een dor, onbegroeid landschap nieuw leven te geven.
-            </p>
-            <p>
-              <img class="lazyload" data-src="vendor/images/page10scape2.png" style="height:auto;width:100%;margin-top:25px;" />
-            </p>
-            <p class="italic">
-              Afbeelding 22: climaxecosysteem, bossen
-            </p>
-          </div>
-          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 spacer"></div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="container page11">
-    <div class="row">
-      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 contentblock height11">
-        <div class="row">
-          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 content">
-            <h1>Waarom de wolf?</h1>
-          </div>
-          <div class="col-lg-12 col-md12 col-sm-12 col-xs-12 content">
-            <p>
-              Waarom de wolf in een ecosysteem brengen en niet een andere predator? Wat is er nou zo speciaal aan de wolf dat andere predatoren niet hebben? Dat is zeker een goede vraag.
-            </p>
-            <p>
-              Je zou kunnen zeggen dat het wellicht komt omdat de wolf voor 1930 al in Yellowstone aanwezig was en dat ze daarom de wolf hebben geherintroduceerd, maar dat is niet de enige mogelijke reden.
-            </p>
-            <p>
-              Tuurlijk, wolven zijn ideaal voor een gebied zoals Yellowstone. Het is een erg groot natuurgebied wat vaak compleet ondergesneeuwd ligt. Als je in zo’n milieu wil overleven moet je snel en sterk zijn, maar vooral een enorm goede conditie hebben en laten
-              hondachtige, dus zeker ook wolven dat hebben. Met een draf van 8 kilometer per uur leggen zij zo 80 kilometer per dag af. Dit komt natuurlijk van pas wanneer je prooi moet opsporen wat meerdere kilometers verder op is.
-            </p>
-            <p>
-              Met het opsporen van prooi hebben wolven ook geen probleem. Vanwege hun geslepen gehoor kunnen zij hun prooi van verre horen. Hun oren zijn geschikt om tonen te kunnen horen van boven de 40.000Hz, dat is twee keer zo hoog als de mens kan horen. Zij beschikken
-              over ogen die prima bewegingen op verre afstanden kunnen waarnemen, daar bovenop komt dat zij niet alleen overdag maar ook s’ nachts prima kunnen zien. Dit is ideaal in gebieden waar bossen zijn en hoog gras is, hierdoor kan de wolf, overdag
-              en ‘s nachts zijn prooi spotten. En natuurlijk de neus van de wolf. De wolf heeft één van de best ontwikkelde neuzen uit het dierenrijk en gebruikt hem dan uitermate veel. Wanneer omstandigheden optimaal zijn, kan hij van 2 kilometer afstand
-              zijn prooi ruiken, verder gebruiken wolven hun neuzen voor communicatie, denk dan bijvoorbeeld aan gemarkeerd territorium met behulp van verschillende geuren.
-            </p>
-            <p>
-              Over territorium gesproken, wolven hebben een uitzonderlijk groot territorium dat van 200 t/m 6000 km² groot kan zijn. Herbivoren hebben dit overigens ook door, waardoor zij zich vervolgens aan de territoria aanpassen. Hierdoor neemt het aantal grote
-              herbivoren af in het territorium van de wolf. Doordat het territorium van de wolf een mogelijk gevaarlijk gebied kan zijn voor de herbivoren, vermijden zij hierdoor het gebied. Zo kan de wolf het aantal herbivoren terugdringen in een natuurgebied,
-              wat in dit geval Yellowstone is, waardoor ook de overbegrazing terug wordt gedrongen, zonder dat de wolf überhaupt een herbivoor heeft moeten ombrengen.
-            </p>
-            <p>
-              De wolf zit ingewikkeld in elkaar zoals je al hebt gelezen. Het is een loyaal, sterk en intelligent dier en zorgt voor grote, positieve gevolgen in de natuur om ons heen.
-            </p>
-            <p>
-              Alhoewel, de grootste reden waarom de wolf nou zo een grote invloed kan uitoefenen is door zijn samenwerking. De meeste wolven leven in roedels waarin iedereen met elkaar om moet kunnen gaan. Er is een rangschikking om duidelijk aan te geven wie meer
-              zeggenschap heeft en wie minder. En samen zorgen ze voor een zeer efficiënte manier van leven waarbij iedereen in de roedel profijt van heeft. Het is een collectivistisch systeem. De groep gaat vóór het individu. Althans, in de meeste gevallen.
-            </p>
-            <p>
-              Samen staan ze sterk en samen kunnen ze een heleboel meer bereiken dan in hun eentje. Een eenzame wolf kan moeilijk een bizon aanpakken, bijvoorbeeld. Bizons zijn namelijk erg sterk en een harde trap kan ernstige gevolgen hebben. Maar in een groep kunnen
-              ze prooien op de bizon en ervoor zorgen dat iedereen voedsel binnenkrijgt.
-            </p>
-            <p>
-              <img class="lazyload" data-src="vendor/images/page11wolf.png" style="height:auto;width:100%;margin-top:25px;" />
-
-            </p>
-            <p class="italic">
-              Afbeelding 23: roedel wolven
-            </p>
-            <p>
-              De reden waarom een andere predator niet zou kunnen werken, of simpelweg niet zo’n grote invloed kan inbrengen, is omdat bij de meeste predatoren dit collectivistisch systeem ontbreekt. Veel predatoren leven niet in een roedel, of groep, van dezelfde
-              soort waarin ze allemaal samenwerken om een groter doel te bereiken.
-            </p>
-            <p>
-              Een vergelijkbaar voorbeeld is een bekende katachtige, de leeuw. Zij werken in een vergelijkbaar systeem als de wolf, alleen met een klein aantal verschillen, zoals dat er meestal maar één mannetje aanwezig is in een groep leeuwen én dat de vrouwtjes
-              meestal het jagen doen, terwijl in een wolvenroedel er vaak meerdere mannetjes aanwezig zijn en zowel vrouwtjes als mannetjes jagen.
-            </p>
-            <p>
-              Maar als er andere predatoren zijn die ook goede samenwerking hebben, waarom dan de wolf? Simpel. De wolf kan in principe overal leven. Net als de mens, zijn wolven zo goed aangepast aan de natuur, dat ze in elk gebied of ecosysteem (op land, natuurlijk)
-              zouden kunnen leven. Net zoals bij de wolf heeft dit ook bij mens een groot verschil gemaakt in het succes van de mensheid. Wij zouden hoogstwaarschijnlijk veel minder ver zijn gekomen met onze wereld dominatie als wij ook net zoals de wolf
-              bijna overal kunnen leven.
-            </p>
-            <p>
-              <img class="lazyload" data-src="vendor/images/page11wolf2.png" style="height:auto;width:100%;margin-top:25px;" />
-            </p>
-            <p class="italic">
-              Afbeelding 24: huilende lone wolf
-            </p>
-          </div>
-          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 spacer"></div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="container page12">
-    <div class="row">
-      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 contentblock height12">
-        <div class="row">
-          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 content">
-            <h1>Hoe kan de wolf naast de mens leven?</h1>
-          </div>
-          <div class="col-lg-12 col-md12 col-sm-12 col-xs-12 content">
-            <p>
-              Zodra de wolf wordt ingebracht, hoe zal hij naast de mens kunnen leven?
-            </p>
-            <p>
-              Wolven kunnen sterke emoties opbrengen. Ze zijn hét symbool van de wildernis en worden gezien als de ultieme sociale dieren. Toch wil dit niet zeggen dat er een bepaald positief denkbeeld wordt geschetst bij het denken aan de wolf. Het is zeker een uitdaging
-              om de mens te laten leren over de wolf, maar hiermee hoopt men dat er gebonden aan het begrip vanzelf ook acceptatie zal komen.
-            </p>
-            <p>
-              Hetzelfde geldt voor grote rashonden. Honden als de Rottweiler, Duitse Herder, Stafford of Pitbull worden verafschuwd en beschouwd als hartstikke gevaarlijk door veel mensen, alsof één van die honden meteen op je af zal rennen en je nek zal door bijten
-              het moment dat ze van de riem los gelaten worden. Zelfs de overheid doet er weinig aan en denkt dat het verbannen, in laten slapen of het muilkorven van de hond de problemen zomaar zal laten verdwijnen.
-            </p>
-            <p>
-              Zo is de mens altijd al geweest. Als we iets niet begrijpen of mogen, dan vindt men de beste oplossing om het maar af te maken. Hetzelfde is gebeurd met de wolf in de VS, waar elke gespotte wolf legaal mocht worden afgeschoten. Vooral in het Yellowstone
-              gebied werd er erg veel gejaagd. Het ging door totdat de laatste paar wolven werden afgemaakt in 1926.
-            </p>
-            <p>
-              <img class="lazyload" data-src="vendor/images/page12wolf.png" style="height:auto;width:100%;margin-top:25px;" />
-            </p>
-            <p class="italic">
-              Afbeelding 25: wolf in een houten kooi die door een opening kijkt
-            </p>
-            <p>
-              Dat ter zijde, om mensen de wolven te laten begrijpen zodat ze hen leren te accepteren, moeten we laten zien dat de wolf veel met de mens gemeen heeft. Ze delen veel menselijke eigenschappen zoals emoties en personaliteit. Wolven creëren dichte sociale
-              banden met elkaar, maar tegelijkertijd zullen ze op bepaalde momenten hun hiërarchische sociale orde toepassen. Sommige wolven adopteren de pups van een ander en voeden die op alsof het hun eigen zijn, maar andere keren zullen ze haastig
-              een indringer in hun territorium doden.
-            </p>
-            <p>
-              Mensen leggen wel eens nadruk op de “goede” en “slechte” dingen die een wolf doet en in hun gedrag zit. In plaats van af te vragen of wolven goed of slecht zijn, leren de mensen bij het International Wolf Center over de complexiteit van het dier. Ze vragen
-              zich af hoe moeilijk het is om een eland van 550 kilogram neer te krijgen; hoe een wolvenroedel hun pups opvoeden; welke impact en gevolgen mensen hebben op de overleving van de wolf; welke impact de wolf heeft op de mens. Volgens hen is
-              er nog veel meer te onderzoeken om volledig te begrijpen hoe wolven in elkaar zitten en wat hun relatie is met ander wildleven en mensen.
-            </p>
-            <p>
-              Conflicten te vermijden
-            </p>
-            <p>
-              Wolven zijn erg verlegen en zullen mensen in het algemeen vermijden. Hierdoor zullen de meeste mensen nooit een wilde wolf ontmoeten, laat staan in een conflict met één komen, al groeien de aantallen wereldwijd. Hoewel, als mensen zich in zullen burgeren
-              in gebieden waar wolven aanwezig zijn, is het bijna onvermijdbaar dat de mens en de wolf steeds vaker elkaar zullen tegemoetkomen en dat de angst van elkaar overwonnen wordt. Wolven zijn dan meer waarschijnlijk om gebieden te betreden waar
-              mensen aanwezig zijn, zoals campings of woonplaatsen, wat erg gevaarlijk kan zijn. Hierdoor zal de kans op conflict tussen de wolf en de mens stijgen. Om dit zoveel mogelijk te voorkomen zijn er een aantal regels of benodigdheden waar mensen
-              in zo’n gebied zich aan moeten houden.
-            </p>
-            <p>
-              Volgens het International Wolf Center moet men:
-            </p>
-            <ul>
-              <li>
-                <p>
-                  de wolven niet voeden;
-                </p>
-              </li>
-              <li>
-                <p>
-                  alle huisdieren binnenhuis eten geven en niet eten buiten achterlaten;
-                </p>
-              </li>
-              <li>
-                <p>
-                  etensresten weggooien in vuilnisbakken met een goed en stevige deksel;
-                </p>
-              </li>
-              <li>
-                <p>
-                  geen ander wildleven voeden: bij het aantrekken van prooi, zullen wolven volgen;
-                </p>
-              </li>
-              <li>
-                <p>
-                  vetbollen voor vogels minstens 7 meter boven de grond ophangen;
-                </p>
-              </li>
-              <li>
-                <p>
-                  huisdieren niet onbeheerd buiten laten: honden en katten zijn makkelijke doelwitten voor de wolf;
-                </p>
-              </li>
-              <li>
-                <p>
-                  als er geen andere optie is voor het onbeheerd je huisdieren in de tuin te laten, zorg ervoor dat ze in een stevig hok zitten;
-                </p>
-              </li>
-              <li>
-                <p>
-                  installeer buiten het huis lampen met bewegingssensoren: dit zal helpen om wolven weg te jagen;
-                </p>
-              </li>
-              <li>
-                <p>
-                  probeer wolven vooral te vermijden en niet comfortabel te laten voelen;
-                </p>
-              </li>
-              <li>
-                <p>
-                  bij het tegenkomen van een wolf afstand houden. Als de wolf te dichtbij komt, zorg ervoor dat je jezelf zo groot mogelijk maakt d.m.v. je armen omhoog te houden en te zwaaien, terwijl je hard schreeuwt om hem weg te jagen.
-                </p>
-              </li>
-            </ul>
-            <p>
-              Wanneer je deze regels opvolgt heb je de 2 grootste gevaren al geminimaliseerd, uitlokking van de wolven en wolven comfort geven naast de mens. Een ander gevaar is wanneer een wolf hondsdolheid krijgt, een ziekte in het brein waardoor een dier, in dit
-              geval de wolf erg agressief wordt en alle rationele beslissingen achterwege laat. Gelukkig is dit zeer zeldzaam en streng gecontroleerd over de hele wereld.
-            </p>
-            <p>
-              Daarbij is volgens The Fear of Wolves: A Review of Wolf Attacks on Humans, waarin een documentatie staat van wolf gerelateerde incidenten de afgelopen 400 jaar, het aantal aanvallen erg zeldzaam. Deze bron kijkt naar wolf-mens ontmoetingen van een grote
-              variatie van bronnen en trekt de conclusie dat het dus erg zeldzaam is voor een mens om aangevallen te worden door een wolf. De meest voorkomende factoren waren hondsdolheid - wat zeer zeldzaam is zoals hierboven beschreven, uitlokking door
-              mensen en gebieden waar de mens de omgeving drastisch heeft aangepast.
-            </p>
-            <div>
+                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+                <span class="sr-only">Previous</span>
+              </a>
+                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="carousel-control-next-icon"></span>
+                <span class="sr-only">Next</span>
+              </a>
+              </div>
+             </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+              <h1>Inleiding</h1>
+                        <p>
+                          Ons profielwerkstuk gaat over de wolf. Maar niet alleen wat de wolf is, maar ook wat hij doet, hoe hij het doet en wat de gevolgen zijn op de natuur om ons heen. De wolf is namelijk niet zo simpel als de meeste mensen denken. Het is een erg complex dier
+                          en er spelen veel achterliggende factoren bij het zijn van een wolf. Daarbij zorgt hij voor grote gevolgen in ecosystemen waar de wolf aanwezig is. Maar wat beïnvloed de wolf nou allemaal precies door simpelweg z’n dagelijks
+                          leven te lijden? Deze hoofdvraag splitsen we op in de geografische en ecologische veranderingen. Om dit te kunnen beantwoorden gaan we eerst na hoe de wolf nou in elkaar zit en hoe hij de dag doorbrengt als toppredator in zijn
+                          roedel zonder dat iemand hem na kan doen.
+                        </p>
+                        <p>
+                          We gebruiken hier het Yellowstone National Park als ons test arena, waar op deze dag de wolf nog steeds veel wordt onderzocht. Hier kunnen we goed zien wat voor effect de wolf nou precies heeft op het park, de planten, de mens en de vele andere soorten
+                          die daar leven in het geval dat hij opnieuw geherintroduceerd wordt.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 spacer"></div>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 spacer"></div>
-        </div>
-      </div>
-    </div>
-  </div>
 
-  <div class="container page13">
-    <div class="row">
-      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 contentblock height13">
-        <div class="row">
-          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 content">
-            <h1>Conclusie</h1>
+          <div class="container page1">
+            <div class="row">
+              <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 contentblock height1">
+                <div class="row">
+                  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 content">
+                    <h1>Een kijkje bij de wolf</h1>
+                  </div>
+                  <div class="col-lg-12 col-md12 col-sm-12 col-xs-12 content">
+                    <p>
+                      Wat is een wolf nou eigenlijk? Dat lijkt misschien een simpele vraag met een nog simpeler antwoord. Toch, als je er even over nadenkt, kom je tot de conclusie dat het een stuk lastigere kwestie is dan je eerder had ingeschat. De wolf ook wel Canis lupus
+                      genoemd, komt van de familie hondachtigen (Canidae), die weer behoort tot de orde van de roofdieren (Carnivora). Maar waar hoort de wolf nog meer bij, hoe is de wolf &lsquo;de wolf&rsquo; geworden zoals we die kennen en wat maakt
+                      deze hondachtige zo speciaal? Dat gaan wij nu beantwoorden in de volgende kopjes.
+                    </p>
+                    <p>
+                      <img class="lazyload" data-src="vendor/images/page1wolf.png" style="height:auto;width:100%;margin-top:25px;" />
+                    </p>
+                    <p class="italic">
+                      Afbeelding 1: de grijze wolf
+                    </p>
+                    <h4>
+              De taxonomie van de wolf
+            </h4>
+                    <p>Voordat we in een aantal leuke weetjes van de wolf duiken, vertel ik eerst wat over de taxonomie van de wolf, oftewel waar de wolf in de biologie wordt ingedeeld.</p>
+                    <ul>
+                      <li>
+                        <p>
+                          Domein: Eukaryoten.
+                        </p>
+                    </ul>
+                    <p>De wolf behoort tot de eukaryoten, wat betekent dat het dier cellen heeft met daarin organellen en een celkern die de chromosomen bij elkaar houdt. Eukaryoten kunnen zowel ééncellig als meercellig zijn. De wolf is uiteraard een meercellig
+                      organisme. Naast een celkern heeft de wolf in zijn cellen ook andere organellen, waaronder: mitochondriën, ribosomen en een golgi-systeem.</p>
+                    <ul>
+                      <li>
+                        <p>
+                          Rijk: Dieren (de wetenschappelijke naam is Animalia).
+                        </p>
+                    </ul>
+                    <p>De wolf behoort tot het dierenrijk, oftewel Animalia. Dit betekent dat de cellen van het dier geen celwand, geen bladgroenkorrels, maar wel een celkern bevatten.</p>
+                    <ul>
+                      <li>
+                        <p>
+                          Stam: Chordadieren (de wetenschappelijke naam is Chordata).
+                        </p>
+                    </ul>
+                    <p>
+                      De wolf behoort tot de Chordadieren. Dat zijn dieren die aanleg van een Chorda hebben. Dit is een elastische, flexibele streng die langs de complete rug van het dier loopt. Dit is nog geen ruggengraat, maar wanneer het dier ook een gewervelde is, wat
+                      de wolf is, ontwikkeld het dier in latere ontwikkelingsstadia ruggenwervels.
+                    </p>
+                    <ul>
+                      <li>
+                        <p>
+                          Klasse: Zoogdieren (de wetenschappelijke naam is Mammalia).
+                        </p>
+                    </ul>
+                    <p>De wolf behoort tot de zoogdieren. Dit zijn warmbloedige dieren die hun nakomelingen levend baren en zoals de naam al verklapt, zoogt de moeder haar nakomelingen met een soort melk.</p>
+                    <ul>
+                      <li>
+                        <p>
+                          Orde: Roofdieren (de wetenschappelijke naam is Carnivora).
+                        </p>
+                    </ul>
+                    <p>De wolf behoort tot de roofdieren. Dit betekent dat het dier exclusief vlees eet. De wolf eet dus onder normale omstandigheden alleen vlees.</p>
+                    <ul>
+                      <li>
+                        <p>
+                          Familie: Hondachtigen (de wetenschappelijke naam is Canidae).
+                        </p>
+                    </ul>
+                    <p>
+                      De wolf behoort tot de hondachtigen. Dat betekent dat het dier vier poten heeft met aan de voorkant 5 nagels per poot en aan de achterkant 4 nagels per poot. De nagels zijn niet intrekbaar zoals bij de katachtigen.
+                    </p>
+                    <ul>
+                      <li>
+                        <p>
+                          Geslacht: Canis
+                        </p>
+                    </ul>
+                    <p>
+                      De wolf zijn geslacht is Canis. Dat betekent dat hij onder een groep valt van verschillende hondachtigen, waaronder: de jakhalzen, de coyote, de hond en de wolf.
+                    </p>
+                    <ul>
+                      <li>
+                        <p>
+                          Soort: Lupus
+                        </p>
+                    </ul>
+                    <p>
+                      Zijn soort is lupus, ofwel de wolf.
+                    </p>
+                  </div>
+                  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 spacer"></div>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="col-lg-12 col-md12 col-sm-12 col-xs-12 content">
-            <p>
-              Er is een grote invloed op de natuur door de aanwezigheid van de wolf. Wat de wolf doet zorgt namelijk voor veel positieve gevolgen. Er is een grote toename van dieren en planten, waardoor de biodiversiteit sterk toeneemt en zelfs de geografie van het
-              land wordt aangepast door middel van meer bosvorming en het ontstaan van nieuwe rivieren. Het ontstaan van rivieren brengt weer allerlei andere dieren en planten die zich kunnen vestigen in het gebied, waardoor alweer de biodiversiteit zal
-              toenemen.
-            </p>
-            <p style="font-style: italic;">
-              “Hoe zitten wolven in elkaar: wat is hun gedrag; gewoontes; bouw; habitat; etc.?”
-            </p>
-            <p>
-              De wolf zijn zeer sociale dieren en zit vooral erg ingewikkeld in elkaar.
-            </p>
-            <p>
-              Wolven leven in een hiërarchische samenleving. De meeste wolven brengen hun leven door in een roedel, waar deze hiërarchie plaatsvindt. Het is een zeer collectivistisch systeem waarin de groep vóór het individu gaat, maar waarin het individu alsnog van
-              sterk belang is. De samenleving werkt goed door de rangschikking in een roedel, waarin een alfa-paar aanwezig is die alle beslissingen maakt en orde houdt. De rest van de roedelleden hebben de rol als beta's en hebben minder zeggenschap.
-            </p>
-            <p>
-              De wolf heeft een tactische manier van jagen die geoptimaliseerd is voor een groep wolven die samen jagen op hun prooi, waarbij hun geslepen zintuigen de jacht nog makkelijker maken. Daarbij hebben ze een territorium die wordt gemarkeerd door middel van
-              defecatie en urine zodat wolven buiten de roedel weten van wie dit territorium is en ze niet te dichtbij mogen komen.
-            </p>
-            <p style="font-style: italic;">
-              “Wat is de invloed die wolven uitoefenen op andere organismen?”
-            </p>
-            <p>
-              Wolven zorgen voor de vermindering van grote herbivoren, zoals herten en elanden, die alle planten afgrazen, waardoor de planten kunnen regenereren en er uiteindelijk ook meer planten en zelfs bossen kunnen ontstaan. Door de toename van planten en de
-              stijging van biodiversiteit is er meer voedselvoorziening en onderdak voor andere dieren, waardoor zij naar dit gebied toe migreren. Ook verminderen ze de hoeveelheid van coyotes, waardoor de hoeveelheid knaagdieren stijgt en er meer voedsel
-              aanwezig is voor dieren zoals roofvogels en andere predatoren als vossen en dassen. Beren migreren uiteindelijk ook naar het gebied toe door de toename van bessen en dergelijke, waardoor de beer versterking geeft aan het impact van de wolf
-              door andere herbivoren populaties in bedwang te houden. Door het claimen van territorium, zorgen de wolven ook voor een verandering in het gedrag van bepaalde dieren, zoals de grote herbivoren waar de wolf op jaagt. Deze dieren durven niet
-              te dichtbij de wolf in de buurt te komen, waardoor ze bepaalde gebieden zullen vermijden en daar de vegetatie zal kunnen toenemen.
-            </p>
-            <p style="font-style: italic;">
-              “Wat is de invloed op de geografie van het gebied?”
-            </p>
-            <p>
-              Door de afname van herbivoren ontstaan er meer beboste gebieden en ontstaat er in het algemeen een groener landschap. Door de toename van bomen zal de grond worden versterkt door de wortels die zich verspreiden onder de grond, maar wat vooral wordt versterkt
-              zijn de rivierbanken. Door de versterking van de rivierbanken zal het meanderen afnemen, waardoor vaste rivieren ontstaan en er geen modderige boel overblijft. Door het ontstaan van rivieren zal er weer een domino-effect plaatsvinden waardoor
-              er meer organismen zich zullen bevinden in het gebied, zoals eenden, bevers, amfibieën, reptielen en waterplanten.
-            </p>
-            <p style="font-style: italic;">
-              “Waarom de wolf en niet een andere predator? En welke factoren spelen hier een rol bij?”
-            </p>
-            <p>
-              Wolven hebben zeer goede zintuigen wat hun goed helpt in de jacht en andere activiteiten. Ze zijn ook erg territoriaal en markeren hun territorium door middel van defecatie en urine, zodat andere wolven, maar ook herbivoren uit de buurt blijven, zonder
-              dat ze enig veel hoeven te doen. Daarbij leven wolven in een hiërarchische samenleving waar er een sterke samenwerking aanwezig is. Veel predatoren ontbreken dit collectivistische systeem waar de soortgenoten samenwerken om te streven naar
-              een groter doel. Voorbeelden van andere organismen die onder een vergelijkbaar systeem leven zijn de leeuw en de mens. Net als de mens, is ook de wolf zo goed aangepast aan de natuur, dat hij vrijwel overal kan leven. Dit zorgt ervoor dat
-              wolven in principe overal kunnen ingebracht worden om de conditie van de natuur te verbeteren.
-            </p>
-            <p style="font-style: italic;font-size:16px;">
-              “Zodra je de wolf inbrengt in een nieuw gebied, hoe zal de wolf naast de mens kunnen leven zonder enige conflicten?”
-            </p>
-            <p>
-              Veel mensen zijn over het algemeen bang voor wilde dieren, vooral voor vleesetenden, oftewel de (meestal) carnivorische predatoren. Dit kan voor enige conflicten zorgen tussen de mens en de wolf, maar door de mens een betere voorlichting te geven over
-              de wolf en hen een aantal strikte regels te laten volgen, zal alles goed aflopen. Daarbij zijn wolven erg verlegen en zullen ze mensen zoveel mogelijk vermijden, dus als je ze geen reden geeft om je te benaderen, zullen ze mensen ook nooit
-              kwaad kunnen doen. Daarbij is er in het verleden erg weinig aanvallen geweest op de mens. In 400 jaar tijd was het zeer zeldzaam voor een wolf om een mens aan te vallen, waarvan de meeste incidenten te maken hadden met hondsdolheid, uitlokking
-              door mensen of doordat de mens het leefgebied van de wolf te drastisch heeft aangepast.
-            </p>
+
+          <div class="container page2">
+            <div class="row">
+              <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 contentblock height2">
+                <div class="row">
+                  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 content">
+                    <h1>Geschiedenis en herkomst</h1>
+                  </div>
+                  <div class="col-lg-12 col-md12 col-sm-12 col-xs-12 content">
+                    <h4>
+              Voorouders
+            </h4>
+                    <p>
+                      De Canis lupus, of de grijze wolf, is niet de eerste in zijn evolutie tak, maar zeker ook niet de laatste. Deze soort van de Canis familie leeft officieel sinds 1758, waar hij voor het eerst is gedocumenteerd door Carl Linnaeus in zijn boek Systema Naturae.
+                      De grootvader van de Canis familie is de Canis lepophagus, deze soort leefde exclusief in een deel van Noord-Amerika zo’n 5 miljoen jaar geleden. De Canis lepophagus was erg klein toen der tijd, met een gewicht van ongeveer 18 kilo.
+                      Vergelijk dit met de meer moderne hondachtige soorten die tot wel zo’n 80 kg kunnen wegen. Na de lepophagus kwam de Canis etruscus tot stand. Over deze soort is weinig bekend, omdat fragmenten van hun botten erg zeldzaam zijn. Ook
+                      bevatten de botten vaak weinig genetisch materiaal.
+                    </p>
+                    <p>
+                      Wat we wel weten is dat hij de voorouder is van de Canis mosbachensis. Deze soort had meerdere populaties in Noord-Amerika, Europa en Azië. Later stierf de Noord-Amerikaanse populatie uit.
+                    </p>
+                    <p>
+                      <img class="lazyload" data-src="vendor/images/page2graph.jpg" style="height:auto;width:100%;max-width:600px;margin-top:25px;" />
+                    </p>
+                    <p class="italic">
+                      Afbeelding 2: de stamboom van de grijze wolf en andere hondachtigen <a href="http://www.cell.com/trends/genetics/fulltext/S0168-9525(07)00305-8" target="_blank">[bron]</a>
+                    </p>
+                    <h4>
+            Evolutie
+          </h4>
+                    <p>
+                      Er is een duidelijke trend te zien, elke nieuwe wolvensoort uit de Canis familie is groter en sterker gaan groeien dan hun voorouders met een uitzondering op de hond - laten we zeggen dat dit het zwarte schaap is van de familie. Dit waren blijkbaar voordelige
+                      eigenschappen in het verleden, waardoor de wolf uiteindelijk nu zo tot stand is gekomen.
+                    </p>
+                    </br>
+                    <h4>
+            De wolf van nu
+          </h4>
+                    <p>
+                      De modernste vorm van de Canis familie naast de geliefde hondensoort wordt lupus genoemd. De mosbachensis, die zich de voorouder mag noemen van de lupus, ging vanuit Azië verder naar Noord-Amerika om daar de dominantste wolvensoort te worden. Helaas heeft
+                      dit feest niet lang geduurd. In 1926 werden in de VS al de wolvenpopulaties gereduceerd tot kleine aantallen. In de VS stierf de laatste grijze wolf nog voor 1930 in Yellowstone. Pas in het jaar 1995 werd de wolf weer geherintroduceerd
+                      in het Yellowstone National Park. Hedendaags heeft de lupus vooral in Canada, Rusland, Azië, delen in Oost-Europa en Duitsland grote populaties.
+                    </p>
+                  </div>
+                  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 spacer"></div>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 spacer"></div>
-        </div>
-      </div>
-    </div>
-  </div>
 
-  <button type="button" class="btn btn btn-primary btn-circle btn-lg btn-up" onclick="movePage(NaN, false);"><i class="fa fa-arrow-up" aria-hidden="true"></i></button>
-  <button type="button" class="btn btn btn-primary btn-circle btn-lg btn-down" onclick="movePage(NaN, true);"><i class="fa fa-arrow-down" aria-hidden="true"></i></button>
-  <button type="button" class="btn btn btn-primary btn-circle btn-lg btn-counter"><p class="pageNumber">1</p></button>
+          <div class="container page3">
+            <div class="row">
+              <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 contentblock height3">
+                <div class="row">
+                  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 content">
+                    <h1>Bouw van de wolf</h1>
+                  </div>
+                  <div class="col-lg-12 col-md12 col-sm-12 col-xs-12 content">
+                    <p>
+                      Heb je wel eens willen weten hoe hard een wolf kan bijten, hoe snel en hoe lang zo’n beest kan rennen, of hij zacht is, maar vooral hoe groot de wolf is? Dit gaan wij behandelen in het volgende onderwerp.
+                    </p>
+                    </br>
+                    <h4>
+              De Grootte en het gewicht
+            </h4>
+                    <p>
+                      De grijze wolf weegt gemiddeld tussen de 40 en de 50 kilogram, maar het is niet vreemd als een wolf 60 kilogram wordt. De vrouwtjes zijn gemiddeld 20% kleiner dan de mannetjes. De mannetjes kunnen van staart tot neus ongeveer anderhalve meter tot en met
+                      twee meter lang worden. De vrouwtjes worden van neus tot staart gemiddeld 1,40 meter tot en met 1,80 meter lang.
+                    </p>
+                    </br>
+                    <h4>
+              De kaak en de beet
+            </h4>
+                    <p>
+                      De kaak van een wolf is wat ingewikkelder dan die van een mens, omdat de wolf 42 tanden in zijn bek heeft. Dit zijn 12 snijtanden, 4 hoektanden, 16 voorkiezen, 10 scheurkiezen en gewone kiezen. Het unieke aan een wolf is dat hij zijn prooi niet kauwt,
+                      maar hem eerder aan stukken scheurt, zodat hij zijn prooi op gemakkelijk naar binnen kan werken. De druk die hij uitoefent tijdens het bijten, bedraagt maar liefst 15 MPa. Dit houdt in dat hij een elands poot kan doorbijten tot aan
+                      het beenmerg toe.
+                    </p>
+                    </br>
+                    <h4>
+              De vacht
+            </h4>
+                    <p>
+                      De vacht van de meeste wolven moet tegen lage temperaturen kunnen, daarom heeft de wolf een dichte wintervacht, inclusief een korte ondervacht en grof dekhaar. Het haar op de wolf is het langst rond de nek, vooral rond de schouder is bijzonder lang. Dit
+                      vormt als ware een soort kam in de hals van de wolf. De kop is bedekt met lange haren die een bosje vormen. De oren zijn bedekt met redelijk korte haren.
+                    </p>
+                    <p>
+                      Tijdens het voorjaar, wanneer de wolf deze deze dikke vacht niet nodig heeft, laat hij grotendeels zijn ondervacht en dekhaar vallen. De kleuren van de vacht bij wolven verschillen enorm, van bijna wit tot zwart, van grijs tot bruin en zelfs verschillende
+                      tinten blond.
+                    </p>
+                    </br>
+                    <h4>
+              De conditie en loopsnelheid
+            </h4>
+                    <p>
+                      Wolven draven in een stevig tempo van ongeveer 8 kilometer per uur. Hun topsnelheid ligt rond de 60 kilometer per uur. Dit komt van pas wanneer zij achtervolgingen met prooi hebben. Helaas kunnen zij dit niet voor lange afstanden volhouden. De lange afstands
+                      conditie van de wolf daarentegen, is verbazingwekkend. Ze zijn instaat om 80 kilometer per dag af te leggen en kunnen uren lopen zonder moe te worden. Het is bekend dat wolven meerdere honderden kilometers weg van hun territorium
+                      hebben gereisd op zoek naar een eigen roedel. Waarbij sommigen wel een afstand van zo’n 160 kilometer hebben afgelegd zonder enige rust.
+                    </p>
+                  </div>
+                  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 spacer"></div>
+                </div>
+              </div>
+            </div>
+          </div>
 
-  <!-- Bootstrap core JavaScript -->
-  <script src="vendor/jquery/jquery.min.js "></script>
-  <script async src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="vendor/imagesloaded/imagesloaded.min.js"></script>
-  <script async src="vendor/custom/js/custom.js "></script>
-  <script async src="https://use.fontawesome.com/8d6338574f.js"></script>
+          <div class="container page4">
+            <div class="row">
+              <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 contentblock height4">
+                <div class="row">
+                  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 content">
+                    <h1>Hoe oriënteert de wolf zich?</h1>
+                  </div>
+                  <div class="col-lg-12 col-md12 col-sm-12 col-xs-12 content">
+                    <p>
+                      In dit kopje behandelen we hoe geslepen de zintuigen van een wolf zijn, en in hoeverre de wolf superieur is tegenover de mens en vooral in welke opzichten. Om specifieker te zijn, hoe is het zicht, het reukvermogen en om niet te vergeten het gehoor van
+                      de wolf.
+                    </p>
+                    <p>
+                      <img class="lazyload" data-src="vendor/images/page4wolf.png" style="height:auto;width:100%;margin-top:25px;" />
+                    </p>
+                    <p class="italic">
+                      Afbeelding 3: kop van de wolf, de wolf is gefocust op een object of organisme in de verte
+                    </p>
+                    <h4>
+            Het zicht
+            </h4>
+                    <p>
+                      We beginnen met de ogen van de wolf en hoe goed die ontwikkeld zijn. Om te beginnen, zijn ze dat eigenlijk wel? In het ene opzicht wel. Daarmee bedoel ik dat zij veel beter in het donker kunnen zien dan wij mensen. Dat niet alleen, zij hebben een gezichtsveld
+                      van 270°, terwijl de mens slechts een gezichtsveld heeft van ongeveer 180°. Dit helpt de wolf goed zijn omgeving in de gaten te houden. Daar bovenop komt dat wolven veel meer staafjes in hun ogen hebben dan wij mensen dat hebben.
+                      Staafjes hebben als enige functie om licht op te vangen. Dit zorgt ervoor dat wolven heel goed beweging kunnen waarnemen. Toch heeft de wolf ook wat minpunten als we het hebben over zijn zicht. Wolven kunnen een stuk slechter diepte
+                      vanaf afstand inschatten zoals wij dat kunnen. Daarnaast hebben de wolfjes een stuk minder kegeltjes in hun ogen. Deze kegeltjes kunnen kleuren detecteren. Dit zorgt ervoor dat wolven minder kleuren zien dan wij mensen. Deze twee
+                      dingen kunnen ervoor zorgen dat wolven een stilstaand persoon over het hoofd zien, omdat ze het niet kunnen herkennen als een mogelijk levend wezen.
+                    </p>
+                    </br>
+                    <h4>
+                Het reukvermogen
+              </h4>
+                    <p>
+                      Een wolf heeft een reukvermogen tot wel 10.000 keer dat van de mens. Onder goede omstandigheden kan de wolf van zo’n 2 kilometer of meer geuren oppikken met z’n neus. De wolf gebruikt zijn neus ook om er mee te communiceren.
+                    </p>
+                    <p>
+                      <img class="lazyload" data-src="vendor/images/page4wolf2.png" style="height:auto;width:100%;margin-top:25px;" />
+                    </p>
+                    <p class="italic">
+                      Afbeelding 4: wolf die de grond aan het ruiken is
+                    </p>
+                    <h4>
+              Het gehoor
+            </h4>
+                    <p>
+                      De oren van de wolf doen het weer een stuk beter dan bij mensen. Zij kunnen tonen tot 40.000 Hz horen! In vergelijking kan de mens op zijn best tot 20.000 Hz horen.
+                    </p>
+                    <p>
+                      Dit verklaart ook waarom wij wolvenfluitjes niet kunnen horen, maar wolven wel. Deze fluitjes geven dus een toon af van boven de 20.000 Hz.
+                    </p>
+                  </div>
+                  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 spacer"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="container page5">
+            <div class="row">
+              <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 contentblock height5">
+                <div class="row">
+                  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 content">
+                    <h1>Gedrag en communicatie</h1>
+                  </div>
+                  <div class="col-lg-12 col-md12 col-sm-12 col-xs-12 content">
+                    <h4>
+              Roedels
+            </h4>
+                    <p>
+                      Wolven zijn zeer sociale dieren die meestal in roedels leven met daarin een alfa-mannetje en een alfa-vrouwtje. De alfa’s regelen alles in de roedel, zoals: wanneer er gejaagd wordt, wanneer het tijd is om te reizen naar een ander stuk land en wie er
+                      als eerste eten krijgt. Ze lossen zelfs conflicten op tussen de wolven in de roedel. Het alfa-mannetje wordt gekozen of bepaald qua hoe sterk hij is, hoe intimiderend hij is of hoe gerespecteerd hij wordt. Het alfa-vrouwtje krijgt
+                      haar status als alfa wanneer zij de hoofdpartner van het alfa-mannetje is. Met “hoofd” wordt er bedoeld dat het wel eens kan voorkomen dat het alfa-mannetje paart met meerdere vrouwtjes in de roedel. Alle andere wolven zijn ondergeschikten,
+                      oftewel beta’s, en behoren tot de lagere rang in de roedel en moeten bevelen opvolgen van de alfa’s.
+                    </p>
+                    <p>
+                      <img class="lazyload" data-src="vendor/images/page5wolf.png" style="height:auto;width:100%;margin-top:25px;" />
+                    </p>
+                    <p class="italic">
+                      Afbeelding 5: een roedel wolven
+                    </p>
+                    <p>
+                      De grootte van een roedel is erg verschillend en wordt sterk beïnvloed door de verandering in geboortecijfers, verspreiding en sterftecijfers. De beschikbaarheid en grootte van prooidieren spelen ook belangrijke factoren.
+                    </p>
+                    <p>
+                      Een roedel wolven hebben normaal gesproken één nest met jongen per jaar tijdens de lente. Hoewel, als er een overvloed van prooi in hun leefgebied aanwezig is, kan het weleens voorkomen dat er meer dan één vrouwtje in een roedel jongen krijgt. Waarbij
+                      de grootte van het nest ongeveer 4 á 6 jongen is, maar dit kan soms ook meer of minder zijn. Een aantal – of zelfs alle – jongen kunnen sterven als er niet een stabiele voorraad is van voedsel voor de snelgroeiende pups. Daarnaast
+                      kunnen ziektes en andere predatoren ook een rol spelen in het sterven van de jongen.
+                    </p>
+                    <p>
+                      Tijdens de eerste 3 weken, worden de jongen elke 4 tot 6 uur gekoesterd en warm gehouden. In het algemeen is het de moeder die bij de jongen blijft in het nest. Omdat zij haar tijd voornamelijk besteedt aan haar jongeren, brengen andere roedelleden haar
+                      voedsel. Verder worden de jongen vanaf hun geboorte volgepropt met eten. Voorlopig is hun enige taak om te spelen en te eten zodat ze genoeg tijd hebben om te groeien en nieuwe dingen te ontdekken.
+                    </p>
+                    <p>
+                      Na ongeveer een half jaar tot een jaar zullen de pups oud genoeg zijn om te leren jagen. In hun eerste jacht zullen ze meegaan met hun ouders of met de alfa’s van de roedel en toekijken hoe hun ouderen te werk gaan.
+                    </p>
+                    <p>
+                      Vaak zullen alleen het alfa-paar paren en nakomelingen krijgen, maar hier zijn natuurlijk wel uitzonderingen voor.
+                    </p>
+                    <p>
+                      Het alfa-mannetje kan vervolgens niet gaan paren met z’n eigen dochters. Al zou hij het proberen of graag willen, zullen zijn dochters meestal hem wegjagen om inteelt en eventuele gezondheidsproblemen bij hun nakomelingen te voorkomen. Om hun roedel verder
+                      te vergroten is er dus een mannetje nodig van een andere roedel, wat dus één van de uitzonderingen is voor het feit dat meestal alleen de alfa’s onderling paren.
+                    </p>
+                    <p>
+                      Wanneer de pups zo’n 2 á 3 jaar bereiken, is het mogelijk dat ze hun roedel verlaten en op zoek gaan naar nieuw territorium, een andere roedel of een partner om mee te paren. Dit is dan ook meteen de leeftijd wanneer ze beginnen met paren, wat ze hun
+                      hele leven lang door kunnen blijven doen.
+                    </p>
+                    <p>
+                      Uiteengaande wolven kunnen gemiddeld wel 64 tot 113 kilometer ver rondzwerven, waarbij sommige wel een afstand van plus 160 kilometer afleggen, afhankelijk van gender, beschikbare leefgebieden en aanwezigheid van andere roedels.
+                    </p>
+                    <p>
+                      <img class="lazyload" data-src="vendor/images/page5wolf3.png" style="height:auto;width:100%;margin-top:25px;" />
+                    </p>
+                    <p class="italic">
+                      Afbeelding 6: een wolvenstelletje
+                    </p>
+                    <p>
+                      Opzoek gaan naar een partner is zeer moeilijk, want je beste kansen liggen bij een andere roedel, wat erg gevaarlijk is, zelfs levensbedreigend, wanneer je andermans territorium binnentreedt. Als een mannetje een vrouwtje zoekt, moet hij dit toch overwegen.
+                    </p>
+                    <p>
+                      Zodra een wolf andermans territorium betreedt, is het de taak van het alfa-mannetje om de vreemdeling weg te jagen of zelfs af te maken. Vaak hebben de indringers maar twee keuzes: vecht met je leven op het spel óf probeer zo snel mogelijk weg te rennen.
+                      Als de indringer weet te blijven, zal hij, om de vrouwtjes in de buurt te laten weten van zijn
+                    </p>
+                  </div>
+                  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 spacer"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="container page6">
+            <div class="row">
+              <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 contentblock height6">
+                <div class="row">
+                  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 content">
+                    <h1>Gedrag en communicatie</h1>
+                  </div>
+                  <div class="col-lg-12 col-md12 col-sm-12 col-xs-12 content">
+                    <h4>
+              Communicatie
+            </h4>
+                    <p>
+                      Bij communicatie denken mensen vaak aan praten of een ander vocaal geluid, maar zoals sommigen weten, is dat slechts een klein deel van wat communicatie inhoudt.
+                    </p>
+                    <p>
+                      De communicatie tussen roedelleden zorgt ervoor dat wolven voor elkaar kunnen zorgen, hun territorium kunnen beschermen en samen een groot prooidier kunnen neerhalen dat een individu niet voor elkaar zou kunnen krijgen.
+                    </p>
+                    <p>
+                      Een groot deel van de communicatie tussen de wolven in een roedel is lichaamstaal. Bepaald gespecialiseerd gedrag en postuur zijn geëvolueerd om agressie tussen roedelleden te verminderen. De lichaamstaal van wolven zorgt ervoor dat de roedel makkelijker
+                      in overeenkomst kunnen leven.
+                    </p>
+                    <p>
+                      <img class="lazyload" data-src="vendor/images/page5wolf2.png" style="height:auto;width:100%;margin-top:25px;" />
+                    </p>
+                    <p class="italic">
+                      Afbeelding 7: een huilende wolf
+                    </p>
+                    <p>
+                      Vocale communicatie onder wolven bestaat uit huilen, piepen, grommen en blaffen.
+                    </p>
+                    <p>
+                      Alhoewel niet alle functies van huilen bekend zijn, zijn onderzoekers er vrijwel zeker van dat wolven deze manier van communicatie gebruiken om hun roedel bij elkaar te brengen, om territorium te claimen, om indringers te waarschuwen of om andere wolven
+                      te identificeren.
+                    </p>
+                    <p>
+                      De gezichtsuitdrukkingen van wolven worden vaak gebruikt om hun emoties te tonen en zelfs om hun personaliteit weer te geven. Bijvoorbeeld, wolven die hun tanden laten zien en hun oren voorwaarts wijzen, vertonen dominant gedrag. Het gedrag van de lagere
+                      rang wolven vertonen daarbij een gesloten mond, spleetogen en zullen hun oren naar achteren wijzen en dicht bij hun hoofd houden, terwijl ze hun hoofd naar beneden richten.
+                    </p>
+                    <p>
+                      <img class="lazyload" data-src="vendor/images/page5wolf5.png" style="height:auto;width:100%;margin-top:25px;" />
+                    </p>
+                    <p class="italic">
+                      Afbeelding 8: dominante wolf (links) en onderdanige wolf (rechts)
+                    </p>
+                    <p>
+                      De positie van hun staart wordt ook gebruikt om te communiceren met emoties.
+                    </p>
+                    <p>
+                      Wolven die dreigende tekens uitdrukken, houden hun staart recht omhoog, terwijl de onderdanige wolven – meestal in de lagere rang ook wel beta’s genoemd – hun staart tussen hun benen houden.
+                    </p>
+                    <p>
+                      Zelfs geur is een belangrijke factor bij communicatie tussen wolven.
+                    </p>
+                    <p>
+                      Urine is de meest voorkomende vorm van geur markering voor wolven, maar ze kunnen ook geuren produceren vanuit de klieren tussen hun tenen.
+                    </p>
+                    <p>
+                      Omdat wolvenroedels zeer territoriaal zijn, gebruiken ze bepaalde geuren om de grenzen van hun territorium duidelijk aan te stippen, zodat andere roedels weten dat dit gebied van hen is. Ook wordt geur gebruikt om eigenaarschap van eten aan te geven en
+                      als een soort directie of route voor de rest van de roedel om te volgen. Geur is dus een manier voor een roedel om te laten weten dat zij lang nadat ze zijn vertrokken op deze plaats zijn geweest.
+                    </p>
+                  </div>
+                  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 spacer"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="container page7">
+            <div class="row">
+              <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 contentblock height7">
+                <div class="row">
+                  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 content">
+                    <h1>Territorium en dieet</h1>
+                  </div>
+                  <div class="col-lg-12 col-md12 col-sm-12 col-xs-12 content">
+                    <p>
+                      De wolf kan in principe overal leven, als er maar genoeg voedsel is op die plek. Zoals je al weet, zijn wolven groepsdieren en moet het alfa-mannetje ervoor zorgen dat de roedel genoeg voedsel heeft. Een roedel heeft meestal 10 tot 20 wolven, dus voedsel
+                      is erg belangrijk. Om ervoor te zorgen dat de roedel gegarandeerd eten heeft, moeten ze een territorium hebben. Het territorium mag niet overlappen met het territorium van andere wolven en moet genoeg bronnen van voedsel hebben.
+                      Wolven maken hun territorium door de grenzen van hun territorium te markeren met hun urinegeur. Deze taak is weggelegd voor het alfa-mannetje en -vrouwtje die ook elke keer die geur moet verversen. De urine geur geeft andere wolven
+                      aan van wie dit territorium is en dat andere roedels er uit moeten blijven.
+                    </p>
+                    <p>
+                      Een territorium kan wel meer dan dan 6.000 km^2 bevatten. Wolven moeten dus weten waar ze hun prooi kunnen vinden. Dit doen ze door het gedrag van hun prooi te bestuderen. De wolven weten meestal op welke plekken hun prooi het meest zich bevinden en welke
+                      route hun prooi volgen. Dit geeft de wolf bepaalde routes wat ze elke keer volgen om bij een bepaald gebied te komen. Wolven moet de verschillende routes onthouden om tactisch op hun prooien te jagen. Als er veel honger heerst over
+                      een roedel, is het beter om op grotere en sterkere dieren te jagen, zoals reeën en herten.
+                    </p>
+                    <p>
+                      En als er minder honger heerst zijn zwijnen en bokken weer een beter doelwit.
+                    </p>
+                    <p>
+                      <img class="lazyload" data-src="vendor/images/page7wolf.png" style="height:auto;width:100%;margin-top:25px;" />
+                    </p>
+                    <p class="italic">
+                      Afbeelding 9: een roedel wolven met een karkas van een grote herbivoor
+                    </p>
+                    <h4>
+              Jagen
+            </h4>
+                    <p>
+                      Wanneer je als individueel niet genoeg benodigde kracht, snelheid of tactiek hebt om zelf je voedsel te bemachtigen, dan is het verstandig om in een groep samen te gaan werken. Na honderden jaren heeft de wolf dit aardig onder de knie, in samenwerking
+                      met de hiërarchie, perfecte neus en de uitmuntende uithoudingsvermogen, kun je de roedel wel een militair leger noemen. Elke wolf heeft zijn eigen taak en houdt zich daar ook streng aan. De jacht wordt bijna altijd geleid door het
+                      alfa-mannetje en die maakt dus ook de beslissingen.
+                    </p>
+                    <p>
+                      De aanval begint met het opsporen van de prooi, hier schijnen de kwaliteiten van de neus het sterkst. Soms duurt het wel dagen totdat ze misschien een groep met herten of elanden vinden. In het geval dat ze een groep vinden, testen ze de prooi en filteren
+                      ze de jongen, zieken of ouderen eruit. Wolven merken heel snel met hun zintuigen wie van de dieren het zwakste binnen de groep is. Omdat dit moeilijk te zien is als de kudde stilstaat, laat de wolf zich al snel zien zodat de kudde
+                      het op het lopen zet. De wolf kan dan aan verschillende kenmerken zien wie zwakker is dan de rest. Misschien zitten er jongen of zeer oude dieren in de kudde, of misschien ziet een hert er gewond uit of loopt die raar.
+                    </p>
+                    <p>
+                      Dit zijn allemaal kenmerken waarop de wolf let. Zodra de wolf de zwakste op het oog heeft, zet de groep wolven het op het rennen. Tijdens de sprint kan de wolf wel 40 km/h halen, De roedel gaat in formatie, de oudsten voorop om de vitale klap uit te delen
+                      en om beslissingen te maken. De rest verspreidt zich rondom het doel zodat het niet kan ontsnappen. De wolven mikken graag op de benen om die te beschadigen, zodat de verspreide wolven met z’n allen direct hun prooi kunnen doden.
+                      Ook moeten ze uitkijken voor verschillende gevaarlijke situaties, bijvoorbeeld een trap van een ree of een hert die fataal kan zijn voor een wolf. In het geval dat ze hun kans missen, hebben de wolven de mogelijkheid om meerdere
+                      kilometers de prooi met 10 km/h te kunnen achtervolgen, maar het is vaak het niet waard om dit te doen.
+                    </p>
+                  </div>
+                  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 spacer"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="container page8">
+            <div class="row">
+              <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 contentblock height8">
+                <div class="row">
+                  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 content">
+                    <h1>Invloed op de natuur</h1>
+                  </div>
+                  <div class="col-lg-12 col-md12 col-sm-12 col-xs-12 content">
+                    <h4>
+              Wat is de invloed op andere organismen?
+            </h4>
+                    <p>
+                      Predatoren besturen ecosystemen. Dat klinkt wellicht vreemd, maar het is écht zo. We weten allemaal dat wolven op een boel dieren jagen, maar wat we niet allemaal realiseren, is dat ze ook leven geven aan een groot aantal andere dieren.
+                    </p>
+                    <p>
+                      Een jongeman genaamd Aldo Leopald kwam erachter dat wanneer de wolven afstierven, de hertenpopulatie sterk begon te stijgen. Deze herten aten alle planten op in de omgeving, waardoor er niks of nauwelijks meer overbleef.
+                    </p>
+                    <p>
+                      In vroeg 1900, was Yellowstone National Park vol met grassen en bomen en bloeiden het hele ecosysteem. Maar in het jaar 1992, waren er nauwelijks planten over. Biologen zochten naar de oorzaak van dit fenomeen en er waren verschillende theorieën, waaronder
+                      klimaatveranderingen of bosbranden. Maar beiden leken niet het geval te zijn. Volgens Bill Ripple, van Oregon State University, was buiten het park de condities van verschillende soorten bomen in goede staat, terwijl er in het Yellowstone
+                      park er nauwelijks bomen waren. Samen met Eric Larson, van University of Wisconsin, kwam Ripple erachter dat er bijna geen middeljarige bomen in het park stonden. De meeste bomen waren 70 jaar oud. Door de ringen in de boomstronken
+                      te tellen, kwamen ze erachter dat de bomen stopten met regenereren in de jaren 30 van de 20ste eeuw. De biologen vroegen zich af wat er nou rond 1930 is gebeurd. Wat ze wel wisten, is dat vóór 1930 de laatste wolf werd neergeschoten
+                      door jagers.
+                    </p>
+                    <p>
+                      <img class="lazyload" data-src="vendor/images/page8wolf.png" style="height:auto;width:100%;margin-top:25px;" />
+                    </p>
+                    <p class="italic">
+                      Afbeelding 10: lone wolf
+                    </p>
+                    <p>
+                      Volgens jaren later onderzoek, bleken de uitspraken ook daadwerkelijk te kloppen. In 1995 werden de wolven in het Yellowstone National Park geherintroduceerd, waar men veel van heeft geleerd over de effecten en de invloed van predatoren op de natuur.
+                      Vroeger werd er namelijk gedacht dat een ecosysteem werd gemaakt met plantenleven als fundering, waarna alle andere organismen rond deze fundering ontstonden. Zodra er gezond plantenleven ontstaat, ontstaat er een balans tussen alle
+                      insecten, kleine diertjes, vogels, grote herbivoren en uiteindelijk de toppredatoren. Bijna alle conservatie en herintroductie projecten werden op dit principe gebouwd. Biologen zouden in een beschadigd gebied eerst al het plantenleven
+                      opbouwen en weer tot bloei laten komen, voordat ze andere dingen gingen doen. Maar sommige ecosystemen bleken hierdoor niet hersteld te kunnen worden zonder het herintroduceren van een bedreigde toppredator.
+                    </p>
+                    <p>
+                      Sinds het herintroduceren van de wolven in Yellowstone, werd het nationale park hét wetenschappelijke laboratorium op basis van de observatie van wilde dieren en het herstellen van ecosystemen. Allerlei wetenschappers van over de hele wereld zijn naar
+                      het nationale park gekomen om het effect die de wolven uitoefenen met hun eigen ogen te bekijken.
+                    </p>
+                    <p>
+                      <img class="lazyload" data-src="vendor/images/page8wolf2.png" style="height:auto;width:100%;margin-top:25px;" />
+                    </p>
+                    <p class="italic">
+                      Afbeelding 11: roedel wolven op pad
+                    </p>
+                    <p>
+                      Na de herintroductie van de wolven in Yellowstone, zijn de elanden, herten en bizons sterker geworden, de bomen en andere planten gezonder en de grassen hoger.
+                    </p>
+                    <p>
+                      Wolven jagen voornamelijk op grote herbivoren, waardoor de populatie van deze dieren sterk afneemt. Maar de wolven jagen niet op willekeurig prooi. Ze prooien meestal op de zwakkelingen, zoals jongere of minder gezonde. Oudere elanden zijn, bijvoorbeeld,
+                      groter en agressiever, waardoor het moeilijker is voor de wolven om op deze individuen te jagen. De wolven rennen achter de herten en elanden aan, waardoor zij worden geforceerd om harder, sneller en verder te rennen (zie afbeelding
+                      10). Tijdens dat de elanden en herten rennen, zullen hun hoeven de bodem aanstampen, zodat er meer planten kunnen groeien. Vervolgens, als je niet snel genoeg bent of lang genoeg kan rennen, word je gepakt door de wolven. Hierdoor
+                      zullen alle zwakke dieren in een populatie uitgeroeid worden, waardoor de sterke en gezonde overblijven en hun nakomelingen ook de best geschikte genen voor hun leefgebied zullen overerven. In het kort, de selectiedruk is weer toegenomen,
+                      waardoor survival of the fittest weer in volle kracht geherintroduceerd is in Yellowstone.
+                    </p>
+                    <p>
+                      <img class="lazyload" data-src="vendor/images/page8wolf3.png" style="height:auto;width:100%;margin-top:25px;" />
+                    </p>
+                    <p class="italic">
+                      Afbeelding 12: wolven die hun prooi opjagen
+                    </p>
+                    <p>
+                      Niet alleen heeft de wolf invloed op de gezondheid van herbivoren, maar ze tasten ook het gedrag van deze soorten aan. Herbivoren zoals herten en elanden worden geforceerd om niet een al te lange tijd te blijven in hetzelfde gebied vanwege het risico
+                      dat ze worden opgejaagd door wolvenroedels. Door deze migratie zullen de planten in het gebied minder aangetast zijn en kunnen ze sneller regenereren. Ook is het dat herbivoren het territorium van een wolvenroedel niet durven te
+                      betreden, waardoor er zogenaamde “bufferzones” ontstaan. Dit zijn gebieden tussen territoria van verschillende wolvenroedels in, waar de herbivoren vaak in goede omstandigheden leven. Wolven die hun roedel hebben verlaten vinden
+                      vaak hier goed onderdak, veiligheid en eten, met minder risico om aangevallen te worden door wolvenroedels in de nabije gebieden. Alhoewel, dit betekent niet dat het waterdichte, veilige gebieden zijn. Het is mogelijk dat er om het
+                      gebied wordt gevochten door de roedels in de omgeving en dat de eenzame wolf alsnog aangevallen kan worden.
+                    </p>
+                    <p>
+                      <img class="lazyload" data-src="vendor/images/page8wolf4.png" style="height:auto;width:100%;margin-top:25px;" />
+                    </p>
+                    <p class="italic">
+                      Afbeelding 13: relatief dor landschap met bizon en lone wolf, bossen in de achtergrond
+                    </p>
+                    <p>
+                      Door het migreren van de herbivoren en deze bufferzones, zal de plantengroei in andere gebieden, met name het territoria van wolvenroedels, sterk toenemen. Maar niet alleen dat, want door de afname van de populatie van bepaalde soorten herbivoren, kregen
+                      de planten meer tijd om te groeien en zich voort te planten. Dit zorgde voor meer vegetatie en uiteindelijk een grotere biodiversiteit in het plantenrijk. Dit proces komt het meest voor in territoria van wolvenroedels en valleien
+                      waar je een makkelijk prooi bent door de absentie van enige ontsnappingsroutes. Herbivoren durven zich niet te vestigen in deze gebieden, maar het proces gebeurt ook natuurlijk in andere gebieden vanwege de migratie van, bijvoorbeeld,
+                      elanden. Deze gebieden zullen grotendeels onaangetast blijven, waardoor er een grote bloei van plantengroei plaatsvindt waaruit grote bossen en grassen ontstaan.
+                    </p>
+                    <p>
+                      Uit het ontstaan van meer planten, zullen steeds meer dieren - vooral dieren die niet als prooi worden gezien door de wolf, zich vestigen in deze gebieden, omdat er meer voedsel en onderdak aanwezig is. Zodra er allerlei verschillende bossen ontstonden,
+                      migreerden de vogels zich binnen deze gebieden. De hoeveelheid zangvogels nam sterk toe. De hoeveelheid bevers begon ook toe te nemen, omdat bevers ervan houden om bomen op te eten. En net zoals wolven, zijn de bevers ecosysteem
+                      ingenieurs en maken ze holtes en dammen waar andere soorten weer in kunnen vestigen, zoals otters, muskusratten, eenden, vissen, reptielen en amfibieën.
+                    </p>
+                    <p>
+                      Zoals in de rest van de Verenigde Staten, waren de coyote, of prairiewolven, populaties in Yellowstone bijna uit de handen gelopen. Maar sinds dat de wolven terugkwamen, begonnen ze de coyotes te doden en hebben ze de populatie van coyotes afgenomen met
+                      wel 80 procent in gebieden waar wolven leven. De coyotes die er nog zijn, zijn een stuk schrikachtiger en voorzichtig geworden. Met de afname van coyotes begonnen de hoeveelheden van knaagdieren, zoals konijnen en muizen, toe te
+                      nemen. Wat daar weer ervoor zorgde dat er meer haviken, wezels, vossen en dassen zich gingen vestigen, omdat zij weer meer eten voorziening hadden. Raven en arenden migreerden naar de gebieden waar wolven aanwezig waren, om te smikkelen
+                      van de restjes die de wolven achterlieten. Ook verschillende soorten insecten eten van de karkassen die wolven achterlaten. Zelfs beren kwamen erbij om van de restjes te genieten of door de prooi van wolven te stelen, waardoor hun
+                      populatie ook sterk toenam, maar ook omdat er nu meer bessen en dergelijke aan de regenererende planten groeien. De beren zorgden daarna voor een domino-effect en versterkten de impact van de wolven door een aantal andere populaties
+                      van, bijvoorbeeld, herten af te nemen.
+                    </p>
+                    <p>
+                      <img class="lazyload" data-src="vendor/images/page8wolf5.png" style="height:auto;width:100%;margin-top:25px;" />
+                    </p>
+                    <p class="italic">
+                      Afbeelding 14: wolf met een groep kraaien die een lijk omsingelen
+                    </p>
+                    <p>
+                      In essentie, hebben wij, de mens, geleerd dat door de top van de trofische niveaus te herstellen, door bijvoorbeeld wolven te herintroduceren, het hele ecosysteem daar profijt bij heeft. Een wilde wolvenpopulatie zorgt eigenlijk voor een sterker, gezonder
+                      en een meer gebalanceerd ecosysteem. Niet alleen de planten en dieren hebben hier profijt van, maar wij ook.
+                    </p>
+                  </div>
+                  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 spacer"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="container page9">
+            <div class="row">
+              <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 contentblock height9">
+                <div class="row">
+                  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 content">
+                    <h1>Invloed op de natuur</h1>
+                  </div>
+                  <div class="col-lg-12 col-md12 col-sm-12 col-xs-12 content">
+                    <p>
+                      Om het allemaal nog duidelijk weer te geven kun je naar het voedselweb hieronder kijken. Dit voedselweb laat de situatie zien van Yellowstone na de wolven herintroductie.
+                    </p>
+                    <p>
+                      <img class="lazyload" data-src="vendor/images/page9graph.png" style="height:auto;max-width:600px;;width:100%;margin-top:25px;" />
+                    </p>
+                    <p class="italic">
+                      Afbeelding 15: voedselweb voorbeeld in Yellowstone <a href="https://visityellowstonenationalparkyall.weebly.com/yellowstones-wildlife.html" target="_blank">[bron]</a>
+                    </p>
+                    <p>
+                      Vóór de herintroductie van de wolf waren de meeste planten, die je onderaan de voedselketen ziet, opgegeten door elanden en herten. Verder waren er nog andere herbivoren zoals dikhoornschapen, bizons en gaffelbokken die ook de planten opaten. Naast deze
+                      herbivoren waren er ook coyotes die op kleine dieren zoals muizen en konijnen jagen. Maar omdat er geen natuurlijke vijand voor de coyotes waren, ontstond er van hen een overvloed van nakomelingen.
+                    </p>
+                    <p>
+                      Tijdens de afwezigheid van de wolf, is dus overduidelijk te zien dat er te weinig toppredatoren waren die de overvloed aan herbivoren en andere predatoren, als de coyotes, in bedwang hielden.
+                    </p>
+                    <p>
+                      Grizzlyberen en coyotes zijn wel predatoren, maar coyotes jagen vooral op kleine dieren, want ze zijn te klein om op grote dieren (zoals bizons, elanden ect.) te jagen. Natuurlijk klopt het wel dat ze elanden en bizons aten maar ze jaagde niet op ze.
+                      En voor de wolven herintroductie waren er nauwelijks grizzlyberen, omdat het dieet van de grizzlybeer vooral bestaat uit wortels, bessen en noten. Dit was toendertijd erg problematisch in samenstelling met weinig vegetatie. Natuurlijk
+                      jaagden de grizzlyberen wel op elanden en gaffelbokken, maar dat was vaak niet mogelijk en dit was niet wat ze het liefst aten. Slechts 11% van het dieet van grizzlyberen bestaat uit zoogdieren en 67% bestaat uit plantensoorten.
+                      Je kan ook zien in deze grafiek dat er pas na de wolven herintroductie (in 1995) er meer beren in Yellowstone begonnen te komen.
+                    </p>
+                    <p>
+                      <img class="lazyload" data-src="vendor/images/page9graph2.png" style="height:auto;max-width:600px;;width:100%;margin-top:25px;" />
+                    </p>
+                    <p class="italic">
+                      Afbeelding 16: grafiek, populatiedichtheid van de grizzlybeer <a href="http://www.biologicaldiversity.org/campaigns/esa_works/northwest.html" target="_blank">[bron]</a>
+                    </p>
+                    <p>
+                      Dit zijn de gegevens vóór de wolven herintroductie.
+                    </p>
+                    <p>
+                      Nu gaan we stap voor stap kijken wat er gebeurde na de herintroductie.
+                    </p>
+                    <p>
+                      Het was dus al duidelijk toen de wolven geherintroduceerd werden dat het aantal elanden en herten daalden en dat er daardoor meer planten weer konden groeien. Ook konden de planten en bomen beter groeien. Een voorbeeld hiervan is cottonwood, waarvan het
+                      aantal in 1995 rond de 1 à 2 was, had in 2010 rond de 150 à 160 in aantallen.
+                    </p>
+                    <p>
+                      <img class="lazyload" data-src="vendor/images/page9graph3.png" style="height:auto;max-width:600px;;width:100%;margin-top:25px;" />
+                    </p>
+                    <p class="italic">
+                      Afbeelding 17: grafiek, aantal cottonwoodplantjes <a href="http://www.bitsofscience.org/wolf-yellowstone-predators-forests-4492/" target="_blank">[bron]</a>
+                    </p>
+                    <p>
+                      Of een ander voorbeeld is de hoogte van espen bomen die in 1997 40 cm was en in 2010 345 cm was. Dat is een toename van meer dan 650%.
+                    </p>
+                    <p>
+                      <img class="lazyload" data-src="vendor/images/page9graph4.png" style="height:auto;max-width:600px;;width:100%;margin-top:25px;" />
+                    </p>
+                    <p class="italic">
+                      Afbeelding 18: grafiek, hoogte van espenbomen <a href="http://www.bitsofscience.org/wolf-yellowstone-predators-forests-4492/" target="_blank">[bron]</a>
+                    </p>
+                    <p>
+                      Dit heeft natuurlijk ook veel invloed op de dieren, die daar leefden en die erbij komen. Om dit goed te overzien moeten we weer het voedselweb van Yellowstone erbij pakken.
+                    </p>
+                    <p>
+                      <img class="lazyload" data-src="vendor/images/page9graph.png" style="height:auto;max-width:600px;;width:100%;margin-top:25px;" />
+                    </p>
+                    <p class="italic">
+                      Afbeelding 19: voedselweb voorbeeld in Yellowstone <a href="https://visityellowstonenationalparkyall.weebly.com/yellowstones-wildlife.html" target="_blank">[bron]</a>
+                    </p>
+                    <p>
+                      We weten hoe de situatie was voor de wolven herintroductie. Dat laat ons beter begrijpen wat er nou precies na gebeurd is. Door de vermindering van de populatie elanden konden planten en bomen eindelijk weer goed en in grotere aantallen groeien, wat voor
+                      andere organismen voordelig is, omdat er meer voedsel aanwezig is. Het is voordelig voor dieren zoals de hertmuis. Dit geldt ook voor vele soorten insecten waar de haften er één van is. Ook viel de wolf coyotes aan en doodde veel
+                      van hun nakomelingen. De coyotes hadden nu een natuurlijke vijand, waardoor de populatie coyotes is gedaald. In het tabel hieronder zie je de gevolgen.
+                    </p>
+                    <p>
+                      <img class="lazyload" data-src="vendor/images/page9graph5.png" style="height:auto;max-width:600px;;width:100%;margin-top:25px;" />
+                    </p>
+                    <p class="italic">
+                      Afbeelding 20: grafiek, aantal wolven en coyotes in Yellowstone <a href="https://www.nps.gov/yell/learn/nature/coyote.htm" target="_blank">[bron]</a>
+                    </p>
+                    <p>
+                      Sinds 1995 zie je dat het gemiddelde aantal coyotes afneemt t/m 2002 en dan weer toeneemt, maar niet zo hoog als daarvoor. Je kan wel zien dat er in 2007 een hoge piek was, waar het aantal coyotes bijna de 60 raakte (net zoals 13 jaar geleden), maar het
+                      jaar daarop is het weer gedaald naar 41. Een grote oorzaak van het afnemen van coyotes, is dat er onder nu meer concurrentie ontstond tussen de coyotes zelf, omdat het voedsel voor de coyotes nu niet meer in overvloed is, moeten
+                      de coyotes meer en meer concurreren met elkaar om aan voedsel te komen. Dit zorgt uiteindelijk voor een beter aangepaste populatie coyotes.
+                    </p>
+                    <p>
+                      Dit had als gevolg dat de rode vos ook vaker te zien was omdat er minder coyotes waren die bepaalde gebieden als territorium geclaimd hadden. Maar er kwamen ook veel meer kleine dieren zoals konijnen en hertmuizen, wat weer als gevolg had dat er meer
+                      roodstaartbuizerds, kale adelaars en vele andere vogels en kleine zoogdieren tevoorschijn kwamen.
+                    </p>
+                    <p>
+                      En doordat alles meer bloeide en vruchtbaarder werd, kwamen er meer bomen en bossen. Rivieren gingen rechter stromen door de sterkere grond en dit zorgde ervoor dat er ook steeds meer bevers kwamen. Omdat er genoeg voedsel was en genoeg materiaal om dammen
+                      en burchten te maken, groeiden de beverpopulatie van 1 kolonie tot 12 kolonies.
+                    </p>
+                    <p>
+                      Je kan de groei in het diagram beneden zien.
+                    </p>
+                    <p>
+                      <img class="lazyload" data-src="vendor/images/page9graph6.png" style="height:auto;max-width:600px;;width:100%;margin-top:25px;" />
+                    </p>
+                    <p class="italic">
+                      Afbeelding 21: grafiek, aantal kolonies van de bever in Yellowstone <a href="https://elizavetaguseva.wordpress.com/2013/06/05/scared-to-death-how-intimidation-changes-ecosystems/" target="_blank">[bron]</a>
+                    </p>
+                    <p>
+                      Dit geeft duidelijker aan wat de gevolgen zijn van wolven, en dan niet zo zeer op individueel niveau maar op hele populaties. Het geeft ook aan hoe krachtig het effect is van de wolf op ecosystemen en dat ze een belangrijke rol spelen in de natuur op
+                      plaatsen zoals Yellowstone.
+                    </p>
+                    <p>
+                      Wolven hebben dus een enorm effect op een ecosysteem, niet alleen omdat zij goed hun “werk” kunnen uitvoeren en ze zo goed zijn in het jagen op grote herbivoren, maar ook omdat Yellowstone een ideaal gebied is voor de wolven. Het is een ideaal gebied,
+                      omdat de herbivoren de herbivoren in dit gebied niet gewend zijn aan de aanwezigheid van een toppredator. Dan zou je waarschijnlijk denken dat wolven in een mum van tijd een enorme populatiegroei zouden ondergaan en die groei blijven
+                      vasthouden. Het eerste gedeelte klopt wel, maar als je kijkt naar de eerdere grafieken zie je dat er op gegeven moment een S-vormige grafiek ontstaat bij het aantal wolven in Yellowstone. Dit wordt veroorzaakt door een negatieve
+                      terugkoppeling. Dit houdt in dat het proces geremd wordt tot er weer een bepaalde waarde wordt bereikt. Pas als die waarde wordt bereikt stopt het proces met geremd worden. In het geval van de wolf verloopt het proces zo: door het
+                      grote aantal grote herbivoren in Yellowstone kon de de wolvenpopulatie exponentieel groeien, maar op gegeven moment verdween die grote groep herbivoren, waardoor er dus minder voedsel was voor de wolven. Dit zorgt uiteindelijk voor
+                      het kleiner worden van de totale wolvenpopulatie. Als gevolg van het kleiner worden van de totale wolvenpopulatie konden de grote herbivoren weer in aantallen groeien. Door het groeien van de populatie herbivoren ontstond er meer
+                      voedsel voor de wolven, waardoor de wolvenpopulatie alweer kon groeien. Nu ontstaat er een cyclus van het groeien en dalen van beide populaties tegenovergesteld van elkaar. Door dit proces is er nu een evenwicht ontstaan tussen de
+                      aantallen wolven en de grote herbivoren.
+                    </p>
+                  </div>
+                  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 spacer"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="container page10">
+            <div class="row">
+              <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 contentblock height10">
+                <div class="row">
+                  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 content">
+                    <h1>Wat is de invloed op de geografie?</h1>
+                  </div>
+                  <div class="col-lg-12 col-md12 col-sm-12 col-xs-12 content">
+                    <p>
+                      Om te beginnen, geografie is alles wat op het aardoppervlak gebeurt. Zonder dat de wolf het zelf door heeft, past hij niet alleen biologische factoren aan maar ook het land waarop hij loopt, eet, drinkt en jaagt verandert drastisch.
+                    </p>
+                    <p>
+                      Het natuurgebied wat wij gebruiken om de vragen te beantwoorden die wij hebben gesteld in ons profielwerkstuk is Yellowstone. Yellowstone is een natuurgebied in de VS, Wyoming. De beheerders van Yellowstone bedachten een plan om het landschap van Yellowstone
+                      drastisch te veranderen. Het plan ging als volgd: ”We zetten wolven uit en laten de natuur zijn werk doen.”
+                    </p>
+                    <p>
+                      Voordat wolven geherintroduceerd werden in Yellowstone, zag het natuurgebied er erg eentonig uit met weinig biodiversiteit, wat gepaard ging met een redelijk kaal landschap. Nadat er wolven uitgezet werden in Yellowstone veranderde het landschap drastisch.
+                      Vandaag de dag is het kale landschap verandert in een prachtig natuurgebied, met grote bossen, veel biodiversiteit en natuurlijk ook wolven. Het heeft de wolven een kleine 20 jaar gekost om zo’n prestatie neer te zetten. Dit lijkt
+                      misschien lang voor een menselijk perspectief, maar in werkelijkheid is dit het tegenovergestelde waar. Het is ongebruikelijk dat een ecosysteem zo drastisch positief verandert in zo’n korte tijd.
+                    </p>
+                    <p>
+                      Wolven werden geherintroduceerd in het jaar 1995. Na het uitzetten van deze predatoren, kwam het landschap steeds meer tot bloei. Het begon allemaal toen de herten en elanden populatie voor het eerst in jaren daalden. In de grafiek hieronder zie je de
+                      gevolgen van de wolf op de populatie wapitiherten (elk in het Engels).
+                    </p>
+                    <p>
+                      <img class="lazyload" data-src="vendor/images/page10graph.png" style="height:auto;width:70%;margin-top:25px;" />
+                    </p>
+                    <p class="italic">
+                      Afbeelding 22: grafiek, aantal wapitiherten <a href="https://www.nps.gov/yell/learn/ys-24-1-the-challenge-of-understanding-northern-yellowstone-elk-dynamics-after-wolf-reintroduction.htm" target="_blank">[bron]</a>
+                    </p>
+                    <p>
+                      Je kan zien dat de populatie wapitiherten in 2015 met 71% gedaald is, als je het vergelijkt met 1995. Dit werd veroorzaakt door de nogal onervaren herten, die noch nooit ergens bang voor hoefden te zijn, omdat er voor zeker 70 jaar geen grote predatoren
+                      in Yellowstone te vinden waren die een gevaar konden zijn voor de grote herbivoren. De ervaren alfa wolven konden van de onwetendheid van de herten gebruik maken, wat zorgde voor het dalen van de populatie herbivoren. Al snel paste
+                      de herten en andere grote herbivoren hun gedrag aan en vertrokken ze uit het territorium van de wolven, zodat ze zoveel mogelijk contact met wolven konden vermijden.
+                    </p>
+                    <p>
+                      <img class="lazyload" data-src="vendor/images/page10scape.png" style="height:auto;width:100%;margin-top:25px;" />
+                    </p>
+                    <p class="italic">
+                      Afbeelding 23: bloeiend landschap met vaste rivieren en veel biodiversiteit
+                    </p>
+                    <p>
+                      De verandering in dit gedrag en aantallen van elanden en herten was erg positief voor de vegetatie in Yellowstone, de leeggevreten valleien en kale bossen konden eindelijk weer opbloeien. Planten verzorgen niet alleen het voedsel in Yellowstone, ze spelen
+                      ook een erg belangrijke rol in de geografische veranderingen in het park.
+                    </p>
+
+                    <p>
+                      Door de toename van planten, werd de grond een stuk sterker. Vooral de bomen spelen hierbij een grote rol. De wortels die door de grond verspreid worden, zorgen ervoor dat de rivierbanken worden versterkt, waardoor de rivieren rechter gingen stromen.
+                    </p>
+                    <p>
+                      Een zwakke bodem is namelijk vaak erg makkelijk voor rivieren om te beginnen met meanderen. Meanderen komt vaak voor wanneer er aan een van de kanten het water sneller stroomt dan de tegenovergestelde kant. Door dit snellere water wordt er meer zand en
+                      klei meegenomen en ontstaat er langzamerhand een grote lus in de baan van de rivier.
+                    </p>
+                    <p>
+                      De wortels van de bomen zorgt voor het afnemen van meanderen, waaruit stevige, permanente stukken grond ontstaan.
+                    </p>
+                    <p>
+                      Naast een meer stevige bodem werd de bodem ook steeds meer vruchtbaar. Om te beginnen, wat maakt een bodem meer vruchtbaar? Een bodem wordt vruchtbaar genoemd wanneer de grond rijk is aan voedingsstoffen voor planten. Denk dan voornamelijk aan verschillende
+                      mineralen die planten nodig hebben voor eiwitsynthese en organische stoffen die de plant kan gebruiken als brand/voedingsstoffen. Naast deze stoffen zorgen verschillende micro-organismen voor een beter leefbare grond. Deze dingen
+                      samen in de grond kan je ook humus noemen. Het probleem was eerst dat door de eerst humusarme bovenlaag regenwater niet goed bleef liggen en al snel naar de diepere grondlagen stroomde. Het regenwater neemt dan ook de weinige mineralen
+                      en organische stoffen die wel op het oppervlak lagen mee naar die diepere lagen waar het vervolgens niet benut kan worden. Dit proces wordt uitspoeling genoemd. Wanneer de mineralen en de organische stoffen verdwijnen, kunnen de
+                      micro-organismen zichzelf ook niet voortzetten.
+                    </p>
+                    <p>
+                      Doordat verschillende planten steeds minder gegeten werden door grote herbivoren ontstond er vanzelf een zooi meer humus. Kleine planten die afsterven die vormen een humus van verschillende organische stoffen waar vervolgens meer en grotere planten gebruik
+                      van kunnen maken. De hoeveelheid mineralen nam ook toe door het toenemen van planten. Planten scheiden als afvalstoffen verschillende soorten zuren uit. Deze zuren zorgen ervoor dat uit de grond waar de planten op gevestigd zijn
+                      mineralen vrijkomen. Naast dit chemische proces komen voornamelijk mineralen vrij door verschillende bacteriën en schimmels die organische stoffen omzetten in voedingszouten, dus mineralen. Deze bacteriën en schimmels nou je de reducenten.
+                      Nu dat de mineralen en organische stoffen weer zich in de bodem bevinden, kunnen de micro-organismen zich ook weer vestigen.
+                    </p>
+                    <p>
+                      Nu dat de humuslaag alsmaar groter wordt, blijft er steeds meer water liggen, er vindt dus nu geen uitspoeling meer plaats. Dit gebeurde voorheen vooral bij zandbodems vanwege de grote lucht ruimtes tussen de zandkorrels. Daarbovenop komt dat planten
+                      nu ook in een meer vochtige bodem kunnen groeien. Dit is altijd voordelig, sinds elke plant water nodig heeft om goed te kunnen groeien. Juist op andere stukken grond waar de grond van zichzelf veel fijner is, waar normaal wel veel
+                      water blijft staan, werd door behulp van meer humus steeds meer doordringbaar voor verschillende planten. Hier moet je denken aan een kleiachtige bodem. Een kleiachtige bodem heeft heel kleine lucht ruimtes tussen de kleikorrels,
+                      waardoor het klei van nature veel water vasthoudt, maar helaas niet zo goed doordringbaar is voor planten.
+                    </p>
+                    <p>
+                      Andere gevolgen van een humusarme grond is dat er een proces genaamt erosie plaatsvindt. Erosie zorgt voor het langzaam slijten van een ondergrond door een aantal abiotische factoren, zoals regen en wind. Erosie kan dus voorkomen worden wanneer de ondergrond
+                      begroeid is met planten, zodat de grond niet makkelijk meer loslaat. Planten kunnen zich alleen goed vestigen wanneer de grond een beetje vruchtbaar is, dus humusrijk. Dit gebeurde in yellowstone, waardoor je meer stevige stukken
+                      land kreeg wat vervolgens bij kon dragen aan het toenemen van permanenten rivier en maar ook bossen.
+                    </p>
+                    <p>
+                      Door de toename van bossen ontstonden er ook meerdere diersoorten die er weer voor zorgden dat de plantendiversiteit toe kon nemen. Dit zorgt ook uiteindelijk voor een veel vruchtbaardere grond. Naast het verminderen van het meanderen zijn er ook veel
+                      meren en sloten ontstaan. Als reactie is de beverpopulatie gestegen. De bevers maken dammen, waardoor er meer leefomgevingen ontstaan voor andere dieren zoals vissen, eenden en reptielen. Deze dieren konden alleen hier leven, doordat
+                      er steeds meer nieuwe microklimaten ontstonden. Er is sprake van een microklimaat wanneer op kleine schaal het ecosysteem anders is dan je bij het klimaat zou verwachten. Denk bij de microklimaten aan de gloednieuwe bossen, rivieren,
+                      sloten en meren. Klein in aantallen maar groot in daden is de wolf één van de beste dieren om een dor, onbegroeid landschap nieuw leven te geven.
+                    </p>
+                    <p>
+                      <img class="lazyload" data-src="vendor/images/page10scape2.png" style="height:auto;width:100%;margin-top:25px;" />
+                    </p>
+                    <p class="italic">
+                      Afbeelding 24: climaxecosysteem, bossen
+                    </p>
+                    <p>
+                      Hier is een schematisch beeld weergegeven van hoe het meanderen eruitzag en hoe de bevers zich uiteindelijk vestigden in de rivieren... (plaatjes zijn zelfgemaakt door Wilfrid Dekker)
+                    </p>
+                    <p>
+                      <img class="lazyload" data-src="vendor/images/fase-5.png" style="height:auto;width:100%;margin-top:25px;" />
+                    </p>
+                    <p class="italic">
+                      Fase 1
+                    </p>
+                    <p>
+                      <img class="lazyload" data-src="vendor/images/fase-6.png" style="height:auto;width:100%;margin-top:25px;" />
+                    </p>
+                    <p class="italic">
+                      Fase 2
+                    </p>
+                    <p>
+                      <img class="lazyload" data-src="vendor/images/fase-7.png" style="height:auto;width:100%;margin-top:25px;" />
+                    </p>
+                    <p class="italic">
+                      Fase 3
+                    </p>
+                    <p>
+                      <img class="lazyload" data-src="vendor/images/fase-8.png" style="height:auto;width:100%;margin-top:25px;" />
+                    </p>
+                    <p class="italic">
+                      Fase 4
+                    </p>
+                  </div>
+                  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 spacer"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="container page11">
+            <div class="row">
+              <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 contentblock height11">
+                <div class="row">
+                  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 content">
+                    <h1>Waarom de wolf?</h1>
+                  </div>
+                  <div class="col-lg-12 col-md12 col-sm-12 col-xs-12 content">
+                    <p>
+                      Waarom de wolf in een ecosysteem brengen en niet een andere predator? Wat is er nou zo speciaal aan de wolf dat andere predatoren niet hebben? Dat is zeker een goede vraag.
+                    </p>
+                    <p>
+                      Je zou kunnen zeggen dat het wellicht komt omdat de wolf voor 1930 al in Yellowstone aanwezig was en dat ze daarom de wolf hebben geherintroduceerd, maar dat is niet de enige mogelijke reden.
+                    </p>
+                    <p>
+                      Tuurlijk, wolven zijn ideaal voor een gebied zoals Yellowstone. Het is een erg groot natuurgebied wat vaak compleet ondergesneeuwd ligt. Als je in zo’n milieu wil overleven moet je snel en sterk zijn, maar vooral een enorm goede conditie hebben en laten
+                      hondachtige, dus zeker ook wolven dat hebben. Met een draf van 8 kilometer per uur leggen zij zo 80 kilometer per dag af. Dit komt natuurlijk van pas wanneer je prooi moet opsporen wat meerdere kilometers verder op is.
+                    </p>
+                    <p>
+                      Met het opsporen van prooi hebben wolven ook geen probleem. Vanwege hun geslepen gehoor kunnen zij hun prooi van verre horen. Hun oren zijn geschikt om tonen te kunnen horen van boven de 40.000Hz, dat is twee keer zo hoog als de mens kan horen. Zij beschikken
+                      over ogen die prima bewegingen op verre afstanden kunnen waarnemen, daar bovenop komt dat zij niet alleen overdag maar ook s’ nachts prima kunnen zien. Dit is ideaal in gebieden waar bossen zijn en hoog gras is, hierdoor kan de wolf,
+                      overdag en ‘s nachts zijn prooi spotten. En natuurlijk de neus van de wolf. De wolf heeft één van de best ontwikkelde neuzen uit het dierenrijk en gebruikt hem dan uitermate veel. Wanneer omstandigheden optimaal zijn, kan hij van
+                      2 kilometer afstand zijn prooi ruiken, verder gebruiken wolven hun neuzen voor communicatie, denk dan bijvoorbeeld aan gemarkeerd territorium met behulp van verschillende geuren.
+                    </p>
+                    <p>
+                      Over territorium gesproken, wolven hebben een uitzonderlijk groot territorium dat van 200 t/m 6000 km² groot kan zijn. Herbivoren hebben dit overigens ook door, waardoor zij zich vervolgens aan de territoria aanpassen. Hierdoor neemt het aantal grote
+                      herbivoren af in het territorium van de wolf. Doordat het territorium van de wolf een mogelijk gevaarlijk gebied kan zijn voor de herbivoren, vermijden zij hierdoor het gebied. Zo kan de wolf het aantal herbivoren terugdringen in
+                      een natuurgebied, wat in dit geval Yellowstone is, waardoor ook de overbegrazing terug wordt gedrongen, zonder dat de wolf überhaupt een herbivoor heeft moeten ombrengen.
+                    </p>
+                    <p>
+                      De wolf zit ingewikkeld in elkaar zoals je al hebt gelezen. Het is een loyaal, sterk en intelligent dier en zorgt voor grote, positieve gevolgen in de natuur om ons heen.
+                    </p>
+                    <p>
+                      Alhoewel, de grootste reden waarom de wolf nou zo een grote invloed kan uitoefenen is door zijn samenwerking. De meeste wolven leven in roedels waarin iedereen met elkaar om moet kunnen gaan. Er is een rangschikking om duidelijk aan te geven wie meer
+                      zeggenschap heeft en wie minder. En samen zorgen ze voor een zeer efficiënte manier van leven waarbij iedereen in de roedel profijt van heeft. Het is een collectivistisch systeem. De groep gaat vóór het individu. Althans, in de meeste
+                      gevallen.
+                    </p>
+                    <p>
+                      Samen staan ze sterk en samen kunnen ze een heleboel meer bereiken dan in hun eentje. Een eenzame wolf kan moeilijk een bizon aanpakken, bijvoorbeeld. Bizons zijn namelijk erg sterk en een harde trap kan ernstige gevolgen hebben. Maar in een groep kunnen
+                      ze prooien op de bizon en ervoor zorgen dat iedereen voedsel binnenkrijgt.
+                    </p>
+                    <p>
+                      <img class="lazyload" data-src="vendor/images/page11wolf.png" style="height:auto;width:100%;margin-top:25px;" />
+
+                    </p>
+                    <p class="italic">
+                      Afbeelding 25: roedel wolven
+                    </p>
+                    <p>
+                      De reden waarom een andere predator niet zou kunnen werken, of simpelweg niet zo’n grote invloed kan inbrengen, is omdat bij de meeste predatoren dit collectivistisch systeem ontbreekt. Veel predatoren leven niet in een roedel, of groep, van dezelfde
+                      soort waarin ze allemaal samenwerken om een groter doel te bereiken.
+                    </p>
+                    <p>
+                      Een vergelijkbaar voorbeeld is een bekende katachtige, de leeuw. Zij werken in een vergelijkbaar systeem als de wolf, alleen met een klein aantal verschillen, zoals dat er meestal maar één mannetje aanwezig is in een groep leeuwen én dat de vrouwtjes
+                      meestal het jagen doen, terwijl in een wolvenroedel er vaak meerdere mannetjes aanwezig zijn en zowel vrouwtjes als mannetjes jagen.
+                    </p>
+                    <p>
+                      Maar als er andere predatoren zijn die ook goede samenwerking hebben, waarom dan de wolf? Simpel. De wolf kan in principe overal leven. Net als de mens, zijn wolven zo goed aangepast aan de natuur, dat ze in elk gebied of ecosysteem (op land, natuurlijk)
+                      zouden kunnen leven. Net zoals bij de wolf heeft dit ook bij mens een groot verschil gemaakt in het succes van de mensheid. Wij zouden hoogstwaarschijnlijk veel minder ver zijn gekomen met onze wereld dominatie als wij ook net zoals
+                      de wolf bijna overal kunnen leven.
+                    </p>
+                    <p>
+                      <img class="lazyload" data-src="vendor/images/page11wolf2.png" style="height:auto;width:100%;margin-top:25px;" />
+                    </p>
+                    <p class="italic">
+                      Afbeelding 26: huilende lone wolf
+                    </p>
+                  </div>
+                  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 spacer"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="container page12">
+            <div class="row">
+              <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 contentblock height12">
+                <div class="row">
+                  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 content">
+                    <h1>Hoe kan de wolf naast de mens leven?</h1>
+                  </div>
+                  <div class="col-lg-12 col-md12 col-sm-12 col-xs-12 content">
+                    <p>
+                      Zodra de wolf wordt ingebracht, hoe zal hij naast de mens kunnen leven?
+                    </p>
+                    <p>
+                      Wolven kunnen sterke emoties opbrengen. Ze zijn hét symbool van de wildernis en worden gezien als de ultieme sociale dieren. Toch wil dit niet zeggen dat er een bepaald positief denkbeeld wordt geschetst bij het denken aan de wolf. Het is zeker een uitdaging
+                      om de mens te laten leren over de wolf, maar hiermee hoopt men dat er gebonden aan het begrip vanzelf ook acceptatie zal komen.
+                    </p>
+                    <p>
+                      Hetzelfde geldt voor grote rashonden. Honden als de Rottweiler, Duitse Herder, Stafford of Pitbull worden verafschuwd en beschouwd als hartstikke gevaarlijk door veel mensen, alsof één van die honden meteen op je af zal rennen en je nek zal door bijten
+                      het moment dat ze van de riem los gelaten worden. Zelfs de overheid doet er weinig aan en denkt dat het verbannen, in laten slapen of het muilkorven van de hond de problemen zomaar zal laten verdwijnen.
+                    </p>
+                    <p>
+                      Zo is de mens altijd al geweest. Als we iets niet begrijpen of mogen, dan vindt men de beste oplossing om het maar af te maken. Hetzelfde is gebeurd met de wolf in de VS, waar elke gespotte wolf legaal mocht worden afgeschoten. Vooral in het Yellowstone
+                      gebied werd er erg veel gejaagd. Het ging door totdat de laatste paar wolven werden afgemaakt in 1926.
+                    </p>
+                    <p>
+                      <img class="lazyload" data-src="vendor/images/page12wolf.png" style="height:auto;width:100%;margin-top:25px;" />
+                    </p>
+                    <p class="italic">
+                      Afbeelding 27: wolf in een houten kooi die door een opening kijkt
+                    </p>
+                    <p>
+                      Dat ter zijde, om mensen de wolven te laten begrijpen zodat ze hen leren te accepteren, moeten we laten zien dat de wolf veel met de mens gemeen heeft. Ze delen veel menselijke eigenschappen zoals emoties en personaliteit. Wolven creëren dichte sociale
+                      banden met elkaar, maar tegelijkertijd zullen ze op bepaalde momenten hun hiërarchische sociale orde toepassen. Sommige wolven adopteren de pups van een ander en voeden die op alsof het hun eigen zijn, maar andere keren zullen ze
+                      haastig een indringer in hun territorium doden.
+                    </p>
+                    <p>
+                      Mensen leggen wel eens nadruk op de “goede” en “slechte” dingen die een wolf doet en in hun gedrag zit. In plaats van af te vragen of wolven goed of slecht zijn, leren de mensen bij het International Wolf Center over de complexiteit van het dier. Ze vragen
+                      zich af hoe moeilijk het is om een eland van 550 kilogram neer te krijgen; hoe een wolvenroedel hun pups opvoeden; welke impact en gevolgen mensen hebben op de overleving van de wolf; welke impact de wolf heeft op de mens. Volgens
+                      hen is er nog veel meer te onderzoeken om volledig te begrijpen hoe wolven in elkaar zitten en wat hun relatie is met ander wildleven en mensen.
+                    </p>
+                    <p>
+                      Conflicten te vermijden
+                    </p>
+                    <p>
+                      Wolven zijn erg verlegen en zullen mensen in het algemeen vermijden. Hierdoor zullen de meeste mensen nooit een wilde wolf ontmoeten, laat staan in een conflict met één komen, al groeien de aantallen wereldwijd. Hoewel, als mensen zich in zullen burgeren
+                      in gebieden waar wolven aanwezig zijn, is het bijna onvermijdbaar dat de mens en de wolf steeds vaker elkaar zullen tegemoetkomen en dat de angst van elkaar overwonnen wordt. Wolven zijn dan meer waarschijnlijk om gebieden te betreden
+                      waar mensen aanwezig zijn, zoals campings of woonplaatsen, wat erg gevaarlijk kan zijn. Hierdoor zal de kans op conflict tussen de wolf en de mens stijgen. Om dit zoveel mogelijk te voorkomen zijn er een aantal regels of benodigdheden
+                      waar mensen in zo’n gebied zich aan moeten houden.
+                    </p>
+                    <p>
+                      Volgens het International Wolf Center moet men:
+                    </p>
+                    <ul>
+                      <li>
+                        <p>
+                          de wolven niet voeden;
+                        </p>
+                      </li>
+                      <li>
+                        <p>
+                          alle huisdieren binnenhuis eten geven en niet eten buiten achterlaten;
+                        </p>
+                      </li>
+                      <li>
+                        <p>
+                          etensresten weggooien in vuilnisbakken met een goed en stevige deksel;
+                        </p>
+                      </li>
+                      <li>
+                        <p>
+                          geen ander wildleven voeden: bij het aantrekken van prooi, zullen wolven volgen;
+                        </p>
+                      </li>
+                      <li>
+                        <p>
+                          vetbollen voor vogels minstens 7 meter boven de grond ophangen;
+                        </p>
+                      </li>
+                      <li>
+                        <p>
+                          huisdieren niet onbeheerd buiten laten: honden en katten zijn makkelijke doelwitten voor de wolf;
+                        </p>
+                      </li>
+                      <li>
+                        <p>
+                          als er geen andere optie is voor het onbeheerd je huisdieren in de tuin te laten, zorg ervoor dat ze in een stevig hok zitten;
+                        </p>
+                      </li>
+                      <li>
+                        <p>
+                          installeer buiten het huis lampen met bewegingssensoren: dit zal helpen om wolven weg te jagen;
+                        </p>
+                      </li>
+                      <li>
+                        <p>
+                          probeer wolven vooral te vermijden en niet comfortabel te laten voelen;
+                        </p>
+                      </li>
+                      <li>
+                        <p>
+                          bij het tegenkomen van een wolf afstand houden. Als de wolf te dichtbij komt, zorg ervoor dat je jezelf zo groot mogelijk maakt d.m.v. je armen omhoog te houden en te zwaaien, terwijl je hard schreeuwt om hem weg te jagen.
+                        </p>
+                      </li>
+                    </ul>
+                    <p>
+                      Wanneer je deze regels opvolgt heb je de 2 grootste gevaren al geminimaliseerd, uitlokking van de wolven en wolven comfort geven naast de mens. Een ander gevaar is wanneer een wolf hondsdolheid krijgt, een ziekte in het brein waardoor een dier, in dit
+                      geval de wolf erg agressief wordt en alle rationele beslissingen achterwege laat. Gelukkig is dit zeer zeldzaam en streng gecontroleerd over de hele wereld.
+                    </p>
+                    <p>
+                      Daarbij is volgens The Fear of Wolves: A Review of Wolf Attacks on Humans, waarin een documentatie staat van wolf gerelateerde incidenten de afgelopen 400 jaar, het aantal aanvallen erg zeldzaam. Deze bron kijkt naar wolf-mens ontmoetingen van een grote
+                      variatie van bronnen en trekt de conclusie dat het dus erg zeldzaam is voor een mens om aangevallen te worden door een wolf. De meest voorkomende factoren waren hondsdolheid - wat zeer zeldzaam is zoals hierboven beschreven, uitlokking
+                      door mensen en gebieden waar de mens de omgeving drastisch heeft aangepast.
+                    </p>
+                    <div>
+                    </div>
+                  </div>
+                  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 spacer"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="container page13">
+            <div class="row">
+              <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 contentblock height13">
+                <div class="row">
+                  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 content">
+                    <h1>Conclusie</h1>
+                  </div>
+                  <div class="col-lg-12 col-md12 col-sm-12 col-xs-12 content">
+                    <p>
+                      Er is een grote invloed op de natuur door de aanwezigheid van de wolf. Wat de wolf doet zorgt namelijk voor veel positieve gevolgen. Er is een grote toename van dieren en planten, waardoor de biodiversiteit sterk toeneemt en zelfs de geografie van het
+                      land wordt aangepast door middel van meer bosvorming en het ontstaan van nieuwe rivieren. Het ontstaan van rivieren brengt weer allerlei andere dieren en planten die zich kunnen vestigen in het gebied, waardoor alweer de biodiversiteit
+                      zal toenemen.
+                    </p>
+                    <p style="font-style: italic;">
+                      “Hoe zitten wolven in elkaar: wat is hun gedrag; gewoontes; bouw; habitat; etc.?”
+                    </p>
+                    <p>
+                      De wolf zijn zeer sociale dieren en zit vooral erg ingewikkeld in elkaar.
+                    </p>
+                    <p>
+                      Wolven leven in een hiërarchische samenleving. De meeste wolven brengen hun leven door in een roedel, waar deze hiërarchie plaatsvindt. Het is een zeer collectivistisch systeem waarin de groep vóór het individu gaat, maar waarin het individu alsnog van
+                      sterk belang is. De samenleving werkt goed door de rangschikking in een roedel, waarin een alfa-paar aanwezig is die alle beslissingen maakt en orde houdt. De rest van de roedelleden hebben de rol als beta's en hebben minder zeggenschap.
+                    </p>
+                    <p>
+                      De wolf heeft een tactische manier van jagen die geoptimaliseerd is voor een groep wolven die samen jagen op hun prooi, waarbij hun geslepen zintuigen de jacht nog makkelijker maken. Daarbij hebben ze een territorium die wordt gemarkeerd door middel van
+                      defecatie en urine zodat wolven buiten de roedel weten van wie dit territorium is en ze niet te dichtbij mogen komen.
+                    </p>
+                    <p style="font-style: italic;">
+                      “Wat is de invloed die wolven uitoefenen op andere organismen?”
+                    </p>
+                    <p>
+                      Wolven zorgen voor de vermindering van grote herbivoren, zoals herten en elanden, die alle planten afgrazen, waardoor de planten kunnen regenereren en er uiteindelijk ook meer planten en zelfs bossen kunnen ontstaan. Door de toename van planten en de
+                      stijging van biodiversiteit is er meer voedselvoorziening en onderdak voor andere dieren, waardoor zij naar dit gebied toe migreren. Ook verminderen ze de hoeveelheid van coyotes, waardoor de hoeveelheid knaagdieren stijgt en er
+                      meer voedsel aanwezig is voor dieren zoals roofvogels en andere predatoren als vossen en dassen. Beren migreren uiteindelijk ook naar het gebied toe door de toename van bessen en dergelijke, waardoor de beer versterking geeft aan
+                      het impact van de wolf door andere herbivoren populaties in bedwang te houden. Door het claimen van territorium, zorgen de wolven ook voor een verandering in het gedrag van bepaalde dieren, zoals de grote herbivoren waar de wolf
+                      op jaagt. Deze dieren durven niet te dichtbij de wolf in de buurt te komen, waardoor ze bepaalde gebieden zullen vermijden en daar de vegetatie zal kunnen toenemen.
+                    </p>
+                    <p style="font-style: italic;">
+                      “Wat is de invloed op de geografie van het gebied?”
+                    </p>
+                    <p>
+                      Door de afname van herbivoren ontstaan er meer beboste gebieden en ontstaat er in het algemeen een groener landschap. Door de toename van bomen zal de grond worden versterkt door de wortels die zich verspreiden onder de grond, maar wat vooral wordt versterkt
+                      zijn de rivierbanken. Door de versterking van de rivierbanken zal het meanderen afnemen, waardoor vaste rivieren ontstaan en er geen modderige boel overblijft. Door het ontstaan van rivieren zal er weer een domino-effect plaatsvinden
+                      waardoor er meer organismen zich zullen bevinden in het gebied, zoals eenden, bevers, amfibieën, reptielen en waterplanten.
+                    </p>
+                    <p style="font-style: italic;">
+                      “Waarom de wolf en niet een andere predator? En welke factoren spelen hier een rol bij?”
+                    </p>
+                    <p>
+                      Wolven hebben zeer goede zintuigen wat hun goed helpt in de jacht en andere activiteiten. Ze zijn ook erg territoriaal en markeren hun territorium door middel van defecatie en urine, zodat andere wolven, maar ook herbivoren uit de buurt blijven, zonder
+                      dat ze enig veel hoeven te doen. Daarbij leven wolven in een hiërarchische samenleving waar er een sterke samenwerking aanwezig is. Veel predatoren ontbreken dit collectivistische systeem waar de soortgenoten samenwerken om te streven
+                      naar een groter doel. Voorbeelden van andere organismen die onder een vergelijkbaar systeem leven zijn de leeuw en de mens. Net als de mens, is ook de wolf zo goed aangepast aan de natuur, dat hij vrijwel overal kan leven. Dit zorgt
+                      ervoor dat wolven in principe overal kunnen ingebracht worden om de conditie van de natuur te verbeteren.
+                    </p>
+                    <p style="font-style: italic;font-size:16px;">
+                      “Zodra je de wolf inbrengt in een nieuw gebied, hoe zal de wolf naast de mens kunnen leven zonder enige conflicten?”
+                    </p>
+                    <p>
+                      Veel mensen zijn over het algemeen bang voor wilde dieren, vooral voor vleesetenden, oftewel de (meestal) carnivorische predatoren. Dit kan voor enige conflicten zorgen tussen de mens en de wolf, maar door de mens een betere voorlichting te geven over
+                      de wolf en hen een aantal strikte regels te laten volgen, zal alles goed aflopen. Daarbij zijn wolven erg verlegen en zullen ze mensen zoveel mogelijk vermijden, dus als je ze geen reden geeft om je te benaderen, zullen ze mensen
+                      ook nooit kwaad kunnen doen. Daarbij is er in het verleden erg weinig aanvallen geweest op de mens. In 400 jaar tijd was het zeer zeldzaam voor een wolf om een mens aan te vallen, waarvan de meeste incidenten te maken hadden met
+                      hondsdolheid, uitlokking door mensen of doordat de mens het leefgebied van de wolf te drastisch heeft aangepast.
+                    </p>
+                  </div>
+                  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 spacer"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="contact-box">
+            <div class="contact-content">
+              <img class="contact-img" src="vendor/images/wolf-drawing.png" />
+              <p class="italic" style="position:absolute:left:30px;">Gemaakt door River Hanssens.</p>
+              <h5>Dit project is samengesteld door Nick Lust, Ruthger Dijt, Wilfrid Dekker en River Hanssens</h5>
+              <h5>van het Zaanlands Lyceum, Zaandam.</h5>
+              <br/>
+              <h6>Heb je enige vragen? Wil je meer weten? Is er iets onduidelijk? </h6>
+              <h6>Neem dan contact op met: LupusInc.contact@gmail.com</h6>
+              <br/>
+              <button class="btn btn btn-primary contact-button-back" onclick="javascript:contacts(false);">Sluit</button>
+            </div>
+          </div>
+          <button type="button" class="btn btn btn-primary btn-circle btn-lg btn-up" onclick="movePage(NaN, false);"><i class="fa fa-arrow-up" aria-hidden="true"></i></button>
+          <button type="button" class="btn btn btn-primary btn-circle btn-lg btn-down" onclick="movePage(NaN, true);"><i class="fa fa-arrow-down" aria-hidden="true"></i></button>
+          <button type="button" class="btn btn btn-primary btn-circle btn-lg btn-counter"><p class="pageNumber">1</p></button>
+
+          <!-- Bootstrap core JavaScript -->
+          <script src="vendor/jquery/jquery.min.js "></script>
+          <script async src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+          <script async src="vendor/imagesloaded/imagesloaded.min.js"></script>
+          <script async src="vendor/custom/js/custom.js "></script>
+          <script async src="https://use.fontawesome.com/8d6338574f.js"></script>
 </body>
 
 </html>

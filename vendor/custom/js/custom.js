@@ -9,9 +9,7 @@ function OnLoad() {
 //
 function Resize() {
   straightPage();
-  if (!loaded) {
-    scaleBackground();
-  }
+  scaleBackground();
 }
 // Events
 //
@@ -41,7 +39,6 @@ function countPages() {
 }
 // Scroll up or down, to any page number or right under or above the current page
 function movePage(newPage, down) {
-
   if (!lock) {
     lock = true;
     // Check for defined direction if not given calculate automaticly
@@ -62,43 +59,66 @@ function movePage(newPage, down) {
     } else if (newPage > pages) {
       newPage = pages;
     }
-    // Nullify the difference between position: fixed and static
-    $(".page" + currentPage).css("left", $(".page" + currentPage).offset().left);
+    if (currentPage == 0) {
+      page0Timeout = 500;
+      $(".page" + currentPage).css("transition", "0.5s");
+      $(".page0").css("max-width", "");
+    } else {
+      page0Timeout = 0;
+    }
+    setTimeout(function() {
+      $(".page" + currentPage).css("transition", "0s");
+      // Scaling
+      straightPage();
+      overlay();
+      // Nullify the difference between position: fixed and static
+      $(".page" + currentPage).css("left", $(".page" + currentPage).offset().left);
 
-    // Compensate for the scrolled position
-    $(".page" + currentPage).css("top", -$(document).scrollTop());
-    $(".page" + newPage).css("top", parseInt($(".page" + newPage).css("top"), 10) - $(document).scrollTop());
+      // Compensate for the scrolled position
+      $(".page" + currentPage).css("top", -$(document).scrollTop());
+      $(".page" + newPage).css("top", parseInt($(".page" + newPage).css("top"), 10) - $(document).scrollTop());
 
-    setTimeout(function() { // work around
-      // Enable animation
-      $(".page" + currentPage).css("transition", "1s");
-      $(".page" + newPage).css("transition", "1s");
-      // Place the currentPage above or under the visible screen, depending on direction
-      if (down) {
-        $(".page" + currentPage).css("top", -$(".page" + currentPage).height());
-      } else {
-        $(".page" + currentPage).css("top", $(".page" + newPage).height());
-      }
-      // "Freeze" the page so it wont cause any issues while hidden
-      $(".page" + currentPage).css("position", "fixed");
+      setTimeout(function() { // work around
+        // Enable animation
+        $(".page" + currentPage).css("transition", "1s");
+        $(".page" + newPage).css("transition", "1s");
+        // Place the currentPage above or under the visible screen, depending on direction
+        if (down) {
+          $(".page" + currentPage).css("top", -$(".page" + currentPage).height());
+        } else {
+          $(".page" + currentPage).css("top", $(".page" + newPage).height());
+        }
+        // "Freeze" the page so it wont cause any issues while hidden
+        $(".page" + currentPage).css("position", "fixed");
+        // Bring in the new page
+        $(".page" + newPage).css("top", 0);
+        // Wait for the animation
+        setTimeout(function() {
+          // Disable animation
+          $(".page" + currentPage).css("transition", "0s");
+          $(".page" + newPage).css("transition", "0s");
+          $(".page" + newPage).css("position", "static");
+          $(".page" + newPage).css("left", "0px");
+          if (newPage == 0) {
+            $(".page" + newPage).css("transition", "0.5s");
+            $(".page0").css("max-width", "100%");
+          }
+          // Update currentPage
+          currentPage = newPage;
+          // Scaling
+          straightPage();
+          overlay();
+          lock = false;
+        }, 1000);
+      }, 100);
+    }, page0Timeout);
+  }
+}
 
-      // Bring in the new page
-      $(".page" + newPage).css("top", 0);
-      // Wait for the animation
-      setTimeout(function() {
-        // Disable animation
-        $(".page" + currentPage).css("transition", "0s");
-        $(".page" + newPage).css("transition", "0s");
-        $(".page" + newPage).css("position", "static");
-        $(".page" + newPage).css("left", "0px");
-        // Update currentPage
-        currentPage = newPage;
-        // Scaling
-        straightPage();
-        overlay();
-        lock = false;
-      }, 1000);
-    }, 100);
+function page0() {
+
+  if (newPage !== 0) {
+    $(".page0").css("max-width", "");
   }
 }
 // Set the right configuration of pages
@@ -107,16 +127,13 @@ function straightPage() {
     $(".page" + i).css("min-height", $(window).height()); // Reset the min-height
     $(".page" + i).css("height", $(window).height()); // Reset the height
     $(".page" + i).css("height", $(".height" + i).height()); // Set the actual height
-  }
-  for (var i = 0; i <= pages; i++) {
     if (i < currentPage && i !== currentPage) {
       $(".page" + i).css("top", -$(".page" + i).height());
     } else if (i > currentPage) {
       $(".page" + i).css("top", $(document).height());
     }
     if (i !== currentPage) {
-      $(".page" + i).css("left", $(".page" + currentPage).offset().left);
-      $(".page" + i).css("left", $(".page" + currentPage).offset().left);
+      $(".page" + i).css("left", ($(window).width() - $(".page" + i).width()) / 2 - 30);
     }
   }
 }
@@ -153,7 +170,6 @@ function overlay() {
 function scaleBackground() {
   var Background = $(".background");
   if (!loaded) {
-    //Main magic
     if ($(window).height() > Background.height()) {
       Background.css("max-width", "none");
       Background.css("max-height", "100%");
@@ -167,6 +183,7 @@ function scaleBackground() {
 
 function continuePage() {
   $(window).scrollTop(0);
+  $(".page0").css("max-width", "100%");
   $(".overlay").css("opacity", "0");
   $(".background").css("opacity", "0");
   $(".navbar-custom").css("opacity", "1");
@@ -185,12 +202,33 @@ function reload() {
   $(".background").css("display", "inline");
   $(".overlay").css("opacity", "1");
   $(".background").css("opacity", "1");
+  $(".background2").css("opacity", "0");
   $(".navbar-custom").css("opacity", "0");
   $(".container").css("opacity", "0");
   $(".btn-circle").css("opacity", "0");
   loaded = false;
   scaleBackground();
   movePage(0, NaN);
+}
+var lock2 = false;
+
+function contacts(show) {
+  if (!lock2) {
+    lock2 = true;
+    if (show) {
+      $(".contact-box").css("display", "inline");
+      setTimeout(function() {
+        $(".contact-box").css("opacity", "1");
+        lock2 = false;
+      }, 10);
+    } else {
+      $(".contact-box").css("opacity", "0");
+      setTimeout(function() {
+        $(".contact-box").css("display", "none");
+        lock2 = false;
+      }, 500);
+    }
+  }
 }
 
 function lazyLoad() {
