@@ -192,7 +192,9 @@ function continuePage() {
     $(".overlay").css("display", "none");
     $(".background").css("display", "none");
     setTimeout(function() {
+      $(".page0").css("transition", "0");    
       $(".page0").css("max-width", "100%");
+      straightPage();
     }, 50);
     loaded = true;
     overlay();
