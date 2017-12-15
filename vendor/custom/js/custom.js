@@ -183,7 +183,6 @@ function scaleBackground() {
 
 function continuePage() {
   $(window).scrollTop(0);
-  $(".page0").css("max-width", "100%");
   $(".overlay").css("opacity", "0");
   $(".background").css("opacity", "0");
   $(".navbar-custom").css("opacity", "1");
@@ -192,9 +191,13 @@ function continuePage() {
   setTimeout(function() {
     $(".overlay").css("display", "none");
     $(".background").css("display", "none");
+    setTimeout(function() {
+      $(".page0").css("max-width", "100%");
+    }, 50);
     loaded = true;
     overlay();
   }, 500);
+
 }
 
 function reload() {
