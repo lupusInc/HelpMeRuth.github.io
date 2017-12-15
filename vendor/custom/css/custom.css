@@ -52,7 +52,7 @@ h2 {
 .carousel {
   height: auto;
   width: 100%;
-  max-width: 750px;
+  max-width: 650px;
   background-color: rgba(65, 65, 65, 1);
   border-radius: 10px;
   -webkit-box-shadow: inset 0px 3px 10px rgba(44, 44, 44, 0.9);
