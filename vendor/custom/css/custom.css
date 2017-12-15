@@ -5,6 +5,16 @@ body {
   background-color: rgba(65, 65, 65, 1);
 }
 
+h2 {
+  font-size: 3.5vw;
+}
+
+@media(max-width: @screen-xs-max){
+  h2 {
+    font-size: 24px;
+  }
+}
+
 .navbar-custom {
   background-color: rgba(13, 13, 13, 0.7);
   width: 100%;
