@@ -115,12 +115,6 @@ function movePage(newPage, down) {
   }
 }
 
-function page0() {
-
-  if (newPage !== 0) {
-    $(".page0").css("max-width", "");
-  }
-}
 // Set the right configuration of pages
 function straightPage() {
   for (var i = 0; i <= pages; i++) {
@@ -183,6 +177,7 @@ function scaleBackground() {
 
 function continuePage() {
   $(window).scrollTop(0);
+  $(".page0").css("max-width", "100%");
   $(".overlay").css("opacity", "0");
   $(".background").css("opacity", "0");
   $(".navbar-custom").css("opacity", "1");
@@ -192,8 +187,6 @@ function continuePage() {
     $(".overlay").css("display", "none");
     $(".background").css("display", "none");
     setTimeout(function() {
-      $(".page0").css("transition", "0");    
-      $(".page0").css("max-width", "100%");
       straightPage();
     }, 50);
     loaded = true;
@@ -215,22 +208,22 @@ function reload() {
   scaleBackground();
   movePage(0, NaN);
 }
-var lock2 = false;
+var lock2 = true;
 
 function contacts(show) {
-  if (!lock2) {
-    lock2 = true;
+  if (lock2) {
+    lock2 = false;
     if (show) {
       $(".contact-box").css("display", "inline");
       setTimeout(function() {
         $(".contact-box").css("opacity", "1");
-        lock2 = false;
+        lock2 = true;
       }, 10);
     } else {
       $(".contact-box").css("opacity", "0");
       setTimeout(function() {
         $(".contact-box").css("display", "none");
-        lock2 = false;
+        lock2 = true;
       }, 500);
     }
   }
