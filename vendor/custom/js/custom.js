@@ -21,7 +21,6 @@ $(window).resize(function() {
   Resize();
 });
 //
-//Functions
 var currentPage = 0; // Start page
 var pages = 0; // Amount of pages we have
 var lock = false; // simple lock system to prevent bugs
@@ -140,32 +139,31 @@ function overlay() {
       $(".btn-up").animate({
         opacity: 0,
         right: -60
-      }, 400);
+      }, 300);
     } else {
       $(".btn-up").animate({
         opacity: 1,
         right: 20
-      }, 400);
+      }, 300);
     }
     if (currentPage == pages) {
       $(".btn-down").animate({
         opacity: 0,
         right: -60
-      }, 400, function() {
+      }, 300, function() {
         $(".btn-up").animate({
           bottom: 80
-        }, 400);
+        }, 300);
         reset = true;
       });
     } else if (reset) {
-      console.log("woop");
       $(".btn-up").animate({
         bottom: 140
-      }, 400, function() {
+      }, 300, function() {
         $(".btn-down").animate({
           opacity: 1,
           right: 20
-        }, 400);
+        }, 300);
       });
       reset = false;
     }
