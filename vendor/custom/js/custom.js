@@ -130,8 +130,9 @@ function movePage(newPage, down) {
 
 // Set the right configuration of pages
 function straightPage() {
+  let windowHeight = $(window).height();
   for (let i = 0; i <= pages; i++) {
-    $(".page" + i).css("min-height", $(window).height()).css("height", $(window).height()).css("height", $(".height" + i).height());
+    $(".page" + i).css("min-height", windowHeight).css("height", windowHeight).css("height", $(".height" + i).height());
     if (i < currentPage && i !== currentPage) {
       $(".page" + i).css("top", -$(".page" + i).height());
     } else if (i > currentPage) {
