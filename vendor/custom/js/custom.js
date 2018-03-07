@@ -1,4 +1,4 @@
-// Event functions
+// All functions called on load
 function OnLoad() {
   lazyLoad();
   countPages();
@@ -6,28 +6,32 @@ function OnLoad() {
   straightPage();
   scaleBackground()
 }
-//
+
+// account for changing screensize e.g. desktops
 function Resize() {
   straightPage();
   scaleBackground();
 }
+
 // Events
-//
-//Trigger OnLoad() when page is fully loaded.
 $(document).ready(function() {
   OnLoad();
 })
 $(window).resize(function() {
   Resize();
 });
-//
-var currentPage = 0; // Start page
-var pages = 0; // Amount of pages we have
-var scrollLock = false; // simple scrollLock system to prevent bugs
-var loaded = false; // is the site loaded?
+
+// variables
+let currentPage = 0;
+let pages = 0;
+let scrollLock = false;
+let loaded = false;
+let contactlock = true;
+let reset = false;
+
 // Count the amount of pages we have
 function countPages() {
-  for (var found = false; !found;) {
+  for (let found = false; !found;) {
     if ($(".page" + pages).length == 1) {
       pages++;
     } else {
@@ -36,10 +40,12 @@ function countPages() {
     }
   }
 }
+
 // Scroll up or down, to any page number or right under or above the current page
 function movePage(newPage, down) {
   if (!scrollLock) {
     scrollLock = true;
+
     // Check for defined direction if not given calculate automaticly
     if (isNaN(down) && !isNaN(newPage)) {
       if ($(".page" + currentPage).css("top") > $(".page" + newPage).css("top")) {
@@ -48,6 +54,7 @@ function movePage(newPage, down) {
         down = true;
       }
     }
+
     // Check for defined newPage
     if (isNaN(newPage)) {
       if (down) {
@@ -58,8 +65,8 @@ function movePage(newPage, down) {
     } else if (newPage > pages) {
       newPage = pages;
     }
-    // Scaling
-    straightPage();
+
+    // Fancy animation for page0
     if (currentPage == 0) {
       $(".page0").animate({
         width: $(".page1").width() + 60
@@ -69,7 +76,7 @@ function movePage(newPage, down) {
       page0Timeout = 0;
     }
 
-    setTimeout(function() {
+    setTimeout(function() { // This is needed cuz im not good enough
       // Nullify the difference between position: fixed and static
       $(".page" + currentPage).css("left", $(".page" + currentPage).offset().left);
 
@@ -88,10 +95,11 @@ function movePage(newPage, down) {
           top: $(".page" + newPage).height()
         }, 1000);
       }
+
       // Animate newPage
       $(".page" + newPage).animate({
         top: 0
-      }, 1000, function() { // unfreeze
+      }, 1000, function() {
         $(".page" + newPage).css("position", "static");
         $(".page" + newPage).css("left", "0px");
         if (newPage === 0) {
@@ -116,7 +124,7 @@ function movePage(newPage, down) {
 
 // Set the right configuration of pages
 function straightPage() {
-  for (var i = 0; i <= pages; i++) {
+  for (let i = 0; i <= pages; i++) {
     $(".page" + i).css("min-height", $(window).height()); // Reset the min-height
     $(".page" + i).css("height", $(window).height()); // Reset the height
     $(".page" + i).css("height", $(".height" + i).height()); // Set the actual height
@@ -130,9 +138,8 @@ function straightPage() {
     }
   }
 }
-// Animate the scroll buttons(hide and show on first and last page)
-reset = false;
 
+// Animate the scroll buttons(hide and show on first and last page)
 function overlay() {
   if (loaded) {
     if (currentPage == 0) {
@@ -171,6 +178,7 @@ function overlay() {
   }
 }
 
+// Load welcome screen
 function welcome() {
   $('.overlay-content').imagesLoaded(function() {
     $(".overlay-content").css("opacity", "1");
@@ -178,12 +186,10 @@ function welcome() {
   });
 }
 
-//We need to check if our background fits the screen.
-//If not change the way how we calculate the width or height of the picturel.
-// only needed for greeting overlay. both mobile en desktop
+// Just like it says
 function scaleBackground() {
   if (!loaded) {
-    var Background = $(".background");
+    let Background = $(".background");
     if ($(window).height() > Background.height()) {
       Background.css("max-width", "none");
       Background.css("max-height", "100%");
@@ -195,9 +201,9 @@ function scaleBackground() {
   }
 }
 
+// Setup the main website for use
 function continuePage() {
   $(window).scrollTop(0);
-
   $(".page0").css("max-width", "100%");
   $(".overlay").css("opacity", "0");
   $(".background").css("opacity", "0");
@@ -216,6 +222,7 @@ function continuePage() {
 
 }
 
+// Go back to the welcome screen
 function reload() {
   $(".overlay").css("display", "inline");
   $(".background").css("display", "inline");
@@ -229,8 +236,8 @@ function reload() {
   scaleBackground();
   movePage(0, NaN);
 }
-var contactlock = true;
 
+// Fade animation for the contacts button
 function contacts(show) {
   if (contactlock) {
     contactlock = false;
@@ -252,6 +259,7 @@ function contacts(show) {
   }
 }
 
+// Load all picture asynchronously to speed up physical browser load time
 function lazyLoad() {
   $(".lazyload").each(function() {
     $(this).attr("src", $(this).attr("data-src"));
