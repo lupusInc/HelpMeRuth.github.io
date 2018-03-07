@@ -2,7 +2,7 @@
 function OnLoad() {
   lazyLoad();
   countPages();
-  overlay();
+  welcome();
   straightPage();
   scaleBackground()
 }
@@ -132,32 +132,54 @@ function straightPage() {
   }
 }
 // Animate the scroll buttons(hide and show on first and last page)
+reset = false;
+
 function overlay() {
   if (loaded) {
     if (currentPage == 0) {
-      $(".btn-up").css("opacity", "0");
-      $(".btn-up").css("right", "-60px");
+      $(".btn-up").animate({
+        opacity: 0,
+        right: -60
+      }, 400);
     } else {
-      $(".btn-up").css("opacity", "1");
-      $(".btn-up").css("right", "20px");
+      $(".btn-up").animate({
+        opacity: 1,
+        right: 20
+      }, 400);
     }
     if (currentPage == pages) {
-      $(".btn-down").css("opacity", "0");
-      $(".btn-down").css("right", "-60px");
-      $(".btn-up").css("bottom", "80px");
-    } else {
-      $(".btn-down").css("opacity", "1");
-      $(".btn-down").css("right", "20px");
-      $(".btn-up").css("bottom", "140px");
+      $(".btn-down").animate({
+        opacity: 0,
+        right: -60
+      }, 400, function() {
+        $(".btn-up").animate({
+          bottom: 80
+        }, 400);
+        reset = true;
+      });
+    } else if (reset) {
+      console.log("woop");
+      $(".btn-up").animate({
+        bottom: 140
+      }, 400, function() {
+        $(".btn-down").animate({
+          opacity: 1,
+          right: 20
+        }, 400);
+      });
+      reset = false;
     }
     $("p:last").text(currentPage + 1);
-  } else {
-    $('.overlay-content').imagesLoaded(function() {
-      $(".overlay-content").css("opacity", "1");
-      $(".overlay-content").css("top", "0");
-    });
   }
 }
+
+function welcome() {
+  $('.overlay-content').imagesLoaded(function() {
+    $(".overlay-content").css("opacity", "1");
+    $(".overlay-content").css("top", "0");
+  });
+}
+
 //We need to check if our background fits the screen.
 //If not change the way how we calculate the width or height of the picturel.
 // only needed for greeting overlay. both mobile en desktop
@@ -208,23 +230,25 @@ function reload() {
   scaleBackground();
   movePage(0, NaN);
 }
-var lock2 = true;
+var contactlock = true;
 
 function contacts(show) {
-  if (lock2) {
-    lock2 = false;
+  if (contactlock) {
+    contactlock = false;
     if (show) {
       $(".contact-box").css("display", "inline");
-      setTimeout(function() {
-        $(".contact-box").css("opacity", "1");
-        lock2 = true;
-      }, 10);
+      $(".contact-box").animate({
+        opacity: 1
+      }, 200, function() {
+        contactlock = true;
+      });
     } else {
-      $(".contact-box").css("opacity", "0");
-      setTimeout(function() {
+      $(".contact-box").animate({
+        opacity: 0
+      }, 200, function() {
+        contactlock = true;
         $(".contact-box").css("display", "none");
-        lock2 = true;
-      }, 500);
+      });
     }
   }
 }

@@ -256,7 +256,6 @@ h2 {
 
 .contact-box {
   display: none;
-  transition: 0.5s;
   opacity: 0;
   box-shadow: 0px 0px 15px rgba(22, 22, 22, 1);
   border-radius: 10px;
@@ -293,7 +292,6 @@ h2 {
   font-size: 12px;
   line-height: 1.428571429;
   border-radius: 15px;
-  transition: 0.4s;
   display: initial;
   box-shadow: 0px 3px 10px rgba(44, 44, 44, 0.9);
 }
