@@ -9,6 +9,12 @@ function OnLoad() {
 
 // account for changing screensize e.g. desktops
 function Resize() {
+  if (currentPage !== 0) {
+    $(".page0").css("width", $(".page1").width() + 60);
+  } else {
+    $(".page0").css("width", $(window).width());
+
+  }
   straightPage();
   scaleBackground();
 }
@@ -124,10 +130,9 @@ function movePage(newPage, down) {
 
 // Set the right configuration of pages
 function straightPage() {
+  console.log($(".page0").css("width"));
   for (let i = 0; i <= pages; i++) {
-    $(".page" + i).css("min-height", $(window).height()); // Reset the min-height
-    $(".page" + i).css("height", $(window).height()); // Reset the height
-    $(".page" + i).css("height", $(".height" + i).height()); // Set the actual height
+    $(".page" + i).css("min-height", $(window).height()).css("height", $(window).height()).css("height", $(".height" + i).height());
     if (i < currentPage && i !== currentPage) {
       $(".page" + i).css("top", -$(".page" + i).height());
     } else if (i > currentPage) {
