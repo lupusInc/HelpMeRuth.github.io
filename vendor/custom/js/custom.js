@@ -1,10 +1,10 @@
 // All functions called on load
 function OnLoad() {
   lazyLoad();
-  countPages();
-  welcome();
-  straightPage();
   scaleBackground()
+  welcome();
+  countPages();
+  straightPage();
 }
 
 // account for changing screensize e.g. desktops
@@ -34,6 +34,9 @@ let scrollLock = false;
 let loaded = false;
 let contactlock = true;
 let reset = false;
+let scrollduration = 1000;
+let overlayduration = 450;
+jQuery.easing.def = "easeInOutSine";
 
 // Count the amount of pages we have
 function countPages() {
@@ -64,9 +67,15 @@ function movePage(newPage, down) {
     // Check for defined newPage
     if (isNaN(newPage)) {
       if (down) {
-        newPage = currentPage + 1;
+        if (currentPage == pages) {
+          newPage = currentPage;
+        } else {
+          newPage = currentPage + 1;
+        }
       } else if (currentPage !== 0) {
         newPage = currentPage - 1;
+      } else {
+        newPage = currentPage; // its a feature, if you see this try clicking the up button quick on page0 before it goes away
       }
     } else if (newPage > pages) {
       newPage = pages;
@@ -76,8 +85,8 @@ function movePage(newPage, down) {
     if (currentPage == 0) {
       $(".page0").animate({
         width: $(".page1").width() + 60
-      }, 500);
-      page0Timeout = 500;
+      }, scrollduration / 2);
+      page0Timeout = scrollduration / 2;
     } else {
       page0Timeout = 0;
     }
@@ -95,17 +104,17 @@ function movePage(newPage, down) {
       if (down) {
         $(".page" + currentPage).animate({
           top: -$(".page" + currentPage).height()
-        }, 1000);
+        }, scrollduration);
       } else {
         $(".page" + currentPage).animate({
           top: $(".page" + newPage).height()
-        }, 1000);
+        }, scrollduration);
       }
 
       // Animate newPage
       $(".page" + newPage).animate({
         top: 0
-      }, 1000, function() {
+      }, scrollduration, function() {
         $(".page" + newPage).css("position", "static");
         $(".page" + newPage).css("left", "0px");
         if (newPage === 0) {
@@ -151,31 +160,50 @@ function overlay() {
       $(".btn-up").animate({
         opacity: 0,
         right: -60
-      }, 300);
+      }, overlayduration, "easeInBack");
     } else {
       $(".btn-up").animate({
         opacity: 1,
         right: 20
-      }, 300);
+      }, overlayduration, "easeOutBack");
     }
     if (currentPage == pages) {
       $(".btn-down").animate({
         opacity: 0,
         right: -60
-      }, 300, function() {
-        $(".btn-up").animate({
-          bottom: 80
-        }, 300);
-        reset = true;
+      }, {
+        duration: overlayduration,
+        queue: false,
+        easing: "easeOutBack",
+        complete: function() {
+          reset = true;
+        }
+      });
+      $(".btn-up").animate({
+        bottom: 80
+      }, {
+        duration: overlayduration,
+        queue: false,
+        easing: "easeOutBack"
       });
     } else if (reset) {
       $(".btn-up").animate({
         bottom: 140
-      }, 300, function() {
-        $(".btn-down").animate({
-          opacity: 1,
-          right: 20
-        }, 300);
+      }, {
+        duration: overlayduration,
+        queue: false,
+        easing: "easeOutBack",
+        complete: function() {
+
+        }
+      });
+      $(".btn-down").animate({
+        opacity: 1,
+        right: 20
+      }, {
+        duration: overlayduration,
+        queue: false,
+        easing: "easeOutBack"
       });
       reset = false;
     }
@@ -183,12 +211,24 @@ function overlay() {
   }
 }
 
-// Load welcome screen
+// Load smooth welcome screen
 function welcome() {
   $('.overlay-content').imagesLoaded(function() {
-    $(".overlay-content").css("opacity", "1");
-    $(".overlay-content").css("top", "0");
+    $(".overlay-content").animate({
+      opacity: 1
+    }, {
+      duration: 500,
+      queue: false
+    });
+    $(".overlay-content").animate({
+      top: 0
+    }, {
+      duration: 500,
+      queue: false,
+      ease: "easeOutBack"
+    });
   });
+
 }
 
 // Just like it says
@@ -203,6 +243,7 @@ function scaleBackground() {
       Background.css("max-width", "100%");
       Background.css("max-height", "none");
     }
+    Background.css("opacity", "1");
   }
 }
 
@@ -210,12 +251,19 @@ function scaleBackground() {
 function continuePage() {
   $(window).scrollTop(0);
   $(".page0").css("max-width", "100%");
-  $(".overlay").css("opacity", "0");
-  $(".background").css("opacity", "0");
-  $(".navbar-custom").css("opacity", "1");
+  $(".overlay").animate({
+    opacity: 0
+  }, 500);
+  $(".background").animate({
+    opacity: 0
+  }, 500);
+  $(".navbar-custom").animate({
+    opacity: 1
+  }, 500);
   $(".container").css("opacity", "1");
-  $(".btn-circle").css("opacity", "1");
-  setTimeout(function() {
+  $(".btn-circle").animate({
+    opacity: 1
+  }, 500, function() {
     $(".overlay").css("display", "none");
     $(".background").css("display", "none");
     setTimeout(function() {
@@ -223,7 +271,8 @@ function continuePage() {
     }, 50);
     loaded = true;
     overlay();
-  }, 500);
+  });
+
 
 }
 

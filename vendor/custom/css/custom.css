@@ -325,16 +325,14 @@ h2 {
   max-width: 100%;
   height: auto;
   width: auto;
-  transition: 0.1s;
   filter: blur(6px);
-  opacity: 1;
+  opacity: 0;
 }
 
 .logo {
   height: auto;
   width: 80%;
   max-width: 500px;
-  transition: 0.5s;
 }
 
 .overlay {
@@ -346,16 +344,14 @@ h2 {
   top: 0;
   background-color: rgba(0, 0, 0, 0.6);
   overflow-x: hidden;
-  transition: 0.5s;
 }
 
 .overlay-content {
   position: absolute;
-  top: 50px;
+  top: 100px;
   opacity: 0;
   width: 100%;
   text-align: center;
-  transition: 0.5s;
 }
 
 .overlay a {
@@ -364,7 +360,6 @@ h2 {
   font-size: 36px;
   color: #818181;
   display: block;
-  transition: 0.5s;
 }
 
 .overlay button {
