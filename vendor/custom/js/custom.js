@@ -36,6 +36,7 @@ let contactlock = true;
 let reset = false;
 let scrollduration = 1000;
 let overlayduration = 450;
+let overlayease = "easeInOutBack"
 jQuery.easing.def = "easeInOutSine";
 
 // Count the amount of pages we have
@@ -160,12 +161,12 @@ function overlay() {
       $(".btn-up").animate({
         opacity: 0,
         right: -60
-      }, overlayduration, "easeInBack");
+      }, overlayduration, overlayease);
     } else {
       $(".btn-up").animate({
         opacity: 1,
         right: 20
-      }, overlayduration, "easeOutBack");
+      }, overlayduration, overlayease);
     }
     if (currentPage == pages) {
       $(".btn-down").animate({
@@ -174,7 +175,7 @@ function overlay() {
       }, {
         duration: overlayduration,
         queue: false,
-        easing: "easeOutBack",
+        easing: overlayease,
         complete: function() {
           reset = true;
         }
@@ -184,7 +185,7 @@ function overlay() {
       }, {
         duration: overlayduration,
         queue: false,
-        easing: "easeOutBack"
+        easing: overlayease
       });
     } else if (reset) {
       $(".btn-up").animate({
@@ -192,7 +193,7 @@ function overlay() {
       }, {
         duration: overlayduration,
         queue: false,
-        easing: "easeOutBack",
+        easing: overlayease,
         complete: function() {
 
         }
@@ -203,7 +204,7 @@ function overlay() {
       }, {
         duration: overlayduration,
         queue: false,
-        easing: "easeOutBack"
+        easing: overlayease
       });
       reset = false;
     }
@@ -225,7 +226,7 @@ function welcome() {
     }, {
       duration: 500,
       queue: false,
-      ease: "easeOutBack"
+      ease: overlayease
     });
   });
 
