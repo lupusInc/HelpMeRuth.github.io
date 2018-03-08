@@ -75,7 +75,7 @@ function movePage(newPage, down) {
       } else if (currentPage !== 0) {
         newPage = currentPage - 1;
       } else {
-        newPage = currentPage; // its a feature, if you see this try clicking the up button quick on page0 before it goes away
+        newPage = currentPage;
       }
     } else if (newPage > pages) {
       newPage = pages;
@@ -118,11 +118,11 @@ function movePage(newPage, down) {
         $(".page" + newPage).css("position", "static");
         $(".page" + newPage).css("left", "0px");
         if (newPage === 0) {
+          currentPage = newPage;
+          overlay();
           $(".page0").animate({
             width: $(window).width()
           }, 500, function() {
-            currentPage = newPage;
-            overlay();
             straightPage();
             scrollLock = false;
           });
