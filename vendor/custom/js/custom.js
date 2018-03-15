@@ -269,7 +269,10 @@ function scaleBackground() {
 
 // Setup the main website for use
 function continuePage() {
-  $(window).scrollTop(0);
+  if ($(window).width() < 768 && !popped) {
+    $(window).scrollTop($(".testing").position().top - 100);
+    console.log("scrolling");
+  }
   $(".page0").css("max-width", "100%");
   $(".overlay").animate({
     opacity: 0
@@ -320,9 +323,6 @@ function reload() {
       movePage(0, NaN, false);
       popped = false;
       loaded = false;
-      setTimeout(function() {
-        hidepop()
-      }, 10000);
     }
   });
 }
