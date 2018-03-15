@@ -34,6 +34,7 @@ var scrollLock = false;
 var loaded = false;
 var contactlock = true;
 var reset = false;
+var popped = false;
 var SCROLL_DURATION = 1000;
 var OVERLAY_DURATION = 450;
 var scrollduration, overlayduration;
@@ -54,6 +55,10 @@ function countPages() {
 
 // Scroll up or down, to any page number or right under or above the current page
 function movePage(newPage, down, animate) {
+  if (!popped) {
+    $(".btn-down").popover("hide");
+    popped = true;
+  }
   if (animate || isNaN(animate)) {
     var scrollduration = SCROLL_DURATION;
     var overlayduration = OVERLAY_DURATION;
@@ -63,7 +68,6 @@ function movePage(newPage, down, animate) {
   }
   if (!scrollLock) {
     scrollLock = true;
-
     // Check for defined direction if not given calculate automaticly
     if (isNaN(down) && !isNaN(newPage)) {
       if ($(".page" + currentPage).css("top") > $(".page" + newPage).css("top")) {
@@ -164,6 +168,9 @@ function straightPage() {
 
 // Animate the scroll buttons(hide and show on first and last page)
 function overlay() {
+  if (!popped) {
+    $(".btn-down").popover("show");
+  }
   if (loaded) {
     if (currentPage == 0) {
       $(".btn-up").animate({
@@ -184,7 +191,7 @@ function overlay() {
         duration: overlayduration,
         queue: false,
         easing: overlayease,
-        compvare: function() {
+        complete: function() {
           reset = true;
         }
       });
@@ -202,7 +209,7 @@ function overlay() {
         duration: overlayduration,
         queue: false,
         easing: overlayease,
-        compvare: function() {
+        complete: function() {
 
         }
       });
@@ -258,6 +265,7 @@ function scaleBackground() {
 
 // Setup the main website for use
 function continuePage() {
+  $(".btn-down").popover("hide");
   $(window).scrollTop(0);
   $(".page0").css("max-width", "100%");
   $(".overlay").animate({
@@ -281,8 +289,6 @@ function continuePage() {
     loaded = true;
     overlay();
   });
-
-
 }
 
 // Go back to the welcome screen
