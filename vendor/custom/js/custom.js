@@ -20,12 +20,10 @@ function Resize() {
 }
 
 // Events
-$(document).ready(function() {
-  OnLoad();
-})
-$(window).resize(function() {
-  Resize();
-});
+$(document).ready(OnLoad)
+$(window).resize(Resize);
+$(document).on("click", hidepop);
+$(document).on("scroll", hidepop);
 
 // variables
 var currentPage = 0;
@@ -56,7 +54,7 @@ function countPages() {
 // Scroll up or down, to any page number or right under or above the current page
 function movePage(newPage, down, animate) {
   if (!popped) {
-    $(".btn-down").popover("hide");
+    hidepop();
     popped = true;
   }
   if (animate || isNaN(animate)) {
@@ -169,7 +167,8 @@ function straightPage() {
 // Animate the scroll buttons(hide and show on first and last page)
 function overlay() {
   if (!popped) {
-    $(".btn-down").popover("show");
+    $(".haspop").popover("show");
+    $(".haspop").popover("toggleEnabled");
   }
   if (loaded) {
     if (currentPage == 0) {
@@ -227,6 +226,11 @@ function overlay() {
   }
 }
 
+function hidepop() {
+  $(".haspop").popover("toggleEnabled");
+  $(".haspop").popover("hide");
+  $(".haspop").popover("toggleEnabled");
+}
 // Load smooth welcome screen
 function welcome() {
   $('.overlay-content').imagesLoaded(function() {
@@ -265,7 +269,6 @@ function scaleBackground() {
 
 // Setup the main website for use
 function continuePage() {
-  $(".btn-down").popover("hide");
   $(window).scrollTop(0);
   $(".page0").css("max-width", "100%");
   $(".overlay").animate({
@@ -288,6 +291,9 @@ function continuePage() {
     }, 50);
     loaded = true;
     overlay();
+    setTimeout(function() {
+      hidepop()
+    }, 10000);
   });
 }
 
@@ -312,6 +318,11 @@ function reload() {
     scaleBackground();
     if (currentPage !== 0) {
       movePage(0, NaN, false);
+      popped = false;
+      loaded = false;
+      setTimeout(function() {
+        hidepop()
+      }, 10000);
     }
   });
 }
