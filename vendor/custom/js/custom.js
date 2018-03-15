@@ -28,20 +28,20 @@ $(window).resize(function() {
 });
 
 // variables
-let currentPage = 0;
-let pages = 0;
-let scrollLock = false;
-let loaded = false;
-let contactlock = true;
-let reset = false;
-let scrollduration = 1000;
-let overlayduration = 450;
-let overlayease = "easeInOutBack"
+var currentPage = 0;
+var pages = 0;
+var scrollLock = false;
+var loaded = false;
+var contactlock = true;
+var reset = false;
+var scrollduration = 1000;
+var overlayduration = 450;
+var overlayease = "easeInOutBack"
 jQuery.easing.def = "easeInOutSine";
 
 // Count the amount of pages we have
 function countPages() {
-  for (let found = false; !found;) {
+  for (var found = false; !found;) {
     if ($(".page" + pages).length == 1) {
       pages++;
     } else {
@@ -140,8 +140,8 @@ function movePage(newPage, down) {
 
 // Set the right configuration of pages
 function straightPage() {
-  let windowHeight = $(window).height();
-  for (let i = 0; i <= pages; i++) {
+  var windowHeight = $(window).height();
+  for (var i = 0; i <= pages; i++) {
     $(".page" + i).css("min-height", windowHeight).css("height", windowHeight).css("height", $(".height" + i).height());
     if (i < currentPage && i !== currentPage) {
       $(".page" + i).css("top", -$(".page" + i).height());
@@ -176,7 +176,7 @@ function overlay() {
         duration: overlayduration,
         queue: false,
         easing: overlayease,
-        complete: function() {
+        compvare: function() {
           reset = true;
         }
       });
@@ -194,7 +194,7 @@ function overlay() {
         duration: overlayduration,
         queue: false,
         easing: overlayease,
-        complete: function() {
+        compvare: function() {
 
         }
       });
@@ -235,7 +235,7 @@ function welcome() {
 // Just like it says
 function scaleBackground() {
   if (!loaded) {
-    let Background = $(".background");
+    var Background = $(".background");
     if ($(window).height() > Background.height()) {
       Background.css("max-width", "none");
       Background.css("max-height", "100%");
