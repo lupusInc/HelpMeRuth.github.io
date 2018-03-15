@@ -34,8 +34,9 @@ var scrollLock = false;
 var loaded = false;
 var contactlock = true;
 var reset = false;
-var scrollduration = 1000;
-var overlayduration = 450;
+var SCROLL_DURATION = 1000;
+var OVERLAY_DURATION = 450;
+var scrollduration, overlayduration;
 var overlayease = "easeInOutBack"
 jQuery.easing.def = "easeInOutSine";
 
@@ -52,7 +53,14 @@ function countPages() {
 }
 
 // Scroll up or down, to any page number or right under or above the current page
-function movePage(newPage, down) {
+function movePage(newPage, down, animate) {
+  if (animate || isNaN(animate)) {
+    var scrollduration = SCROLL_DURATION;
+    var overlayduration = OVERLAY_DURATION;
+  } else {
+    var scrollduration = 0;
+    var overlayduration = 0;
+  }
   if (!scrollLock) {
     scrollLock = true;
 
@@ -123,7 +131,7 @@ function movePage(newPage, down) {
           overlay();
           $(".page0").animate({
             width: $(window).width()
-          }, 500, function() {
+          }, overlayduration, function() {
             straightPage();
             scrollLock = false;
           });
@@ -281,15 +289,25 @@ function continuePage() {
 function reload() {
   $(".overlay").css("display", "inline");
   $(".background").css("display", "inline");
-  $(".overlay").css("opacity", "1");
-  $(".background").css("opacity", "1");
-  $(".background2").css("opacity", "0");
-  $(".navbar-custom").css("opacity", "0");
+  $(".overlay").animate({
+    opacity: 1
+  }, OVERLAY_DURATION);
+  $(".background").animate({
+    opacity: 1
+  }, OVERLAY_DURATION);
+  $(".navbar-custom").animate({
+    opacity: 0
+  }, OVERLAY_DURATION);
   $(".container").css("opacity", "0");
-  $(".btn-circle").css("opacity", "0");
-  loaded = false;
-  scaleBackground();
-  movePage(0, NaN);
+  $(".btn-circle").animate({
+    opacity: 0
+  }, OVERLAY_DURATION, function() {
+    loaded = false;
+    scaleBackground();
+    if (currentPage !== 0) {
+      movePage(0, NaN, false);
+    }
+  });
 }
 
 // Fade animation for the contacts button
