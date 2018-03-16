@@ -1,6 +1,6 @@
 body {
   font-family: 'Open Sans', serif;
-  color: black;
+  color: white;
   overflow-y: scroll;
   background-color: rgba(65, 65, 65, 1);
 }
@@ -15,12 +15,16 @@ h2 {
   }
 }
 
-.navbar-custom {
-  background-color: rgba(13, 13, 13, 0.7);
-  width: 100%;
-  box-shadow: 0px 3px 10px rgba(44, 44, 44, 0.8);
-  background-color: rgba(55, 55, 55, 0.95);
-  opacity: 0;
+@media (min-width: 1000px) {
+  .container {
+    max-width: 950px;
+  }
+}
+
+@media (min-width: 1350px) {
+  .container {
+    max-width: 1300px;
+  }
 }
 
 .container {
@@ -34,18 +38,12 @@ h2 {
   -ms-transform: translateZ(0);
   -o-transform: translateZ(0);
   transform: translateZ(0);
+  top: 0px;
+  position: fixed;
 }
 
-@media (min-width: 1000px) {
-  .container {
-    max-width: 950px;
-  }
-}
-
-@media (min-width: 1350px) {
-  .container {
-    max-width: 1300px;
-  }
+.popover {
+  color: black;
 }
 
 .carousel {
@@ -134,119 +132,24 @@ h2 {
 
 .page0 {
   top: 0px;
-  color: white;
   text-align: center;
 }
 
-.page1 {
-  top: 0px;
-  position: fixed;
-  color: white;
-}
-
-.page2 {
-  top: 0px;
-  position: fixed;
-  color: white;
-}
-
-.page3 {
-  top: 0px;
-  position: fixed;
-  color: white;
-}
-
-.page4 {
-  top: 0px;
-  position: fixed;
-  color: white;
-}
-
-.page5 {
-  top: 0px;
-  position: fixed;
-  color: white;
-}
-
-.page6 {
-  top: 0px;
-  position: fixed;
-  color: white;
-}
-
-.page7 {
-  top: 0px;
-  position: fixed;
-  color: white;
-}
-
-.page8 {
-  top: 0px;
-  position: fixed;
-  color: white;
-}
-
-.page9 {
-  top: 0px;
-  position: fixed;
-  color: white;
-}
-
-.page10 {
-  top: 0px;
-  position: fixed;
-  color: white;
-}
-
-.page11 {
-  top: 0px;
-  position: fixed;
-  color: white;
-}
-
-.page12 {
-  top: 0px;
-  position: fixed;
-  color: white;
-}
-
-.page13 {
-  top: 0px;
-  position: fixed;
-  color: white;
-}
-
-.page14 {
-  top: 0px;
-  position: fixed;
-  color: white;
-}
-
-.page15 {
-  top: 0px;
-  position: fixed;
-  color: white;
-}
-
-.page16 {
-  top: 0px;
-  position: fixed;
-  color: white;
-}
-
-.page17 {
-  top: 0px;
-  position: fixed;
-  color: white;
-}
-
-.page18 {
-  top: 0px;
-  position: fixed;
-  color: white;
+.navbar-custom {
+  background-color: rgba(13, 13, 13, 0.7);
+  width: 100%;
+  box-shadow: 0px 3px 10px rgba(44, 44, 44, 0.8);
+  background-color: rgba(55, 55, 55, 0.95);
+  opacity: 0;
 }
 
 .contact-button {
+  right: 130px;
+  top: 8px;
+  position: absolute;
+}
+
+.home-button {
   right: 80px;
   top: 8px;
   position: absolute;
