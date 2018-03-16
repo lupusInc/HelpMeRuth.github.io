@@ -9,6 +9,11 @@ function OnLoad() {
 
 // account for changing screensize e.g. desktops
 function Resize() {
+  if (currentPage !== 0) {
+    $(".page0").css("width", $(".page1").width() + 60);
+  } else {
+    $(".page0").css("width", $(window).width());
+  }
   straightPage();
   scaleBackground();
 }
@@ -48,7 +53,8 @@ function countPages() {
 
 // Scroll up or down, to any page number or right under or above the current page
 function movePage(newPage, down, animate) {
-  if (!popped) {
+  if (!popped && isNaN(animate)) {
+    console.log(animate + "popped:" + popped);
     hidepop();
     popped = true;
   }
@@ -125,7 +131,7 @@ function movePage(newPage, down, animate) {
         $(".page" + newPage).css("left", "0px");
         if (newPage === 0) {
           currentPage = newPage;
-          overlay();
+          overlay(animate);
           $(".page0").animate({
             width: $(window).width()
           }, overlayduration, function() {
@@ -134,7 +140,7 @@ function movePage(newPage, down, animate) {
           });
         } else {
           currentPage = newPage;
-          overlay();
+          overlay(animate);
           straightPage();
           scrollLock = false;
         }
@@ -160,8 +166,8 @@ function straightPage() {
 }
 
 // Animate the scroll buttons(hide and show on first and last page)
-function overlay() {
-  if (!popped) {
+function overlay(animate) {
+  if (!popped && isNaN(animate)) {
     $(".haspop").popover("show");
     $(".haspop").popover("toggleEnabled");
   }
@@ -229,6 +235,7 @@ function hidepop() {
 // Load smooth welcome screen
 function welcome() {
   $('.overlay-content').imagesLoaded(function() {
+    movePage(0, NaN, false); // bypasses some awesome css magicrap
     $(".overlay-content").animate({
       opacity: 1
     }, {
@@ -264,7 +271,6 @@ function scaleBackground() {
 
 // Setup the main website for use
 function continuePage() {
-  movePage(0, NaN, false); // bypasses some awesome css magicrap
   if ($(window).width() < 768 && !popped) {
     $(window).scrollTop($(".testing").position().top - 100);
     console.log("scrolling");
