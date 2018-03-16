@@ -320,9 +320,9 @@ function reload() {
     scaleBackground();
     if (currentPage !== 0) {
       movePage(0, NaN, false);
-      popped = false;
-      loaded = false;
     }
+    popped = false;
+    loaded = false;
   });
 }
 
