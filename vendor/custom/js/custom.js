@@ -54,7 +54,6 @@ function countPages() {
 // Scroll up or down, to any page number or right under or above the current page
 function movePage(newPage, down, animate) {
   if (!popped && isNaN(animate)) {
-    console.log(animate + "popped:" + popped);
     hidepop();
     popped = true;
   }
@@ -273,7 +272,6 @@ function scaleBackground() {
 function continuePage() {
   if ($(window).width() < 768 && !popped) {
     $(window).scrollTop($(".testing").position().top - 100);
-    console.log("scrolling");
   }
   $(".page0").css("max-width", "100%");
   $(".overlay").animate({
