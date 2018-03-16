@@ -6,13 +6,7 @@ body {
 }
 
 h2 {
-  font-size: 3.5vw;
-}
-
-@media(max-width: @screen-xs-max) {
-  h2 {
-    font-size: 24px;
-  }
+  font-size: 24px;
 }
 
 @media (min-width: 1000px) {
@@ -111,7 +105,14 @@ h2 {
 }
 
 .carousel-caption {
+  max-width: 100%;
+  width: 100%;
+  position: fixed;
+  bottom: 0px;
+  color: white;
   background-color: rgba(22, 22, 22, 0.8);
+  left: 0;
+  border-radius: 10px;
 }
 
 .italic {
