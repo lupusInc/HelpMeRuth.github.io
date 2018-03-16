@@ -67,7 +67,6 @@ h2 {
 .carousel-image {
   background-size: cover;
   border-radius: 10px;
-  color: white;
   padding-top: 100%;
 }
 
@@ -112,7 +111,6 @@ h2 {
 }
 
 .carousel-caption {
-  color: white;
   background-color: rgba(22, 22, 22, 0.8);
 }
 
@@ -136,7 +134,6 @@ h2 {
 }
 
 .navbar-custom {
-  background-color: rgba(13, 13, 13, 0.7);
   width: 100%;
   box-shadow: 0px 3px 10px rgba(44, 44, 44, 0.8);
   background-color: rgba(55, 55, 55, 0.95);
@@ -168,7 +165,6 @@ h2 {
   width: 100%;
   left: 0%;
   top: 20px;
-  color: white;
   background-color: rgba(22, 22, 22, 1);
 }
 
@@ -261,15 +257,10 @@ h2 {
   padding: 8px;
   text-decoration: none;
   font-size: 36px;
-  color: #818181;
   display: block;
 }
 
 .overlay button {
   text-decoration: none;
   font-size: 25px;
-}
-
-.overlay a:hover, .overlay a:focus {
-  color: #f1f1f1;
 }
