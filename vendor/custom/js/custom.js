@@ -24,6 +24,7 @@ $(document).on("click", hidepop);
 $(document).on("scroll", hidepop);
 
 // variables
+var limit = false;
 var perf = false;
 var currentPage = 0;
 var pages = 0;
@@ -64,8 +65,10 @@ function movePage(newPage, down, animate) {
     var scrollduration = 0;
     var overlayduration = 0;
   }
+
   if (!scrollLock) {
     scrollLock = true;
+    console.log("this isnt supposed to happen");
     // Check for defined direction if not given calculate automaticly
     if (isNaN(down) && !isNaN(newPage)) {
       if ($(".page" + currentPage).css("top") > $(".page" + newPage).css("top")) {
@@ -77,74 +80,79 @@ function movePage(newPage, down, animate) {
 
     // Check for defined newPage
     if (isNaN(newPage)) {
-      if (down) {
-        if (currentPage == pages) {
-          newPage = currentPage;
-        } else {
-          newPage = currentPage + 1;
-        }
-      } else if (currentPage !== 0) {
+      if (down && currentPage !== pages) {
+        newPage = currentPage + 1;
+        limit = false;
+      } else if (currentPage !== 0 && !down) {
         newPage = currentPage - 1;
+        limit = false;
       } else {
-        newPage = currentPage;
+        limit = true;
       }
-    } else if (newPage > pages) {
-      newPage = pages;
-    }
-
-    // Fancy animation for page0
-    if (currentPage == 0) {
-      $(".page0").animate({
-        width: $(".page1").width() + 60
-      }, scrollduration / 2);
-      page0Timeout = scrollduration / 2;
+    } else if (newPage == pages + 1 || newPage < 0 || (newPage == 0 && isNaN(animate) && currentPage == 0) || (newPage == pages && currentPage == pages)) {
+      limit = true;
+      console.log(newPage == pages + 1 || newPage < 0 || (newPage == 0 && isNaN(animate) && currentPage == 0) || (newPage == pages && currentPage == pages));
     } else {
-      page0Timeout = 0;
+      limit = false;
     }
-
-    setTimeout(function() { // This is needed cuz im not good enough
-      // Nullify the difference between position: fixed and static
-      $(".page" + currentPage).css("left", $(".page" + currentPage).offset().left);
-
-      // Compensate for the scrolled position
-      $(".page" + currentPage).css("top", -$(document).scrollTop());
-      $(".page" + newPage).css("top", parseInt($(".page" + newPage).css("top"), 10) - $(document).scrollTop());
-
-      // Animate currentPage
-      $(".page" + currentPage).css("position", "fixed");
-      if (down) {
-        $(".page" + currentPage).animate({
-          top: -$(".page" + currentPage).height()
-        }, scrollduration);
+    if (!limit) {
+      // Fancy animation for page0
+      if (currentPage == 0) {
+        console.log("anim" + limit);
+        $(".page0").animate({
+          width: $(".page1").width() + 60
+        }, scrollduration / 2);
+        page0Timeout = scrollduration / 2;
       } else {
-        $(".page" + currentPage).animate({
-          top: $(".page" + newPage).height()
-        }, scrollduration);
+        page0Timeout = 0;
       }
 
-      // Animate newPage
-      $(".page" + newPage).animate({
-        top: 0
-      }, scrollduration, function() {
-        $(".page" + newPage).css("position", "static");
-        $(".page" + newPage).css("left", "0px");
-        if (newPage === 0) {
-          currentPage = newPage;
-          overlay(animate);
-          $(".page0").animate({
-            width: $(window).width()
-          }, overlayduration, function() {
+      setTimeout(function() { // This is needed cuz im not good enough
+        // Nullify the difference between position: fixed and static
+        $(".page" + currentPage).css("left", $(".page" + currentPage).offset().left);
+
+        // Compensate for the scrolled position
+        $(".page" + currentPage).css("top", -$(document).scrollTop());
+        $(".page" + newPage).css("top", parseInt($(".page" + newPage).css("top"), 10) - $(document).scrollTop());
+
+        // Animate currentPage
+        $(".page" + currentPage).css("position", "fixed");
+        if (down) {
+          $(".page" + currentPage).animate({
+            top: -$(".page" + currentPage).height()
+          }, scrollduration);
+        } else {
+          $(".page" + currentPage).animate({
+            top: $(".page" + newPage).height()
+          }, scrollduration);
+        }
+
+        // Animate newPage
+        $(".page" + newPage).animate({
+          top: 0
+        }, scrollduration, function() {
+          $(".page" + newPage).css("position", "static");
+          $(".page" + newPage).css("left", "0px");
+          if (newPage === 0) {
+            currentPage = newPage;
+            overlay(animate);
+            $(".page0").animate({
+              width: $(window).width()
+            }, overlayduration, function() {
+              straightPage();
+              scrollLock = false;
+            });
+          } else {
+            currentPage = newPage;
+            overlay(animate);
             straightPage();
             scrollLock = false;
-          });
-        } else {
-          currentPage = newPage;
-          overlay(animate);
-          straightPage();
-          scrollLock = false;
-        }
-      })
-    }, page0Timeout);
+          }
+        })
+      }, page0Timeout);
+    } else {
+      scrollLock = false;
+    }
   }
 }
 // Set the right configuration of pages
@@ -176,7 +184,7 @@ function straightPage() {
   }
   var t1 = performance.now();
   if (perf) {
-    console.log("Call to doSomething took " + (t1 - t0) + " milliseconds.");
+    console.log("straightPage() took " + (t1 - t0) + " milliseconds.");
   }
 }
 
