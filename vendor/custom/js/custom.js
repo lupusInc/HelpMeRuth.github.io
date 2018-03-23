@@ -2,9 +2,8 @@
 function OnLoad() {
   lazyLoad();
   scaleBackground()
-  welcome();
+  setTimeout(welcome, 200);
   countPages();
-  straightPage();
 }
 
 // account for changing screensize e.g. desktops
@@ -25,6 +24,7 @@ $(document).on("click", hidepop);
 $(document).on("scroll", hidepop);
 
 // variables
+var perf = false;
 var currentPage = 0;
 var pages = 0;
 var scrollLock = false;
@@ -147,20 +147,36 @@ function movePage(newPage, down, animate) {
     }, page0Timeout);
   }
 }
-
 // Set the right configuration of pages
 function straightPage() {
+  var t0 = performance.now();
   var windowHeight = $(window).height();
+  var documentHeight = $(document).height();
+  var windowWidth = $(window).width();
   for (var i = 0; i <= pages; i++) {
-    $(".page" + i).css("min-height", windowHeight).css("height", windowHeight).css("height", $(".height" + i).height());
+    var pageWidth = $(".page" + i).width();
+    var pageHeight = $(".page" + i).height();
+    if (parseInt($(".page" + i).css("min-height"), 10) !== windowHeight) {
+      $(".page" + i).css("min-height", windowHeight);
+    }
     if (i < currentPage && i !== currentPage) {
-      $(".page" + i).css("top", -$(".page" + i).height());
+      if ($(".page" + i).position().top !== -pageHeight) {
+        $(".page" + i).css("top", -pageHeight);
+      }
     } else if (i > currentPage) {
-      $(".page" + i).css("top", $(document).height());
+      if ($(".page" + i).position().top !== documentHeight) {
+        $(".page" + i).css("top", documentHeight);
+      }
     }
     if (i !== currentPage) {
-      $(".page" + i).css("left", ($(window).width() - $(".page" + i).width()) / 2 - 30);
+      if ($(".page" + i).position().left !== (windowWidth - pageWidth) / 2 - 30) {
+        $(".page" + i).css("left", (windowWidth - pageWidth) / 2 - 30);
+      }
     }
+  }
+  var t1 = performance.now();
+  if (perf) {
+    console.log("Call to doSomething took " + (t1 - t0) + " milliseconds.");
   }
 }
 
