@@ -68,7 +68,6 @@ function movePage(newPage, down, animate) {
 
   if (!scrollLock) {
     scrollLock = true;
-    console.log("this isnt supposed to happen");
     // Check for defined direction if not given calculate automaticly
     if (isNaN(down) && !isNaN(newPage)) {
       if ($(".page" + currentPage).css("top") > $(".page" + newPage).css("top")) {
@@ -91,14 +90,12 @@ function movePage(newPage, down, animate) {
       }
     } else if (newPage == pages + 1 || newPage < 0 || (newPage == 0 && isNaN(animate) && currentPage == 0) || (newPage == pages && currentPage == pages)) {
       limit = true;
-      console.log(newPage == pages + 1 || newPage < 0 || (newPage == 0 && isNaN(animate) && currentPage == 0) || (newPage == pages && currentPage == pages));
     } else {
       limit = false;
     }
     if (!limit) {
       // Fancy animation for page0
       if (currentPage == 0) {
-        console.log("anim" + limit);
         $(".page0").animate({
           width: $(".page1").width() + 60
         }, scrollduration / 2);
