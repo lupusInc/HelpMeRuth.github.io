@@ -243,7 +243,7 @@ function overlay(animate) {
       });
       reset = false;
     }
-    $("p:last").text(currentPage + 1);
+    $(".pageNumber").text(currentPage + 1);
   }
 }
 
