@@ -33,56 +33,58 @@
 
     <button class="btn btn btn-primary contact-button" onclick="javascript:contacts(true);"><i class="fa fa-address-book fa-lg"></i> Contact</button>
     <button class="btn btn btn-primary home-button" onclick="javascript:reload();"><i class="fa fa-home fa-lg"></i></button>
-    <button class="navbar-toggler haspop" type="button" data-toggle="collapse" data-target="#collapsingNavbar" data-ride="carousel" data-toggle="popover" data-placement="top" title="Navigatie" data-content="Navigeer makkelijk naar alle onderwerpen">
+    <button class="navbar-toggler haspop" type="button" onclick="javascript:slideNav()" data-toggle="collapse" data-target="#collapsingNavbar" data-ride="carousel" data-toggle="popover" data-placement="top" title="Navigatie" data-content="Navigeer makkelijk naar alle onderwerpen">
         <span class="navbar-toggler-icon"></span>
     </button>
     <div class="navbar-collapse collapse" id="collapsingNavbar">
       <ul class="navbar-nav ml-auto">
-        <li class="nav-item" data-toggle="collapse" data-target="#collapsingNavbar">
-          <a class="nav-link" href="javascript:movePage(0, NaN);">Inleiding</a>
-        </li>
-        <li class="nav-item" data-toggle="collapse" data-target="#collapsingNavbar">
-          <a class="nav-link" href="javascript:movePage(1, NaN);">Een kijkje bij de wolf</a>
-        </li>
-        <li class="nav-item" data-toggle="collapse" data-target="#collapsingNavbar">
-          <a class="nav-link" href="javascript:movePage(2, NaN);">Geschiedenis en herkomst</a>
-        </li>
-        <li class="nav-item" data-toggle="collapse" data-target="#collapsingNavbar">
-          <a class="nav-link" href="javascript:movePage(3, NaN);">Bouw van de wolf</a>
-        </li>
-        <li class="nav-item" data-toggle="collapse" data-target="#collapsingNavbar">
-          <a class="nav-link" href="javascript:movePage(4, NaN);">Hoe oriënteert de wolf zich?</a>
-        </li>
-        <li class="nav-item" data-toggle="collapse" data-target="#collapsingNavbar">
-          <a class="nav-link" href="javascript:movePage(5, NaN);">Gedrag en communicatie 1</a>
-        </li>
-        <li class="nav-item" data-toggle="collapse" data-target="#collapsingNavbar">
-          <a class="nav-link" href="javascript:movePage(6, NaN);">Gedrag en communicatie 2</a>
-        </li>
-        <li class="nav-item" data-toggle="collapse" data-target="#collapsingNavbar">
-          <a class="nav-link" href="javascript:movePage(7, NaN);">Territorium en dieet</a>
-        </li>
-        <li class="nav-item" data-toggle="collapse" data-target="#collapsingNavbar">
-          <a class="nav-link" href="javascript:movePage(8, NaN);">Wat is de invloed op organismen? 1</a>
-        </li>
-        <li class="nav-item" data-toggle="collapse" data-target="#collapsingNavbar">
-          <a class="nav-link" href="javascript:movePage(9, NaN);">Wat is de invloed op organismen? 2</a>
-        </li>
-        <li class="nav-item" data-toggle="collapse" data-target="#collapsingNavbar">
-          <a class="nav-link" href="javascript:movePage(10, NaN);">Wat is de invloed op de geografie?</a>
-        </li>
-        <li class="nav-item" data-toggle="collapse" data-target="#collapsingNavbar">
-          <a class="nav-link" href="javascript:movePage(11, NaN);">Waarom de wolf?</a>
-        </li>
-        <li class="nav-item" data-toggle="collapse" data-target="#collapsingNavbar">
-          <a class="nav-link" href="javascript:movePage(12, NaN);">Hoe kan de wolf naast de mens leven?</a>
-        </li>
-        <li class="nav-item" data-toggle="collapse" data-target="#collapsingNavbar">
-          <a class="nav-link" href="javascript:movePage(13, NaN);">Conclusie</a>
-        </li>
       </ul>
     </div>
   </nav>
+  <div class="slide-nav">
+    <li class="slide-nav-item">
+      <a class="slide-nav-link" href="javascript:movePage(0, NaN);"><i class="fa fa-circle" style="font-size:10px;"></i> Inleiding</a>
+    </li>
+    <li class="slide-nav-item">
+      <a class="slide-nav-link" href="javascript:movePage(1, NaN);"><i class="fa fa-circle" style="font-size:10px;"></i> Een kijkje bij de wolf</a>
+    </li>
+    <li class="slide-nav-item">
+      <a class="slide-nav-link" href="javascript:movePage(2, NaN);"><i class="fa fa-circle" style="font-size:10px;"></i> Geschiedenis en herkomst</a>
+    </li>
+    <li class="slide-nav-item">
+      <a class="slide-nav-link" href="javascript:movePage(3, NaN);"><i class="fa fa-circle" style="font-size:10px;"></i> Bouw van de wolf</a>
+    </li>
+    <li class="slide-nav-item">
+      <a class="slide-nav-link" href="javascript:movePage(4, NaN);"><i class="fa fa-circle" style="font-size:10px;"></i> Hoe oriënteert de wolf zich?</a>
+    </li>
+    <li class="slide-nav-item">
+      <a class="slide-nav-link" href="javascript:movePage(5, NaN);"><i class="fa fa-circle" style="font-size:10px;"></i> Gedrag en communicatie 1</a>
+    </li>
+    <li class="slide-nav-item">
+      <a class="slide-nav-link" href="javascript:movePage(6, NaN);"><i class="fa fa-circle" style="font-size:10px;"></i> Gedrag en communicatie 2</a>
+    </li>
+    <li class="slide-nav-item">
+      <a class="slide-nav-link" href="javascript:movePage(7, NaN);"><i class="fa fa-circle" style="font-size:10px;"></i> Territorium en dieet</a>
+    </li>
+    <li class="slide-nav-item">
+      <a class="slide-nav-link" href="javascript:movePage(8, NaN);"><i class="fa fa-circle" style="font-size:10px;"></i> Wat is de invloed op organismen? 1</a>
+    </li>
+    <li class="slide-nav-item">
+      <a class="slide-nav-link" href="javascript:movePage(9, NaN);"><i class="fa fa-circle" style="font-size:10px;"></i> Wat is de invloed op organismen? 2</a>
+    </li>
+    <li class="slide-nav-item">
+      <a class="slide-nav-link" href="javascript:movePage(10, NaN);"><i class="fa fa-circle" style="font-size:10px;"></i> Wat is de invloed op de geografie?</a>
+    </li>
+    <li class="slide-nav-item">
+      <a class="slide-nav-link" href="javascript:movePage(11, NaN);"><i class="fa fa-circle" style="font-size:10px;"></i> Waarom de wolf?</a>
+    </li>
+    <li class="slide-nav-item">
+      <a class="slide-nav-link" href="javascript:movePage(12, NaN);"><i class="fa fa-circle" style="font-size:10px;"></i> Hoe kan de wolf naast de mens leven?</a>
+    </li>
+    <li class="slide-nav-item">
+      <a class="slide-nav-link" href="javascript:movePage(13, NaN);"><i class="fa fa-circle" style="font-size:10px;"></i> Conclusie</a>
+    </li>
+  </div>
 
   <!-- Page Content -->
   <div>
@@ -1291,8 +1293,8 @@
       </div>
     </div>
   </div>
-  <button type="button" class="btn btn btn-primary btn-circle btn-lg btn-up" onclick="movePage(NaN, false);"><i class="fa fa-arrow-up" aria-hidden="true"></i></button>
-  <button type="button" class="btn btn btn-primary btn-circle btn-lg btn-down haspop" onclick="movePage(NaN, true);" data-toggle="popover" title="Knoppen" data-content="Ga hier naar de volgende pagina."><i class="fa fa-arrow-down" aria-hidden="true"></i></button>
+  <button type="button" class="btn btn btn-primary btn-circle btn-lg btn-up" onclick="movePage(NaN, false);"><i class="fa fa-arrow-up"></i></button>
+  <button type="button" class="btn btn btn-primary btn-circle btn-lg btn-down haspop" onclick="movePage(NaN, true);" data-toggle="popover" title="Knoppen" data-content="Ga hier naar de volgende pagina."><i class="fa fa-arrow-down"></i></button>
   <button type="button" class="btn btn btn-primary btn-circle btn-lg btn-counter"><p class="pageNumber">1</p></button>
   <div class="contact-box">
     <div class="contact-content">
@@ -1314,8 +1316,8 @@
   <script src="vendor/jquery/jquery.easing.js "></script>
   <script async src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script async src="vendor/imagesloaded/imagesloaded.min.js"></script>
-  <script async src="vendor/custom/js/custom.js "></script>
   <script async src="https://use.fontawesome.com/8d6338574f.js"></script>
+  <script async src="vendor/custom/js/custom.js "></script>
 </body>
 
 </html>

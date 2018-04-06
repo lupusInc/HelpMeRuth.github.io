@@ -4,6 +4,7 @@ function OnLoad() {
   scaleBackground()
   setTimeout(welcome, 200);
   countPages();
+  $(".slide-nav").css("right", -$(".slide-nav").outerWidth() - 15);
 }
 
 // account for changing screensize e.g. desktops
@@ -24,6 +25,8 @@ $(document).on("click", hidepop);
 $(document).on("scroll", hidepop);
 
 // variables
+var navhidden = true;
+var navlock = false;
 var limit = false;
 var perf = false;
 var currentPage = 0;
@@ -68,6 +71,9 @@ function movePage(newPage, down, animate) {
 
   if (!scrollLock) {
     scrollLock = true;
+    if (animate || isNaN(animate) && !navhidden) {
+      slideNav();
+    }
     // Check for defined direction if not given calculate automaticly
     if (isNaN(down) && !isNaN(newPage)) {
       if ($(".page" + currentPage).css("top") > $(".page" + newPage).css("top")) {
@@ -94,6 +100,10 @@ function movePage(newPage, down, animate) {
       limit = false;
     }
     if (!limit) {
+      // Active page
+      $(".slide-nav-link:eq(" + currentPage + ")").css("color", "");
+      $(".slide-nav-link:eq(" + newPage + ")").css("color", "white");
+
       // Fancy animation for page0
       if (currentPage == 0) {
         $(".page0").animate({
@@ -158,6 +168,9 @@ function straightPage() {
   var windowHeight = $(window).height();
   var documentHeight = $(document).height();
   var windowWidth = $(window).width();
+  $(".slide-nav").css("height", $(window).height() - 54);
+  $(".slide-nav-item").css("height", $(".slide-nav").height() / 14);
+
   for (var i = 0; i <= pages; i++) {
     var pageWidth = $(".page" + i).width();
     var pageHeight = $(".page" + i).height();
@@ -185,6 +198,36 @@ function straightPage() {
   }
 }
 
+function slideNav() {
+  nav = $(".slide-nav");
+  nav.css("height", $(window).height() - 56)
+  if (!navlock) {
+    navlock = true;
+    if (navhidden) {
+      nav.animate({
+        right: 0
+      }, {
+        duration: OVERLAY_DURATION,
+        easing: "easeInOutCubic",
+        complete: function() {
+          navhidden = false;
+          navlock = false;
+        }
+      });
+    } else {
+      nav.animate({
+        right: -nav.outerWidth()
+      }, {
+        duration: OVERLAY_DURATION,
+        easing: "easeInOutCubic",
+        complete: function() {
+          navhidden = true;
+          navlock = false;
+        }
+      });
+    }
+  }
+}
 // Animate the scroll buttons(hide and show on first and last page)
 function overlay(animate) {
   if (!popped && isNaN(animate)) {
@@ -294,6 +337,7 @@ function continuePage() {
   if ($(window).width() < 768 && !popped) {
     $(window).scrollTop($(".testing").position().top - 100);
   }
+  $(".slide-nav").css("opacity", 1);
   $(".page0").css("max-width", "100%");
   $(".overlay").animate({
     opacity: 0
@@ -366,7 +410,6 @@ function contacts(show) {
     }
   }
 }
-
 // Load all picture asynchronously to speed up physical browser load time
 function lazyLoad() {
   $(".lazyload").each(function() {
