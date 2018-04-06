@@ -365,6 +365,9 @@ function continuePage() {
 
 // Go back to the welcome screen
 function reload() {
+  if (!navhidden) {
+    slideNav();
+  }
   $(".overlay").css("display", "inline");
   $(".background").css("display", "inline");
   $(".overlay").animate({
