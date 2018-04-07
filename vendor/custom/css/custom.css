@@ -273,6 +273,7 @@ h2 {
   height: auto;
   width: auto;
   filter: blur(6px);
+  right: 0px;
   opacity: 0;
 }
 
