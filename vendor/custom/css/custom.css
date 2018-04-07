@@ -149,10 +149,12 @@ h2 {
 
 .slide-nav-link {
   color: gray;
+  transition: 0.3s;
 }
 
 .slide-nav-link:hover {
   color: white;
+  font-size: 21px;
   text-decoration: none;
 }
 
