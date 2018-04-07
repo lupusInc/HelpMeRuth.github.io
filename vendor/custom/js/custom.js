@@ -170,6 +170,9 @@ function straightPage() {
   var documentHeight = $(document).height();
   var windowWidth = $(window).width();
   $(".slide-nav").css("height", $(window).height() - 54);
+  if (navhidden) {
+    $(".slide-nav").css("right", -$(".slide-nav").outerWidth());
+  }
   $(".slide-nav-item").css("height", $(".slide-nav").height() / 14);
 
   for (var i = 0; i <= pages; i++) {
