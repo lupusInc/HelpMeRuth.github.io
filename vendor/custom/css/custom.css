@@ -107,7 +107,7 @@ h2 {
 .carousel-caption {
   max-width: 100%;
   width: 100%;
-  position: fixed;
+  position: absolute;
   bottom: 0px;
   color: white;
   background-color: rgba(33, 33, 33, 0.95);
